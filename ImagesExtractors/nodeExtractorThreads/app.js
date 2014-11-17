@@ -1,4 +1,4 @@
-var fs = require('fs');
+var fs = require('graceful-fs');
 var request = require('request');
 var async = require('async');
 var gm = require('gm');
@@ -8,7 +8,7 @@ var numCPUs = require('os').cpus().length;
 
 //Configuration
 var options = {
-	nbImagesLimit: 100000,
+	nbImagesLimit: 60000,
 	folderName: "images",
 	folderNameNotDownloaded: "imagesNotDowloaded"
 }
@@ -17,7 +17,7 @@ var uriFolder = __dirname + '/' + options.folderName;
 
 //Connexion to postGre Database
 var query = require('pg-query');
-query.connectionParameters = 'postgres://utilisateur:utilisateur@localhost:5432/imageSourcesClean';
+query.connectionParameters = 'postgres://utilisateur:utilisateur@localhost:5432/BDClean';
 
 //Function to mark the image downloaded in DB
 function markIsDownloaded(imageId, callback){
@@ -70,7 +70,9 @@ function downloadAndSaveImage(imageUrl, imageUri, callback){
 			return callback();
 		}
 		
-		request(imageUrl).pipe(fs.createWriteStream(imageUri)).on('close', callback);
+		var fileStream = fs.createWriteStream(imageUri);
+		fileStream.on('close', callback);
+		request(imageUrl).pipe(fileStream);
 	});
 }
 

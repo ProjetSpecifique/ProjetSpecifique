@@ -1,4 +1,4 @@
-var fs = require('fs');
+var fs = require('graceful-fs');
 var request = require('request');
 var async = require('async');
 var gm = require('gm');
@@ -6,7 +6,7 @@ var gm = require('gm');
 
 //Configuration
 var options = {
-	nbImagesLimit: 100,
+	nbImagesLimit: 60000,
 	folderName: "images",
 	folderNameNotDownloaded: "imagesNotDowloaded"
 }
