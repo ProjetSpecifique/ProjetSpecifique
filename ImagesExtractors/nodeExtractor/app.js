@@ -68,8 +68,7 @@ function moveImageIfNotDowloadable(image, callback){
 function downloadAndSaveImage(imageUrl, imageUri, callback){
 	request.head(imageUrl, function(err, res, body){
 		if(err){
-			console.log(err);
-			return callback();
+			return callback(err);
 		}
 		
 		request(imageUrl).pipe(fs.createWriteStream(imageUri)).on('close', callback);
@@ -111,6 +110,11 @@ async.auto({
 			image.uri = res.createFolder + '/' + image.name;
 
 			downloadAndSaveImage(image.downloadURL, image.uri, function(err){
+				if(err) {
+					console.log("Error on image " + image.id);
+					console.log(err);
+					return nextImage();
+				}
 				nbImageDownloaded++;
 				//removeImageIfNotDowloadable(image, function(isRemoved){
 				moveImageIfNotDowloadable(image, function(isRemoved){

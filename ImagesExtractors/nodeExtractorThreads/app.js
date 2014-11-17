@@ -66,8 +66,7 @@ function moveImageIfNotDowloadable(image, callback){
 function downloadAndSaveImage(imageUrl, imageUri, callback){
 	request.head(imageUrl, function(err, res, body){
 		if(err){
-			console.log(err);
-			return callback();
+			return callback(err);
 		}
 		
 		var fileStream = fs.createWriteStream(imageUri);
@@ -150,6 +149,11 @@ else{ //Worker
 			image.uri = uriFolder + '/' + image.name;
 
 			downloadAndSaveImage(image.downloadURL, image.uri, function(err){
+				if(err){
+					console.log("Error on image " + image.id);
+					console.log(err);
+					return nextImage();
+				}
 				//removeImageIfNotDowloadable(image, function(isRemoved){
 				moveImageIfNotDowloadable(image, function(isRemoved){
 
