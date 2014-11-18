@@ -1,9 +1,12 @@
 package main;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
+import com.opencsv.CSVWriter;
+
 import descripteurs.AutoColorCorrelogramDescriptor;
-import descripteurs.CEDD;
 
 /**
  * Super Main
@@ -11,27 +14,32 @@ import descripteurs.CEDD;
  *
  */
 public class PSMain {
+	
+	/**
+	 * args[0] - directory name for images
+	 * args[1] - name for output csv file (without extension)
+	 * @param args
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws IOException {
 		
-//		AutoColorCorrelogramDescriptor.applyIt();
-		AutoColorCorrelogramDescriptor.go2();
-		
-		
-//		String workingDir = System.getProperty("user.dir");
-//	    System.out.println("Current working directory : " + workingDir);
-//		String[] fakeArgs = {workingDir + "/data/ferrari/black"};
-//		indexElements(fakeArgs);
-//		String[] colors = {
-//				"black.jpg",
-//				"red.jpg",
-//				"white.jpg",
-//				"yellow.jpg",
-//				"notferrari.jpg"
-//		};
-//		for (String s : colors) {
-//			System.out.println("=========" + s + "==========");
-//			fakeArgs[0] = workingDir + "/data/ferrari/tests/" + s;
-//	        CEDD.searchImage(fakeArgs);
-//		}
+		String workingDir = "";
+		String csvPath = "";
+        if (args[0] != null) {
+            File f = new File(args[0]);
+            if (f.exists() && f.isDirectory()) {
+            	workingDir = args[0];
+            }
+        }
+        
+        // Fallback to current data dir (testing only)
+        workingDir = workingDir == null ? System.getProperty("user.dir") + "/data/ferrari/" : workingDir;
+        csvPath = csvPath == null? "data.csv": csvPath;
+	    CSVWriter writer = new CSVWriter(new FileWriter(csvPath), 
+	    		CSVWriter.DEFAULT_SEPARATOR, CSVWriter.NO_QUOTE_CHARACTER);
+	    // TODO : find sub-directories automatically
+	    String[] subDirectories = { "red", "black", "white", "yellow" };
+	    // Call descriptors
+        AutoColorCorrelogramDescriptor.computeDescriptor(workingDir, writer, subDirectories);
     }
 }
