@@ -8,7 +8,7 @@ public abstract class MyDescriptor {
 	protected Object lireDescriptor;
 
 	/*
-	 * All LIRE descriptors implement LireFeature interface which offers defines
+	 * All LIRE descriptors implement LireFeature interface which defines
 	 * the extract method
 	 */
 	public MyDescriptor(BufferedImage img) {

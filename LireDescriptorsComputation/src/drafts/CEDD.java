@@ -1,4 +1,4 @@
-package descripteurs;
+package drafts;
 
 import net.semanticmetadata.lire.DocumentBuilder;
 import net.semanticmetadata.lire.DocumentBuilderFactory;
@@ -25,7 +25,6 @@ import java.util.Iterator;
 
 
 /**
- * Color and Edge Directivity Descriptor
  * @author AdeN
  *
  */
