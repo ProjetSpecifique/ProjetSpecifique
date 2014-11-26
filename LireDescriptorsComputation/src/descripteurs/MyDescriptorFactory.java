@@ -31,14 +31,16 @@ public class MyDescriptorFactory {
 			return new MyJCD(bimg);
 		case JointHistogram:
 			return new MyJointHistogram(bimg);
-		case JointOpponentHistogram:
-			return new MyJointOpponentHistogram(bimg);
+		/* LIRE only defines them but doesn't implement them
+		 * maybe on a future version of lire => we keep them
+		 * case JointOpponentHistogram:
+			return new MyJointOpponentHistogram(bimg); 
+		case OpponentHistogram:
+			return new MyOpponentHistogram(bimg);*/
 		case JpegCoefficientHistogram:
 			return new MyJpegCoefficientHistogram(bimg);
 		case MSERFeature:
 			return new MyMSERFeature(bimg);
-		case OpponentHistogram:
-			return new MyOpponentHistogram(bimg);
 		case PHOG:
 			return new MyPHOG(bimg);
 		case ScalableColor:

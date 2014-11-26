@@ -15,10 +15,10 @@ public enum MyDescriptorType {
 	SimpleColorHistogram    ,
 	JointHistogram          ,
 	Feature                 ,
-	OpponentHistogram       ,
-	JointOpponentHistogram  ,
-	SurfFeature             ,
-	MSERFeature             ,
+	// OpponentHistogram       , extraction method not implemented in LIRE
+	// JointOpponentHistogram  , extraction method not implemented in LIRE
+	SurfFeature             ,  // java.lang.UnsupportedOperationException: No implemented!
+	MSERFeature             , // java.lang.NullPointerException
 	JpegCoefficientHistogram,
 	Tamura                  ,
 	PHOG                    ;

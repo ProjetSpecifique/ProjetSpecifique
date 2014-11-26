@@ -55,11 +55,18 @@ public class ServerMain {
 		}
 
 		/* compute and print the csv for all implemented descriptors */
-
+		System.out.println("---- Start computations ----");
 		for (MyDescriptorType descriptorType : MyDescriptorType.values()) {
-			extractHistogramsForDescriptor(descriptorType, imgDir, csvDir);
-		}
 
+			System.out.println("Start	: " + descriptorType.name());
+			try {
+				extractHistogramsForDescriptor(descriptorType, imgDir, csvDir);
+			} catch (Exception e) {
+				System.err.println(e);
+			}
+			System.out.println("End 	: " + descriptorType.name() + "\n");
+		}
+		System.out.println("---- End computations ----");
 	}
 
 	private static void extractHistogramsForDescriptor(MyDescriptorType descriptorType, File imgDir, File csvDir)
@@ -75,7 +82,7 @@ public class ServerMain {
 		for (Iterator<File> i = allImages.iterator(); i.hasNext();) {
 			imgFile = i.next();
 			bufferedImgX = ImageUtils.openImage(imgFile);
-			
+
 			myDescriptor.setImage(bufferedImgX);
 			WriteCSV.writeHistogramLine(imgFile.getName(), myDescriptor.computeHistogram());
 		}
