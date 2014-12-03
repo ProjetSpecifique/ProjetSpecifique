@@ -79,14 +79,19 @@ public class ServerMain {
 
 		ArrayList<File> allImages = FileUtils.getAllImageFiles(imgDir, true);
 
+		int k = 0;
 		for (Iterator<File> i = allImages.iterator(); i.hasNext();) {
 			imgFile = i.next();
 			bufferedImgX = ImageUtils.openImage(imgFile);
-
+			k++;
 			if (bufferedImgX != null) {
 				myDescriptor.setImage(bufferedImgX);
 				WriteCSV.writeHistogramLine(imgFile.getName(), myDescriptor.computeHistogram());
+			} else {
+				System.out.println("" + k + " .Image " + imgFile.getName() + " is null...");
 			}
 		}
+		
+		WriteCSV.finish();
 	}
 }
