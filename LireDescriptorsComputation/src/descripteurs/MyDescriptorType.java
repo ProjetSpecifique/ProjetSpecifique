@@ -14,11 +14,11 @@ public enum MyDescriptorType {
 	ScalableColor           ,
 	SimpleColorHistogram    ,
 	JointHistogram          ,
-	Feature                 ,
+//	Feature                 ,
 	// OpponentHistogram       , extraction method not implemented in LIRE
 	// JointOpponentHistogram  , extraction method not implemented in LIRE
-	SurfFeature             ,  // java.lang.UnsupportedOperationException: No implemented!
-	MSERFeature             , // java.lang.NullPointerException
+//	SurfFeature             ,  // java.lang.UnsupportedOperationException: No implemented!
+//	MSERFeature             , // java.lang.NullPointerException
 	JpegCoefficientHistogram,
 	Tamura                  ,
 	PHOG                    ;

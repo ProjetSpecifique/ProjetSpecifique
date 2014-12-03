@@ -47,7 +47,7 @@ public class ServerMain {
 		csvDir = new File(args[1]);
 
 		if (!imgDir.exists() || !imgDir.isAbsolute()) {
-			throw new Exception("Specified csv path doesn't exist or is not a directory");
+			throw new Exception("Specified images path doesn't exist or is not a directory");
 		}
 
 		if (!csvDir.exists() || !csvDir.isAbsolute()) {
@@ -79,12 +79,19 @@ public class ServerMain {
 
 		ArrayList<File> allImages = FileUtils.getAllImageFiles(imgDir, true);
 
+		int k = 0;
 		for (Iterator<File> i = allImages.iterator(); i.hasNext();) {
 			imgFile = i.next();
 			bufferedImgX = ImageUtils.openImage(imgFile);
-
-			myDescriptor.setImage(bufferedImgX);
-			WriteCSV.writeHistogramLine(imgFile.getName(), myDescriptor.computeHistogram());
+			k++;
+			if (bufferedImgX != null) {
+				myDescriptor.setImage(bufferedImgX);
+				WriteCSV.writeHistogramLine(imgFile.getName(), myDescriptor.computeHistogram());
+			} else {
+				System.out.println("" + k + " .Image " + imgFile.getName() + " is null...");
+			}
 		}
+		
+		WriteCSV.finish();
 	}
 }

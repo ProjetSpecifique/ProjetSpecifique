@@ -9,8 +9,6 @@ public class MyDescriptorFactory {
 		switch (descriptorType) {
 		case AutoColorCorrelogram:
 			return new MyAutoColorCorrelogram(bimg);
-		case BasicFeatures:
-			return new MyBasicFeatures(bimg);
 		case CEDD:
 			return new MyCEDD(bimg);
 		case ColorLayout:
@@ -19,8 +17,6 @@ public class MyDescriptorFactory {
 			return new MyEdgeHistogram(bimg);
 		case FCTH:
 			return new MyFCTH(bimg);
-		case Feature:
-			return new MyFeature(bimg);
 		case FuzzyColorHistogram:
 			return new MyFuzzyColorHistogram(bimg);
 		case FuzzyOpponentHistogram:
@@ -33,22 +29,26 @@ public class MyDescriptorFactory {
 			return new MyJointHistogram(bimg);
 		/* LIRE only defines them but doesn't implement them
 		 * maybe on a future version of lire => we keep them
-		 * case JointOpponentHistogram:
+		case JointOpponentHistogram:
 			return new MyJointOpponentHistogram(bimg); 
+		case Feature:
+			return new MyFeature(bimg);
+		case SurfFeature:
+			return new MySurfFeature(bimg);
+		case MSERFeature:
+			return new MyMSERFeature(bimg);
 		case OpponentHistogram:
 			return new MyOpponentHistogram(bimg);*/
 		case JpegCoefficientHistogram:
 			return new MyJpegCoefficientHistogram(bimg);
-		case MSERFeature:
-			return new MyMSERFeature(bimg);
 		case PHOG:
 			return new MyPHOG(bimg);
 		case ScalableColor:
 			return new MyScalableColor(bimg);
 		case SimpleColorHistogram:
 			return new MySimpleColorHistogram(bimg);
-		case SurfFeature:
-			return new MySurfFeature(bimg);
+		case BasicFeatures:
+			return new MyBasicFeatures(bimg);
 		case Tamura:
 			return new MyTamura(bimg);
 
