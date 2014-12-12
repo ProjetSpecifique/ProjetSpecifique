@@ -14,7 +14,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import static distancestags.Distances.divergenceOfHistogrammes;
-import java.sql.PreparedStatement;
+import org.postgresql.copy.CopyIn;
+import org.postgresql.copy.CopyManager;
+import org.postgresql.core.BaseConnection;
 
 /**
  *
@@ -41,7 +43,7 @@ public class DistancesTags {
                             "  FROM \"cooccurrence\"\n" +
                             "  ORDER BY \"tag1\", \"tag2\";";
             ResultSet rs = stmt.executeQuery( theQuery );
-            
+           
             //Get the list of tag
             List<String> listTag = getListTag(rs);
             
@@ -59,7 +61,7 @@ public class DistancesTags {
             
             //Save in BD
             saveDistanceMatrixInBD(c, listTag, matrixDistance);
-                    
+
             rs.close();
             stmt.close();
             c.close();
@@ -193,49 +195,41 @@ public class DistancesTags {
         System.out.println("CSV written.");
     }
 
+    /*
+     Need the table distancestags empty in DB
+     CREATE TABLE distancestags
+    (
+        tag1 text NOT NULL,
+        tag2 text NOT NULL,
+        distance numeric
+    )
+    */
     public static void saveDistanceMatrixInBD(Connection c, List<String> listTag, List<List<Double>> matrixDistance) throws SQLException{
         System.out.println("Saving in BD...");
         int nbTag = listTag.size();
-        /*for(int j=0; j<nbTag; j++){
-            for(int i=0; i<nbTag; i++){
-                Statement st = null;
-                st = c.createStatement();
-                String query = "UPDATE \"cooccurrence\" " +
-                                "SET \"distance\" = '" + matrixDistance.get(j).get(i) +
-                                "' WHERE tag1 = '" + listTag.get(j) + "'" +
-                                "AND tag2 = '" + listTag.get(i) + "'";
-                st.executeUpdate(query);
-                if (st != null) {
-                    st.close();
-                }
-            }
-            System.out.println((j+1) + "/" + nbTag);
-        }*/
+    
+        StringBuilder sb = new StringBuilder("");
+        CopyManager cm = new CopyManager((BaseConnection) c);
+        CopyIn cpIN = cm.copyIn("COPY distancestags(tag1, tag2, distance) FROM STDIN WITH DELIMITER '|'");
         
-        /*String query = "UPDATE \"cooccurrence\" " +
-                        "SET \"distance\" = ? WHERE tag1 = ? AND tag2 = ?";
-
-        PreparedStatement pstmt = c.prepareStatement(query);
         for(int j=0; j<nbTag; j++){
+            sb.delete(0, sb.length());
             for(int i=0; i<nbTag; i++){
-                pstmt.setDouble(1, matrixDistance.get(j).get(i));
-                pstmt.setString(2, listTag.get(j));
-                pstmt.setString(2, listTag.get(i));
-                pstmt.addBatch();
+                sb.append(listTag.get(j));
+                sb.append('|');
+                sb.append(listTag.get(i));
+                sb.append('|');
+                sb.append(matrixDistance.get(j).get(i));
+                sb.append('\n');
             }
+            byte[] dataBytes = sb.toString().getBytes();
+            cpIN.writeToCopy(dataBytes,0,dataBytes.length);
             System.out.println((j+1) + "/" + nbTag);
         }
-        System.out.println("Executing request...");
-        pstmt.executeBatch();
-        */
+        cpIN.endCopy();
+        c.commit();
         System.out.println("Saved in BD.");
-        
-        
     }
+
 }
 
-/*
- ALTER TABLE cooccurrence
-   ADD COLUMN distance numeric;
-
- */
