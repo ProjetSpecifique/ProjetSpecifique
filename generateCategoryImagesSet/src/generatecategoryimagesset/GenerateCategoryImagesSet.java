@@ -12,9 +12,6 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -34,6 +31,8 @@ public class GenerateCategoryImagesSet {
     private static int nbImageOK = 100;
     private static int nbImageNotOK = 100;
     private static String categoriesFilePath = "categories.csv";
+    private static String outputPath = "output/";
+    private static GeneratorImageSetFactory.GeneratorType generatorType = GeneratorImageSetFactory.GeneratorType.distancesTags;
     
     
     public static void main(String[] args) {
@@ -45,6 +44,9 @@ public class GenerateCategoryImagesSet {
             c = DriverManager.getConnection(url, user, password);
             System.out.println("Opened database successfully");
             
+            //Create the generator
+            GeneratorImageSet genImageSet = GeneratorImageSetFactory.createGenerator(c, generatorType);
+            
             //Load categories with tags from csv file
             List<List<String>> categories = loadCategories(categoriesFilePath);
             
@@ -52,101 +54,22 @@ public class GenerateCategoryImagesSet {
             Iterator<List<String>> iter = categories.iterator(); 
             while (iter.hasNext()) { 
                 List<String> listTag = iter.next();
-                printCSV(listTag.get(0), getImagesOK(c, listTag, nbImageOK), getImagesNotOK(c, listTag, nbImageNotOK));
+                printCSV(listTag.get(0), genImageSet.getImagesOK(listTag, nbImageOK), genImageSet.getImagesNotOK(listTag, nbImageNotOK));
                 //System.out.println(listTag);
             }
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
+            e.printStackTrace();
             System.exit(0);
         }  
     }
     
-    
-    /**
-     * Function to find images with a tag from the parameters list
-     */
-    public static List<String> getImagesOK(Connection c, List<String> listTag, int number) throws SQLException{
-        if(listTag == null || listTag.size() <= 0 || number <= 0) return null;
-        
-        List<String> listImagesId = new ArrayList<>();
-
-        String query =  "       SELECT imageid\n" +
-                        "       FROM \"imagetagfiltred\"\n" +
-                        "	WHERE tag ~ '(^|^.* )" + listTag.get(0) + "($| .*$)'\n";
-        for(int i=1; i<listTag.size(); i++){
-            query +=    "UNION\n" +
-                        "	SELECT imageid\n" +
-                        "	FROM \"imagetagfiltred\"\n" +
-                        "	WHERE tag ~ '(^|^.* )" + listTag.get(i) + "($| .*$)'\n";
-        }
-        query += "LIMIT " + number + ";";
-        System.out.println(query);
-        Statement st = c.createStatement();
-        ResultSet rs = st.executeQuery(query);
-        while (rs.next()) {
-            listImagesId.add(rs.getString(1));
-        }
-        //close stuff
-        rs.close();
-        st.close();
-
-        return listImagesId;
-    }
-    
-    /**
-     * Function to have images without tags from the params list
-     */
-    public static List<String> getImagesNotOK(Connection c, List<String> listTag, int number) throws SQLException{
-        if(listTag == null || listTag.size() <= 0 || number <= 0) return null;
-        
-        List<String> listImagesId = new ArrayList<>();
-        
-        String query =  "       SELECT imageid\n" +
-                        "       FROM \"imagetagfiltred\"\n" +
-                        "	WHERE tag ~ '(^|^.* )" + listTag.get(0) + "($| .*$)'\n";
-        for(int i=1; i<listTag.size(); i++){
-            query +=    "UNION\n" +
-                        "	SELECT imageid\n" +
-                        "	FROM \"imagetagfiltred\"\n" +
-                        "	WHERE tag ~ '(^|^.* )" + listTag.get(i) + "($| .*$)'\n";
-        }
-        
-        query = "SELECT i.id\n" +
-                "FROM \"imagefiltred\" i\n" +
-                "WHERE NOT EXISTS (\n" +
-                "	SELECT NULL\n" +
-                "	FROM \"imagetagfiltred\"\n" +
-                "	WHERE i.id = imageId \n" +
-                "	AND tag IN (SELECT DISTINCT tag\n" +
-                "FROM \"imagetagfiltred\"\n" +
-                "WHERE imageid IN (\n" + query +
-                "	) EXCEPT(SELECT tag\n" +
-                "           FROM \"imagetagfiltred\"\n" +
-                "           GROUP BY tag\n" +
-                "	HAVING count(imageid) > 10000\n" +
-                "	)\n" +
-                ")\n" +
-                ") LIMIT " + number + ";";
-        
-        System.out.println(query);
-        Statement st = c.createStatement();
-        ResultSet rs = st.executeQuery(query);
-        while (rs.next()) {
-            listImagesId.add(rs.getString(1));
-        }
-        //close stuff
-        rs.close();
-        st.close();
-
-        return listImagesId;
-    }
-    
-    /**
+    /*
      * Function to write the CSV file with 2 list of image id, ok and not ok
      * ok have 1, not ok have 0 in the second column
      */
     public static void printCSV(String filename, List<String> listImageIdOK, List<String> listImageIdNotOK) throws FileNotFoundException{
-        PrintStream file = new PrintStream(new FileOutputStream(filename + ".csv", false));
+        PrintStream file = new PrintStream(new FileOutputStream(outputPath + filename + ".csv", false));
 
 
         Iterator<String> iter = listImageIdOK.iterator(); 
