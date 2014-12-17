@@ -6,16 +6,17 @@
 <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
 </config>
 <config key="model">
-<config key="classcol_Internals">
-<entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-<entry key="EnabledStatus" type="xboolean" value="true"/>
-</config>
-<entry key="classcol" type="xstring" value="TermClass"/>
+<entry key="kernel_type" type="xstring" value="Polynomial"/>
 <config key="c_parameter_Internals">
 <entry key="SettingsModelID" type="xstring" value="SMID_double"/>
 <entry key="EnabledStatus" type="xboolean" value="true"/>
 </config>
 <entry key="c_parameter" type="xdouble" value="1.0"/>
+<config key="classcol_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="classcol" type="xstring" value="TermClass"/>
 <config key="kernel_param_Bias_Internals">
 <entry key="SettingsModelID" type="xstring" value="SMID_double"/>
 <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -46,7 +47,6 @@
 <entry key="EnabledStatus" type="xboolean" value="true"/>
 </config>
 <entry key="kernel_param_sigma" type="xdouble" value="0.1"/>
-<entry key="kernel_type" type="xstring" value="Polynomial"/>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
 <entry key="state" type="xstring" value="EXECUTED"/>
