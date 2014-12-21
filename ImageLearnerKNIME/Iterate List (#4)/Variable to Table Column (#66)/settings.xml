@@ -10,15 +10,22 @@
 <entry key="filter-type" type="xstring" value="STANDARD"/>
 <config key="included_names">
 <entry key="array-size" type="xint" value="2"/>
-<entry key="0" type="xstring" value="TermCSV"/>
-<entry key="1" type="xstring" value="HistogramCSV"/>
+<entry key="0" type="xstring" value="TermCSVName"/>
+<entry key="1" type="xstring" value="HistogramName"/>
 </config>
 <config key="excluded_names">
-<entry key="array-size" type="xint" value="4"/>
-<entry key="0" type="xstring" value="currentIteration"/>
-<entry key="1" type="xstring" value="maxIterations"/>
-<entry key="2" type="xstring" value="RowID"/>
-<entry key="3" type="xstring" value="knime.workspace"/>
+<entry key="array-size" type="xint" value="11"/>
+<entry key="0" type="xstring" value="treeModelPath"/>
+<entry key="1" type="xstring" value="libsvmModelPath"/>
+<entry key="2" type="xstring" value="sotaModelPath"/>
+<entry key="3" type="xstring" value="svmModelPath"/>
+<entry key="4" type="xstring" value="bayesModelPath"/>
+<entry key="5" type="xstring" value="currentIteration"/>
+<entry key="6" type="xstring" value="maxIterations"/>
+<entry key="7" type="xstring" value="TermCSV"/>
+<entry key="8" type="xstring" value="HistogramCSV"/>
+<entry key="9" type="xstring" value="RowID"/>
+<entry key="10" type="xstring" value="knime.workspace"/>
 </config>
 <entry key="enforce_option" type="xstring" value="EnforceInclusion"/>
 <config key="name_pattern">
@@ -29,7 +36,7 @@
 </config>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
-<entry key="state" type="xstring" value="EXECUTED"/>
+<entry key="state" type="xstring" value="IDLE"/>
 <entry key="factory" type="xstring" value="org.knime.base.node.flowvariable.appendvariabletotable2.AppendVariableToTable2NodeFactory"/>
 <entry key="node-name" type="xstring" value="Variable to Table Column"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -38,15 +45,12 @@
 <entry key="node-bundle-version" type="xstring" value="2.10.4.0044920"/>
 <config key="factory_settings"/>
 <entry key="name" type="xstring" value="Variable to Table Column"/>
-<entry key="hasContent" type="xboolean" value="true"/>
+<entry key="hasContent" type="xboolean" value="false"/>
 <entry key="isInactive" type="xboolean" value="false"/>
 <config key="ports">
 <config key="port_1">
 <entry key="index" type="xint" value="1"/>
-<entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
-<entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-<entry key="port_object_summary" type="xstring" value="Rows: 1, Cols: 7"/>
-<entry key="port_dir_location" type="xstring" value="port_1"/>
+<entry key="port_dir_location" type="xstring" isnull="true" value=""/>
 </config>
 </config>
 <config key="filestores">

@@ -7,7 +7,7 @@
 <entry key="authored-by" type="xstring" value="Home"/>
 <entry key="authored-when" type="xstring" value="2014-12-15 09:55:14 -0800"/>
 <entry key="lastEdited-by" type="xstring" value="So"/>
-<entry key="lastEdited-when" type="xstring" value="2014-12-17 15:05:33 -0800"/>
+<entry key="lastEdited-when" type="xstring" value="2014-12-20 17:49:38 -0800"/>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
 <entry key="state" type="xstring" value="IDLE"/>
@@ -55,7 +55,7 @@
 <config key="annotation_3">
 <entry key="text" type="xstring" value="! This is the node to execute !"/>
 <entry key="bgcolor" type="xint" value="12632256"/>
-<entry key="x-coordinate" type="xint" value="-162"/>
+<entry key="x-coordinate" type="xint" value="-292"/>
 <entry key="y-coordinate" type="xint" value="114"/>
 <entry key="width" type="xint" value="173"/>
 <entry key="height" type="xint" value="166"/>
@@ -72,17 +72,17 @@
 </config>
 </config>
 <config key="annotation_4">
-<entry key="text" type="xstring" value="Configurations:%%00013%%00010%%00013%%000101. &quot;Loop through Term CSV&quot; -&gt; set the path of the folder containing csv for the terms%%00013%%000102. &quot;Loop through Histogram CSV&quot; -&gt; set the path of the folder containing csv with histograms%%00013%%000103. &quot;Write Results&quot; -&gt; set the path for the result csv file %%00013%%00010%%00013%%00010Execution:%%00013%%00010Step 1: Configure%%00013%%00010Step 2: Execute &quot;Write Results&quot;"/>
+<entry key="text" type="xstring" value="Configurations:%%00013%%00010%%00013%%000101. &quot;Loop through Term CSV&quot; -&gt; set the path of the folder containing csv for the terms%%00013%%000102. &quot;Loop through Histogram CSV&quot; -&gt; set the path of the folder containing csv with histograms%%00013%%000103. &quot;Write Results&quot; (inside &quot;Iterate List&quot;)-&gt; set the path for the result csv file %%00013%%000104. &quot;Java Snippet&quot; (inside &quot;Iterate List&quot;) -&gt; set the folder path where the pmml models will be saved%%00013%%00010%%00013%%00010Execution:%%00013%%00010Step 1: Configure%%00013%%00010Step 2: Execute &quot;Write Results&quot;"/>
 <entry key="bgcolor" type="xint" value="16763620"/>
-<entry key="x-coordinate" type="xint" value="-812"/>
+<entry key="x-coordinate" type="xint" value="-819"/>
 <entry key="y-coordinate" type="xint" value="411"/>
-<entry key="width" type="xint" value="577"/>
-<entry key="height" type="xint" value="140"/>
+<entry key="width" type="xint" value="587"/>
+<entry key="height" type="xint" value="155"/>
 <entry key="alignment" type="xstring" value="LEFT"/>
 <config key="styles">
 <config key="style_0">
 <entry key="start" type="xint" value="0"/>
-<entry key="length" type="xint" value="325"/>
+<entry key="length" type="xint" value="450"/>
 <entry key="fontname" type="xstring" isnull="true" value=""/>
 <entry key="fontstyle" type="xint" value="1"/>
 <entry key="fontsize" type="xint" value="-1"/>
@@ -357,7 +357,7 @@
 <config key="ui_settings">
 <config key="extrainfo.node.bounds">
 <entry key="array-size" type="xint" value="4"/>
-<entry key="0" type="xint" value="-805"/>
+<entry key="0" type="xint" value="-894"/>
 <entry key="1" type="xint" value="74"/>
 <entry key="2" type="xint" value="50"/>
 <entry key="3" type="xint" value="79"/>
@@ -373,7 +373,7 @@
 <config key="ui_settings">
 <config key="extrainfo.node.bounds">
 <entry key="array-size" type="xint" value="4"/>
-<entry key="0" type="xint" value="-805"/>
+<entry key="0" type="xint" value="-893"/>
 <entry key="1" type="xint" value="268"/>
 <entry key="2" type="xint" value="50"/>
 <entry key="3" type="xint" value="79"/>
@@ -460,22 +460,6 @@
 </config>
 </config>
 </config>
-<config key="node_49">
-<entry key="id" type="xint" value="49"/>
-<entry key="node_settings_file" type="xstring" value="CSV Writer (#49)/settings.xml"/>
-<entry key="node_is_meta" type="xboolean" value="false"/>
-<entry key="node_type" type="xstring" value="NativeNode"/>
-<entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
-<config key="ui_settings">
-<config key="extrainfo.node.bounds">
-<entry key="array-size" type="xint" value="4"/>
-<entry key="0" type="xint" value="-99"/>
-<entry key="1" type="xint" value="165"/>
-<entry key="2" type="xint" value="62"/>
-<entry key="3" type="xint" value="79"/>
-</config>
-</config>
-</config>
 <config key="node_67">
 <entry key="id" type="xint" value="67"/>
 <entry key="node_settings_file" type="xstring" value="Java Snippet (#67)/settings.xml"/>
@@ -488,6 +472,38 @@
 <entry key="0" type="xint" value="-236"/>
 <entry key="1" type="xint" value="165"/>
 <entry key="2" type="xint" value="70"/>
+<entry key="3" type="xint" value="79"/>
+</config>
+</config>
+</config>
+<config key="node_68">
+<entry key="id" type="xint" value="68"/>
+<entry key="node_settings_file" type="xstring" value="URL to File Path (#68)/settings.xml"/>
+<entry key="node_is_meta" type="xboolean" value="false"/>
+<entry key="node_type" type="xstring" value="NativeNode"/>
+<entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+<config key="ui_settings">
+<config key="extrainfo.node.bounds">
+<entry key="array-size" type="xint" value="4"/>
+<entry key="0" type="xint" value="-804"/>
+<entry key="1" type="xint" value="74"/>
+<entry key="2" type="xint" value="88"/>
+<entry key="3" type="xint" value="79"/>
+</config>
+</config>
+</config>
+<config key="node_69">
+<entry key="id" type="xint" value="69"/>
+<entry key="node_settings_file" type="xstring" value="URL to File Path (#69)/settings.xml"/>
+<entry key="node_is_meta" type="xboolean" value="false"/>
+<entry key="node_type" type="xstring" value="NativeNode"/>
+<entry key="ui_classname" type="xstring" value="org.knime.core.node.workflow.NodeUIInformation"/>
+<config key="ui_settings">
+<config key="extrainfo.node.bounds">
+<entry key="array-size" type="xint" value="4"/>
+<entry key="0" type="xint" value="-804"/>
+<entry key="1" type="xint" value="268"/>
+<entry key="2" type="xint" value="88"/>
 <entry key="3" type="xint" value="79"/>
 </config>
 </config>
@@ -574,13 +590,13 @@
 </config>
 <config key="connection_13">
 <entry key="sourceID" type="xint" value="33"/>
-<entry key="destID" type="xint" value="42"/>
+<entry key="destID" type="xint" value="68"/>
 <entry key="sourcePort" type="xint" value="1"/>
 <entry key="destPort" type="xint" value="1"/>
 </config>
 <config key="connection_14">
 <entry key="sourceID" type="xint" value="39"/>
-<entry key="destID" type="xint" value="44"/>
+<entry key="destID" type="xint" value="69"/>
 <entry key="sourcePort" type="xint" value="1"/>
 <entry key="destPort" type="xint" value="1"/>
 </config>
@@ -615,8 +631,14 @@
 <entry key="destPort" type="xint" value="0"/>
 </config>
 <config key="connection_20">
-<entry key="sourceID" type="xint" value="67"/>
-<entry key="destID" type="xint" value="49"/>
+<entry key="sourceID" type="xint" value="68"/>
+<entry key="destID" type="xint" value="42"/>
+<entry key="sourcePort" type="xint" value="1"/>
+<entry key="destPort" type="xint" value="1"/>
+</config>
+<config key="connection_21">
+<entry key="sourceID" type="xint" value="69"/>
+<entry key="destID" type="xint" value="44"/>
 <entry key="sourcePort" type="xint" value="1"/>
 <entry key="destPort" type="xint" value="1"/>
 </config>
