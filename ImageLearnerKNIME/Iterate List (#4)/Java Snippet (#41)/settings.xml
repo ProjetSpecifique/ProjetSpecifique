@@ -40,39 +40,51 @@
 </config>
 <config key="Variable_6">
 <entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="RPropModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value=""/>
+</config>
+<config key="Variable_7">
+<entry key="type" type="xstring" value="variable"/>
 <entry key="name" type="xstring" value="bayesModelPath"/>
 <entry key="class" type="xstring" value="STRING"/>
 <entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\bayes_coastline_AutoColorCorrelogram.pmml"/>
 </config>
-<config key="Variable_7">
+<config key="Variable_8">
 <entry key="type" type="xstring" value="variable"/>
 <entry key="name" type="xstring" value="svmModelPath"/>
 <entry key="class" type="xstring" value="STRING"/>
 <entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\svm_coastline_AutoColorCorrelogram.pmml"/>
 </config>
-<config key="Variable_8">
+<config key="Variable_9">
 <entry key="type" type="xstring" value="variable"/>
 <entry key="name" type="xstring" value="libsvmModelPath"/>
 <entry key="class" type="xstring" value="STRING"/>
 <entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\libsvm_coastline_AutoColorCorrelogram.zip"/>
 </config>
-<config key="Variable_9">
+<config key="Variable_10">
 <entry key="type" type="xstring" value="variable"/>
 <entry key="name" type="xstring" value="treeModelPath"/>
 <entry key="class" type="xstring" value="STRING"/>
 <entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\tree_coastline_AutoColorCorrelogram.pmml"/>
 </config>
-<config key="Variable_10">
+<config key="Variable_11">
 <entry key="type" type="xstring" value="variable"/>
 <entry key="name" type="xstring" value="sotaEuclModelPath"/>
 <entry key="class" type="xstring" value="STRING"/>
 <entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\sotaEucl_coastline_AutoColorCorrelogram.zip"/>
 </config>
-<config key="Variable_11">
+<config key="Variable_12">
 <entry key="type" type="xstring" value="variable"/>
 <entry key="name" type="xstring" value="sotaCosModelPath"/>
 <entry key="class" type="xstring" value="STRING"/>
 <entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\sotaCos_coastline_AutoColorCorrelogram.zip"/>
+</config>
+<config key="Variable_13">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="RPropModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\rProp_coastline_AutoColorCorrelogram.zip"/>
 </config>
 </config>
 <config key="internal_node_subsettings">
@@ -81,7 +93,7 @@
 <config key="model">
 <entry key="scriptImports" type="xstring" value="// Your custom imports:%%00010import org.knime.core.node.NodeLogger;%%00010"/>
 <entry key="scriptFields" type="xstring" value="// Your custom variables:%%00010private static final NodeLogger logger = NodeLogger.getLogger(Object.class);%%00010private String folderPath = &quot;C:\\Users\\So\\Desktop\\Models_PMML\\&quot;;"/>
-<entry key="scriptBody" type="xstring" value="// Enter your code here:%%00010%%00010/*the expression is applied for ALL rows%%00010  I just want the print once %%00010(for the instance that's the solution)%%00010*/%%00010if(ROWINDEX == 1){%%00010%%00009logger.warn(&quot;--------------------- &quot;);%%00010%%00009logger.warn(&quot;Currrent Iteration : &quot; + v_currentIteration);%%00010%%00009logger.warn(&quot;Number of Rows after join : &quot; + ROWCOUNT);%%00010%%00009logger.warn(&quot;Term csv : &quot; + v_TermCSV);%%00010%%00009logger.warn(&quot;Histogram csv : &quot; + v_HistogramCSV);%%00010%%00009logger.warn(&quot;--------------------- \n\n&quot;);%%00010}%%00010%%00010%%00010out_bayesModelPath = folderPath + &quot;bayes_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.pmml&quot;;%%00010out_svmModelPath = folderPath + &quot;svm_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.pmml&quot;; %%00010out_libsvmModelPath = folderPath + &quot;libsvm_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.zip&quot;;%%00010out_treeModelPath = folderPath + &quot;tree_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.pmml&quot;;%%00010out_sotaEuclModelPath = folderPath + &quot;sotaEucl_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.zip&quot;;%%00010out_sotaCosModelPath = folderPath + &quot;sotaCos_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.zip&quot;;%%00010%%00010%%00010"/>
+<entry key="scriptBody" type="xstring" value="// Enter your code here:%%00010%%00010/*the expression is applied for ALL rows%%00010  I just want the print once %%00010(for the instance that's the solution)%%00010*/%%00010if(ROWINDEX == 1){%%00010%%00009logger.warn(&quot;--------------------- &quot;);%%00010%%00009logger.warn(&quot;Currrent Iteration : &quot; + v_currentIteration);%%00010%%00009logger.warn(&quot;Number of Rows after join : &quot; + ROWCOUNT);%%00010%%00009logger.warn(&quot;Term csv : &quot; + v_TermCSV);%%00010%%00009logger.warn(&quot;Histogram csv : &quot; + v_HistogramCSV);%%00010%%00009logger.warn(&quot;--------------------- \n\n&quot;);%%00010}%%00010%%00010%%00010out_bayesModelPath = folderPath + &quot;bayes_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.pmml&quot;;%%00010out_svmModelPath = folderPath + &quot;svm_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.pmml&quot;; %%00010out_libsvmModelPath = folderPath + &quot;libsvm_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.zip&quot;;%%00010out_treeModelPath = folderPath + &quot;tree_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.pmml&quot;;%%00010out_sotaEuclModelPath = folderPath + &quot;sotaEucl_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.zip&quot;;%%00010out_sotaCosModelPath = folderPath + &quot;sotaCos_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.zip&quot;;%%00010out_RPropModelPath = folderPath + &quot;rProp_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.zip&quot;;%%00010%%00010%%00010"/>
 <config key="jarFiles">
 <entry key="array-size" type="xint" value="0"/>
 </config>
@@ -89,7 +101,7 @@
 <entry key="array-size" type="xint" value="0"/>
 </config>
 <config key="outVars">
-<entry key="array-size" type="xint" value="6"/>
+<entry key="array-size" type="xint" value="7"/>
 <config key="0">
 <entry key="Name" type="xstring" value="bayesModelPath"/>
 <entry key="JavaName" type="xstring" value="out_bayesModelPath"/>
@@ -128,6 +140,13 @@
 <config key="5">
 <entry key="Name" type="xstring" value="sotaCosModelPath"/>
 <entry key="JavaName" type="xstring" value="out_sotaCosModelPath"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+<entry key="replaceExisting" type="xboolean" value="false"/>
+</config>
+<config key="6">
+<entry key="Name" type="xstring" value="RPropModelPath"/>
+<entry key="JavaName" type="xstring" value="out_RPropModelPath"/>
 <entry key="JavaType" type="xstring" value="java.lang.String"/>
 <entry key="Type" type="xstring" value="STRING"/>
 <entry key="replaceExisting" type="xboolean" value="false"/>
