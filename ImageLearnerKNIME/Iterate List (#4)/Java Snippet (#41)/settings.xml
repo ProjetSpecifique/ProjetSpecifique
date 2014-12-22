@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+<entry key="node_file" type="xstring" value="settings.xml"/>
+<config key="flow_stack">
+<config key="Variable_0">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="bayesModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value=""/>
+</config>
+<config key="Variable_1">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="svmModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value=""/>
+</config>
+<config key="Variable_2">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="libsvmModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value=""/>
+</config>
+<config key="Variable_3">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="treeModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value=""/>
+</config>
+<config key="Variable_4">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="sotaEuclModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value=""/>
+</config>
+<config key="Variable_5">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="sotaCosModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value=""/>
+</config>
+<config key="Variable_6">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="RPropModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value=""/>
+</config>
+<config key="Variable_7">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="bayesModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\bayes_water_Tamura.pmml"/>
+</config>
+<config key="Variable_8">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="svmModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\svm_water_Tamura.pmml"/>
+</config>
+<config key="Variable_9">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="libsvmModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\libsvm_water_Tamura.zip"/>
+</config>
+<config key="Variable_10">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="treeModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\tree_water_Tamura.pmml"/>
+</config>
+<config key="Variable_11">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="sotaEuclModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\sotaEucl_water_Tamura.zip"/>
+</config>
+<config key="Variable_12">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="sotaCosModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\sotaCos_water_Tamura.zip"/>
+</config>
+<config key="Variable_13">
+<entry key="type" type="xstring" value="variable"/>
+<entry key="name" type="xstring" value="RPropModelPath"/>
+<entry key="class" type="xstring" value="STRING"/>
+<entry key="value" type="xstring" value="C:\Users\So\Desktop\Models_PMML\rProp_water_Tamura.pmml"/>
+</config>
+</config>
+<config key="internal_node_subsettings">
+<entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+</config>
+<config key="model">
+<entry key="scriptImports" type="xstring" value="// Your custom imports:%%00010import org.knime.core.node.NodeLogger;%%00010"/>
+<entry key="scriptFields" type="xstring" value="// Your custom variables:%%00010private static final NodeLogger logger = NodeLogger.getLogger(Object.class);%%00010private String folderPath = &quot;C:\\Users\\So\\Desktop\\Models_PMML\\&quot;;"/>
+<entry key="scriptBody" type="xstring" value="// Enter your code here:%%00010%%00010/*the expression is applied for ALL rows%%00010  I just want the print once %%00010(for the instance that's the solution)%%00010*/%%00010if(ROWINDEX == 1){%%00010%%00009logger.warn(&quot;--------------------- &quot;);%%00010%%00009logger.warn(&quot;Currrent Iteration : &quot; + v_currentIteration);%%00010%%00009logger.warn(&quot;Number of Rows after join : &quot; + ROWCOUNT);%%00010%%00009logger.warn(&quot;Term csv : &quot; + v_TermCSV);%%00010%%00009logger.warn(&quot;Histogram csv : &quot; + v_HistogramCSV);%%00010%%00009logger.warn(&quot;--------------------- \n\n&quot;);%%00010}%%00010%%00010%%00010out_bayesModelPath = folderPath + &quot;bayes_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.pmml&quot;;%%00010out_svmModelPath = folderPath + &quot;svm_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.pmml&quot;; %%00010out_libsvmModelPath = folderPath + &quot;libsvm_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.zip&quot;;%%00010out_treeModelPath = folderPath + &quot;tree_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.pmml&quot;;%%00010out_sotaEuclModelPath = folderPath + &quot;sotaEucl_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.zip&quot;;%%00010out_sotaCosModelPath = folderPath + &quot;sotaCos_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.zip&quot;;%%00010out_RPropModelPath = folderPath + &quot;rProp_&quot;+ v_TermCSVName + &quot;_&quot; + v_HistogramName + &quot;.pmml&quot;;%%00010%%00010%%00010"/>
+<config key="jarFiles">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="outCols">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="outVars">
+<entry key="array-size" type="xint" value="7"/>
+<config key="0">
+<entry key="Name" type="xstring" value="bayesModelPath"/>
+<entry key="JavaName" type="xstring" value="out_bayesModelPath"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+<entry key="replaceExisting" type="xboolean" value="false"/>
+</config>
+<config key="1">
+<entry key="Name" type="xstring" value="svmModelPath"/>
+<entry key="JavaName" type="xstring" value="out_svmModelPath"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+<entry key="replaceExisting" type="xboolean" value="false"/>
+</config>
+<config key="2">
+<entry key="Name" type="xstring" value="libsvmModelPath"/>
+<entry key="JavaName" type="xstring" value="out_libsvmModelPath"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+<entry key="replaceExisting" type="xboolean" value="false"/>
+</config>
+<config key="3">
+<entry key="Name" type="xstring" value="treeModelPath"/>
+<entry key="JavaName" type="xstring" value="out_treeModelPath"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+<entry key="replaceExisting" type="xboolean" value="false"/>
+</config>
+<config key="4">
+<entry key="Name" type="xstring" value="sotaEuclModelPath"/>
+<entry key="JavaName" type="xstring" value="out_sotaEuclModelPath"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+<entry key="replaceExisting" type="xboolean" value="false"/>
+</config>
+<config key="5">
+<entry key="Name" type="xstring" value="sotaCosModelPath"/>
+<entry key="JavaName" type="xstring" value="out_sotaCosModelPath"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+<entry key="replaceExisting" type="xboolean" value="false"/>
+</config>
+<config key="6">
+<entry key="Name" type="xstring" value="RPropModelPath"/>
+<entry key="JavaName" type="xstring" value="out_RPropModelPath"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+<entry key="replaceExisting" type="xboolean" value="false"/>
+</config>
+</config>
+<config key="inCols">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="inVars">
+<entry key="array-size" type="xint" value="5"/>
+<config key="0">
+<entry key="Name" type="xstring" value="currentIteration"/>
+<entry key="JavaName" type="xstring" value="v_currentIteration"/>
+<entry key="JavaType" type="xstring" value="java.lang.Integer"/>
+<entry key="Type" type="xstring" value="INTEGER"/>
+</config>
+<config key="1">
+<entry key="Name" type="xstring" value="TermCSV"/>
+<entry key="JavaName" type="xstring" value="v_TermCSV"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+</config>
+<config key="2">
+<entry key="Name" type="xstring" value="HistogramCSV"/>
+<entry key="JavaName" type="xstring" value="v_HistogramCSV"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+</config>
+<config key="3">
+<entry key="Name" type="xstring" value="TermCSVName"/>
+<entry key="JavaName" type="xstring" value="v_TermCSVName"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+</config>
+<config key="4">
+<entry key="Name" type="xstring" value="HistogramName"/>
+<entry key="JavaName" type="xstring" value="v_HistogramName"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+</config>
+</config>
+<entry key="version" type="xstring" value="version 1.x"/>
+<entry key="templateUUID" type="xstring" isnull="true" value=""/>
+<entry key="runOnExecute" type="xboolean" value="false"/>
+</config>
+<config key="nodeAnnotation">
+<entry key="text" type="xstring" value="1. Print Infos %%00013%%00010to the console%%00013%%000102. Add flow variable%%00013%%00010for the path %%00013%%00010of pmml models%%00013%%00010NO No table modifs"/>
+<entry key="bgcolor" type="xint" value="16777215"/>
+<entry key="x-coordinate" type="xint" value="711"/>
+<entry key="y-coordinate" type="xint" value="287"/>
+<entry key="width" type="xint" value="106"/>
+<entry key="height" type="xint" value="90"/>
+<entry key="alignment" type="xstring" value="CENTER"/>
+<config key="styles"/>
+</config>
+<entry key="customDescription" type="xstring" isnull="true" value=""/>
+<entry key="state" type="xstring" value="EXECUTED"/>
+<entry key="factory" type="xstring" value="org.knime.base.node.jsnippet.JavaSnippetNodeFactory"/>
+<entry key="node-name" type="xstring" value="Java Snippet"/>
+<entry key="node-bundle-name" type="xstring" value="KNIME Java Snippet Nodes"/>
+<entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.jsnippets"/>
+<entry key="node-bundle-vendor" type="xstring" value="KNIME GmbH, Konstanz, Germany"/>
+<entry key="node-bundle-version" type="xstring" value="2.10.1.0043833"/>
+<config key="factory_settings"/>
+<entry key="name" type="xstring" value="Java Snippet"/>
+<entry key="hasContent" type="xboolean" value="true"/>
+<entry key="isInactive" type="xboolean" value="false"/>
+<config key="ports">
+<config key="port_1">
+<entry key="index" type="xint" value="1"/>
+<entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+<entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+<entry key="port_object_summary" type="xstring" value="Rows: 65, Cols: 19"/>
+<entry key="port_dir_location" type="xstring" value="port_1"/>
+</config>
+</config>
+<config key="filestores">
+<entry key="file_store_location" type="xstring" isnull="true" value=""/>
+<entry key="file_store_id" type="xstring" isnull="true" value=""/>
+</config>
+</config>
