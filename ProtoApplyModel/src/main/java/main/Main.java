@@ -11,7 +11,7 @@ import evaluators.MyNaiveBayesEvaluator;
 
 public class Main {
 
-	public static String imagePath = "../images/img1.JPG";
+	public static String imagePath = "../images/img2.png";
 
 	public static void main(String[] args) throws Exception {
 		System.out.println("--- Start ---");

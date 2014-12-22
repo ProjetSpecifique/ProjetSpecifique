@@ -63,7 +63,9 @@ public class MyNaiveBayesEvaluator {
 
 		for (FieldName activeField : activeFields) {
 
-			index = activeFields.indexOf(activeField);
+			index = Integer.parseInt(activeField.toString().substring(3)) - 1;
+			// index = activeFields.indexOf(index) - no correlation
+			//System.out.println(activeField + " " + index);
 			arguments.put(activeField, bayesEvaluator.prepare(activeField, histogram[index]));
 
 		}
