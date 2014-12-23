@@ -18,11 +18,14 @@ public class Main {
 
 		simpleExecution("../images/img1.JPG", MyDescriptorType.AutoColorCorrelogram, MyLearnerType.rProp);
 		System.out.println();
-		
-		simpleExecution("../images/img2.JPG", MyDescriptorType.AutoColorCorrelogram, MyLearnerType.rProp);
+
+		simpleExecution("../images/img2.JPG", MyDescriptorType.JointHistogram, MyLearnerType.svm);
 		System.out.println();
-		
+
 		simpleExecution("../images/img2.JPG", MyDescriptorType.CEDD, MyLearnerType.tree);
+		System.out.println();
+
+		simpleExecution("../images/img3.png", MyDescriptorType.AutoColorCorrelogram, MyLearnerType.rProp);
 
 		System.out.println("--- End ---");
 
@@ -31,7 +34,12 @@ public class Main {
 	private static void simpleExecution(String imagePath, MyDescriptorType descriptorType, MyLearnerType learnerType)
 			throws Exception {
 		/* 1. init image */
-		BufferedImage image = ImageIO.read(Main.class.getResourceAsStream(imagePath));
+		BufferedImage image;
+		try {
+			image = ImageIO.read(Main.class.getResourceAsStream(imagePath));
+		} catch (Exception e) {
+			throw new Exception("Cannot load image at : " + imagePath);
+		}
 
 		/* 2. comoute histogram */
 		MyDescriptor myDescriptor = MyDescriptorFactory.buildDescriptor(descriptorType, image);
