@@ -20,8 +20,8 @@ function loadCsv(){
 		displayTableImage(images.imagesNotOk, 'tableImageNotOk', 'imageNotOk');
 
 		//Display cloud of tags
-		$("#tagCloudOk").jQCloud(calculateTagsStats(images.imagesOk));
-		$("#tagCloudNotOk").jQCloud(calculateTagsStats(images.imagesNotOk));
+		displayTagCloud(images.imagesOk, "tagCloudOk");
+		displayTagCloud(images.imagesNotOk, "tagCloudNotOk");
 	});
 }
 
@@ -43,6 +43,12 @@ function displayTableImage(listImage, idTable, classImage){
 							"<p class='idImage'>" + listImage[i].imageId + "</p></span>" + 
 						 "</td>");
 	}
+}
+
+function displayTagCloud(listImage, idTagCloud){
+	var tagCloud = $('#' + idTagCloud);
+	tagCloud.empty();
+	tagCloud.jQCloud(calculateTagsStats(listImage));
 }
 /*
 	Load a file from the input element with id 'fileInputId'
