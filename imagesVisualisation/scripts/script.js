@@ -3,7 +3,7 @@
 Parameters
 */
 var nbImagePerlign = 10;
-var imagesPath = "getty_imagesSmall/";
+var imagesPath = "images/";
 
 
 /*
@@ -11,28 +11,45 @@ var imagesPath = "getty_imagesSmall/";
 */
 function loadCsv(){
 	loadFile('fileInputCsv', 'csv', function(data){
-		var listImage = parseCsv(data);
+		
+		//Load images from csv
+		var images = parseCsv(data);
 
-		var table = $('#tableImage');
-		var tableLign = null;
+		//Display table of images
+		displayTableImage(images.imagesOk, 'tableImageOk', 'imageOk');
+		displayTableImage(images.imagesNotOk, 'tableImageNotOk', 'imageNotOk');
 
-		table.empty();
-		var lignId = 0;
-		for(var i=0; i<listImage.length; i++){
-			if(i%nbImagePerlign == 0){
-				lignId++;
-				table.append("<tr id='lign_" + lignId + "' class='tableLign'></tr>");
-				tableLign = $('#lign_' + lignId);
-			}
-			tableLign.append("<td class='image" + (listImage[i].isOk ? "Ok":"NotOk") + "'>" +
-								"<img class='image' src='" + imagesPath + listImage[i].imageId + ".jpg'/>" +
-								"<p class='idImage'>" + listImage[i].imageId + "</p>" + 
-							 "</td>");
-		}
+		//Display cloud of tags
+		displayTagCloud(images.imagesOk, "tagCloudOk");
+		displayTagCloud(images.imagesNotOk, "tagCloudNotOk");
 	});
 }
 
+function displayTableImage(listImage, idTable, classImage){
+	//Display table of images
+	var table = $('#' + idTable);
+	var tableLign = null;
 
+	table.empty();
+	var lignId = 0;
+	for(var i=0; i<listImage.length; i++){
+		if(i%nbImagePerlign == 0){
+			lignId++;
+			table.append("<tr id='lign_" + idTable + "_" + lignId + "' class='tableLign'></tr>");
+			tableLign = $('#lign_' + idTable + "_" + lignId);
+		}
+		tableLign.append("<td class='" + classImage + "'>" +
+							"<span title='" + listImage[i].tags + "'><img class='image' src='" + imagesPath + listImage[i].imageId + ".jpg'/>" +
+							"<p class='idImage'>" + listImage[i].imageId + "</p></span>" + 
+						 "</td>");
+	}
+}
+
+function displayTagCloud(listImage, idTagCloud){
+	var tagCloud = $('#' + idTagCloud);
+	tagCloud.empty();
+	tagCloud.jQCloud(calculateTagsStats(listImage));
+}
 /*
 	Load a file from the input element with id 'fileInputId'
 	If ext not null, check if the extension is 'ext'

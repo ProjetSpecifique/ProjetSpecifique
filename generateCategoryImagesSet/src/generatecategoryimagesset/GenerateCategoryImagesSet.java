@@ -25,14 +25,14 @@ public class GenerateCategoryImagesSet {
 
     /*Parameters*/
     private static char separatorCSV = ';';
-    private static String url = "jdbc:postgresql://localhost:5432/BDClean";
+    private static String url = "jdbc:postgresql://localhost:5432/BDImageBig";
     private static String user = "utilisateur";
     private static String password = "utilisateur";
     private static int nbImageOK = 100;
     private static int nbImageNotOK = 100;
     private static String categoriesFilePath = "categories.csv";
     private static String outputPath = "output/";
-    private static GeneratorImageSetFactory.GeneratorType generatorType = GeneratorImageSetFactory.GeneratorType.distancesTags;
+    private static GeneratorImageSetFactory.GeneratorType generatorType = GeneratorImageSetFactory.GeneratorType.SQLRequest;
     
     
     public static void main(String[] args) {
@@ -47,6 +47,9 @@ public class GenerateCategoryImagesSet {
             //Create the generator
             GeneratorImageSet genImageSet = GeneratorImageSetFactory.createGenerator(c, generatorType);
             
+            //Create the CSV printer
+            CSVPrinter csvPrinter = new CSVPrinter(outputPath, separatorCSV);
+            
             //Load categories with tags from csv file
             List<List<String>> categories = loadCategories(categoriesFilePath);
             
@@ -54,7 +57,10 @@ public class GenerateCategoryImagesSet {
             Iterator<List<String>> iter = categories.iterator(); 
             while (iter.hasNext()) { 
                 List<String> listTag = iter.next();
-                printCSV(listTag.get(0), genImageSet.getImagesOK(listTag, nbImageOK), genImageSet.getImagesNotOK(listTag, nbImageNotOK));
+                csvPrinter.printCSVWithTag(listTag.get(0), 
+                        ImageWithTags.getListImageFromListString(c, genImageSet.getImagesOK(listTag, nbImageOK), true),
+                        ImageWithTags.getListImageFromListString(c, genImageSet.getImagesNotOK(listTag, nbImageNotOK), false)
+                        );
                 //System.out.println(listTag);
             }
         } catch (Exception e) {
@@ -64,29 +70,7 @@ public class GenerateCategoryImagesSet {
         }  
     }
     
-    /*
-     * Function to write the CSV file with 2 list of image id, ok and not ok
-     * ok have 1, not ok have 0 in the second column
-     */
-    public static void printCSV(String filename, List<String> listImageIdOK, List<String> listImageIdNotOK) throws FileNotFoundException{
-        PrintStream file = new PrintStream(new FileOutputStream(outputPath + filename + ".csv", false));
-
-
-        Iterator<String> iter = listImageIdOK.iterator(); 
-        while (iter.hasNext()) { 
-            String element = iter.next();
-
-            file.println(element + separatorCSV + '1' + separatorCSV);
-        }
-        
-        iter = listImageIdNotOK.iterator(); 
-        while (iter.hasNext()) { 
-            String element = iter.next();
-
-            file.println(element + separatorCSV + '0' + separatorCSV);
-        }
-        file.close();
-    }
+    
     
     /**
      * Load the csv file with category

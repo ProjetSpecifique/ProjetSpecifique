@@ -4,13 +4,19 @@
 	first column: imageId
 	second column: isOK (true or false)
 	others: tags
+
+	Return an object with 3 list of images, imagesOk, imagesNotOk, imagesUnknown
 */
 function parseCsv(data){
 	
 	if(data == null) return [];
 	var listLign = data.split('\n');
 
-	var listImage = [];
+	var listImage = {
+		imagesOk: [],
+		imagesNotOk: [],
+		imagesUnknown: []
+	};
 
 	for(var i=0; i<listLign.length; i++){
 		var listCols = listLign[i].split(';');
@@ -41,7 +47,15 @@ function parseCsv(data){
 				image.tags = listCols.splice(1, listCols.length-1);
 			}
 
-			listImage.push(image);
+			if(image.isOk == null){
+				listImage.imagesUnknown.push(image);
+			}
+			else if(image.isOk){
+				listImage.imagesOk.push(image);
+			}
+			else{
+				listImage.imagesNotOk.push(image);	
+			}
 		}
 	}
 	return listImage;
