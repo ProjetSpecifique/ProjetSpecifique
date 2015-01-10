@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- *
+ * Class to write a CSV File
  * @author Gaetan
  */
 public class CSVPrinter {
@@ -50,7 +50,7 @@ public class CSVPrinter {
     }
     
     /*
-     * Function to write the CSV file with 2 list of image id, ok and not ok
+     * Function to write the CSV file with 2 list of ImageWithTags, ok and not ok
      * ok have 1, not ok have 0 in the second column
      */
     public void printCSVWithTag(String filename, List<ImageWithTags> listImageIdOK, List<ImageWithTags> listImageIdNotOK) throws FileNotFoundException{

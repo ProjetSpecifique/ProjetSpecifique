@@ -35,13 +35,23 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
     public List<String> getImagesOK(List<String> listTag, int number) throws Exception {
         List<String> listTagsSimilar = getSimilarTags(listTag.get(0), nbTagsSimilar);
         listTagsSimilar.add(listTag.get(0));
-        return getImagesWithListTags(listTagsSimilar, number);
+        
+        List<String> listImagesId = getImagesWithListTags(listTagsSimilar, number);
+        
+        System.out.println(listImagesId.size() + " images found OK for '" + listTag.get(0) + "'");
+        
+        return listImagesId;
     }
 
     @Override
     public List<String> getImagesNotOK(List<String> listTag, int number) throws Exception {
         List<String> listTagsSimilar = getOppositeTags(listTag.get(0), nbTagsSimilar);
-        return getImagesWithListTags(listTagsSimilar, number);
+        
+        List<String> listImagesId = getImagesWithListTags(listTagsSimilar, number);
+        
+        System.out.println(listImagesId.size() + " images found Not OK for '" + listTag.get(0) + "'");
+        
+        return listImagesId;
     }
     
     
@@ -106,6 +116,7 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
         st.close();
 
         if(listTags.isEmpty()) System.out.println("No tag opposite found for " + tag);
+        
         return listTags;
     }
     

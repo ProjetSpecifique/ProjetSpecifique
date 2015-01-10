@@ -51,6 +51,7 @@ public class GeneratorSQLRequest implements GeneratorImageSet {
         rs.close();
         st.close();
 
+        System.out.println(listImagesId.size() + " images found OK for '" + listTag.get(0) + "'");
         return listImagesId;
     }
     
@@ -99,6 +100,7 @@ public class GeneratorSQLRequest implements GeneratorImageSet {
         rs.close();
         st.close();
 
+        System.out.println(listImagesId.size() + " images found Not OK for '" + listTag.get(0) + "'");
         return listImagesId;
     }
     

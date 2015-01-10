@@ -19,12 +19,15 @@ import org.postgresql.copy.CopyManager;
 import org.postgresql.core.BaseConnection;
 
 /**
- *
+ * Main class to compute distances between tags  by using the JensonShanonDivergence
+ * Results are print in CVS files and write in the BD in the table 'distancestags'
  * @author Gaetan
  */
 public class DistancesTags {
 
     /**
+     * WARNING: Need the table distancestags empty in DB
+     * 
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -32,7 +35,7 @@ public class DistancesTags {
             //Connection to the DB
             Connection c = null;
             Class.forName("org.postgresql.Driver");
-            c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/BDClean", "postgres", "admin");
+            c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/BDImageBig", "postgres", "admin");
             c.setAutoCommit(false);
             
             
@@ -54,7 +57,7 @@ public class DistancesTags {
             writeHistoCSV(listHisto, listTag, "tagHistograms.csv");
             
             //Compute distance between tags
-            List<List<Double>> matrixDistance = createCooccurrenceHisto(listHisto);
+            List<List<Double>> matrixDistance = createDistanceMatrix(listHisto);
             
             //Write CSV distance file
             writeDistanceMatrixCSV(matrixDistance, listTag, "tagDistances.csv");
@@ -71,6 +74,12 @@ public class DistancesTags {
         }
     }
   
+    /**
+     * Get the list of tags from the coocurrences list with the result from the request 
+     * @param rs
+     * @return list of string corresponding to the list of tags
+     * @throws SQLException 
+     */
     public static List<String> getListTag(ResultSet rs) throws SQLException{
         String current = "";
         List<String> listTag = new ArrayList<String>();
@@ -87,7 +96,8 @@ public class DistancesTags {
     
    
     /*
-     * Create an histogramme for each tags
+     * Create an histogramme of coocurence for each tags
+     * histogram axes: x: list of tags, y:number of coocurence between the histogramme tag ans the tag x
      */
     public static List<List<Integer>> createCooccurrenceHisto(ResultSet rs, List<String> listTag) throws SQLException{
         System.out.println("Generating histograms...");
@@ -125,7 +135,13 @@ public class DistancesTags {
         return listHistogrammes;
     }
 
-    public static List<List<Double>> createCooccurrenceHisto(List<List<Integer>> listHisto) {
+    /**
+     * Use the list of historigrammes to calculate a full matrix of distance between all tags by using the JensonShanonDivergence calcul
+     * @param listHisto
+     * @return the matrix of distance
+     * TODO: can be optimiz by using Threads
+     */
+    public static List<List<Double>> createDistanceMatrix(List<List<Integer>> listHisto) {
         System.out.println("Compute distances...");
         List<List<Double>> matrixDistance = new ArrayList<List<Double>>();
         int nbTag = listHisto.size();
@@ -136,7 +152,7 @@ public class DistancesTags {
                     matrixDistance.get(j).add(matrixDistance.get(i).get(j));
                 }
                 else{
-                    //matrixDistance.get(j).add(0.4); //To test without calulate distances
+                    //matrixDistance.get(j).add(0.4); //To test without calculate distances
                     matrixDistance.get(j).add(divergenceOfHistogrammes((ArrayList<Integer>)listHisto.get(j),(ArrayList<Integer>)listHisto.get(i), null));
                 }
             }
@@ -146,7 +162,13 @@ public class DistancesTags {
         return matrixDistance;
     }
     
-    
+    /**
+     * Write the list of histogrammes of each tags in a CSV file
+     * @param listHisto
+     * @param listTag
+     * @param fileName
+     * @throws IOException 
+     */
     public static void writeHistoCSV(List<List<Integer>> listHisto, List<String> listTag, String fileName) throws IOException{
         System.out.println("Writting CSV...");
         int nbTag = listTag.size();
@@ -171,6 +193,13 @@ public class DistancesTags {
         System.out.println("CSV written.");
     }
     
+    /**
+     * Write the matrix of distance between each tags in a CSV file
+     * @param listHisto
+     * @param listTag
+     * @param fileName
+     * @throws IOException 
+     */
     public static void writeDistanceMatrixCSV(List<List<Double>> listHisto, List<String> listTag, String fileName) throws IOException{
         System.out.println("Writting CSV...");
         int nbTag = listTag.size();
@@ -196,6 +225,8 @@ public class DistancesTags {
     }
 
     /*
+     * Save the full matrix distance in the BD
+     * 
      Need the table distancestags empty in DB
      CREATE TABLE distancestags
     (

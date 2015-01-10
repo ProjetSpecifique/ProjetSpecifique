@@ -28,11 +28,11 @@ public class GenerateCategoryImagesSet {
     private static String url = "jdbc:postgresql://localhost:5432/BDImageBig";
     private static String user = "utilisateur";
     private static String password = "utilisateur";
-    private static int nbImageOK = 100;
-    private static int nbImageNotOK = 100;
+    private static int nbImageOK = 200;
+    private static int nbImageNotOK = 200;
     private static String categoriesFilePath = "categories.csv";
     private static String outputPath = "output/";
-    private static GeneratorImageSetFactory.GeneratorType generatorType = GeneratorImageSetFactory.GeneratorType.SQLRequest;
+    private static GeneratorImageSetFactory.GeneratorType generatorType = GeneratorImageSetFactory.GeneratorType.DistancesTags;
     
     
     public static void main(String[] args) {

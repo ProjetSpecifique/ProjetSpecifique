@@ -11,13 +11,13 @@ import java.sql.Connection;
  * @author Gaetan
  */
 public class GeneratorImageSetFactory {
-    public static enum GeneratorType { SQLRequest, distancesTags};
+    public static enum GeneratorType { SQLRequest, DistancesTags};
     
     public static GeneratorImageSet createGenerator(Connection c, GeneratorType t){
         switch(t){
             case SQLRequest:
                 return new GeneratorSQLRequest(c);
-                case distancesTags:
+                case DistancesTags:
                 return new GeneratorDistancesTags(c);
         }
         return new GeneratorSQLRequest(c);

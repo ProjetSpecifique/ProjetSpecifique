@@ -13,7 +13,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- *
+ * Object for an image with its id, its tags and a boolean isOK
  * @author Gaetan
  */
 public class ImageWithTags {
@@ -27,6 +27,9 @@ public class ImageWithTags {
         this.tags = new ArrayList<String>();
     }
     
+    /**
+     * Method to load all tags of the image from the databas by using the id of the image
+     */
     public void loadTagsFromBD(Connection c) throws SQLException{
         
         String query =  "SELECT tag\n" +
@@ -46,6 +49,12 @@ public class ImageWithTags {
         st.close();
     }
     
+    /**
+     * Function to return a string for be a lign in a CSV file
+     * The lign will contain the id of the image, the isOk information, and tags
+     * @param separatorCSV caracter to separate cells in the CSV file
+     * @return 
+     */
     public String toCSV(char separatorCSV){
         StringBuilder csvText = new StringBuilder();
         csvText.append(this.id);
@@ -62,6 +71,15 @@ public class ImageWithTags {
     }
     
     
+    /**
+     * Function to load all tags of images from a list
+     * Will create and return a list of ImageWithTags
+     * @param c connection to the database
+     * @param listString list of image id to load tags
+     * @param isOk
+     * @return a list of ImageWithTags
+     * @throws SQLException 
+     */
     public static List<ImageWithTags> getListImageFromListString(Connection c, List<String> listString, boolean isOk) throws SQLException{
         List<ImageWithTags> listImage = new ArrayList<>();
         Iterator<String> iter = listString.iterator();
