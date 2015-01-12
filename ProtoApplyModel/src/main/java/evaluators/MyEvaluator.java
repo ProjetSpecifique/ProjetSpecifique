@@ -9,6 +9,9 @@ import org.dmg.pmml.PMML;
 import org.jpmml.evaluator.Evaluator;
 import org.jpmml.evaluator.EvaluatorUtil;
 import org.jpmml.evaluator.ModelEvaluatorFactory;
+import org.jpmml.evaluator.NeuronClassificationMap;
+import org.jpmml.evaluator.NodeClassificationMap;
+import org.jpmml.evaluator.VoteClassificationMap;
 import org.jpmml.manager.PMMLManager;
 import org.jpmml.model.ImportFilter;
 import org.jpmml.model.JAXBUtil;
@@ -16,7 +19,9 @@ import org.xml.sax.InputSource;
 
 public class MyEvaluator {
 
-	public static void evaluate(double[] histogram, String modelPath) throws Exception {
+	public static boolean logResults = true;
+
+	public static Double evaluate(double[] histogram, String modelPath, String resultClass) throws Exception {
 		PMML pmml;
 		try {
 			pmml = JAXBUtil.unmarshalPMML(ImportFilter.apply(new InputSource(MyNaiveBayesEvaluator.class
@@ -35,25 +40,57 @@ public class MyEvaluator {
 		List<FieldName> activeFields = evaluator.getActiveFields();
 
 		for (FieldName activeField : activeFields) {
-			/* !!! for rProp, svm and decision tree index  ==  activeFields.indexOf(activeField) 
-			 * NOT for bayes */
+			/*
+			 * !!! for rProp, svm and decision tree index ==
+			 * activeFields.indexOf(activeField) NOT for bayes
+			 */
 			index = Integer.parseInt(activeField.toString().substring(3)) - 1;
-			//System.out.println(activeField + " " + index  + " " + activeFields.indexOf(activeField));
+			// System.out.println(activeField + " " + index + " " +
+			// activeFields.indexOf(activeField));
 			arguments.put(activeField, evaluator.prepare(activeField, histogram[index]));
 		}
 
 		// evaluate
 		Map<FieldName, ?> result = evaluator.evaluate(arguments);
 
-		// writeResult
-		System.out.println("Writing " + result.size() + " result(s):");
+		if (logResults) {
+			// writeResult
+			System.out.println("Writing " + result.size() + " result(s):");
 
-		List<FieldName> predictedFields = evaluator.getTargetFields();// .getPredictedFields();
-		for (FieldName predictedField : predictedFields) {
-			Object predictedValue = result.get(predictedField);
+			List<FieldName> predictedFields = evaluator.getTargetFields();// .getPredictedFields();
+			for (FieldName predictedField : predictedFields) {
+				Object predictedValue = result.get(predictedField);
 
-			System.out.println(predictedField + ": " + predictedValue);
-			System.out.println("Winner class: " + EvaluatorUtil.decode(predictedValue));
+				System.out.println(predictedField + ": " + predictedValue);
+				// System.out.println(predictedValue.getProbability("0"));
+				// System.out.println(predictedValue.getProbability("1"));
+
+				System.out.println("Winner class: " + EvaluatorUtil.decode(predictedValue));
+			}
 		}
+
+		FieldName targetName = evaluator.getTargetField();
+		Double proba = getProbabilityForClass(result.get(targetName), resultClass);
+		if (logResults) {
+			System.out.println("Probability for class " + resultClass + " : " + proba);
+		}
+
+		return proba;
+	}
+
+	private static Double getProbabilityForClass(Object targetValue, String resultClass) {
+
+		if (targetValue instanceof NeuronClassificationMap) {
+			NeuronClassificationMap result = (NeuronClassificationMap) targetValue;
+			return result.getProbability(resultClass);
+		} else if (targetValue instanceof NodeClassificationMap) {
+			NodeClassificationMap result = (NodeClassificationMap) targetValue;
+			return result.getProbability(resultClass);
+		} else if (targetValue instanceof VoteClassificationMap) {
+			VoteClassificationMap<?> result = (VoteClassificationMap<?>) targetValue;
+			result.getProbability(resultClass);
+		}
+
+		return 0.0;
 	}
 }

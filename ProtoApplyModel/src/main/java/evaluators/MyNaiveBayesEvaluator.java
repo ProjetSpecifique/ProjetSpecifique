@@ -21,7 +21,7 @@ public class MyNaiveBayesEvaluator {
 
 	private static PMML pmml;
 	private static ModelEvaluator<NaiveBayesModel> bayesEvaluator;
-	private static String modelPath = "../models/bayes_coastline_AutoColorCorrelogram.pmml";
+	private static String modelPath = "../models/aa.pmml";
 
 	static {
 		// init the model
