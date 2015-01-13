@@ -12,6 +12,6 @@ import java.util.List;
  * @author Gaetan
  */
 public interface GeneratorImageSet {
-    public List<String> getImagesOK(List<String> listTag, int number) throws Exception;
-    public List<String> getImagesNotOK(List<String> listTag, int number) throws Exception;
+    public List<String> getImagesOK(List<String> listTag, int number, List<String> listIdImageExclude) throws Exception;
+    public List<String> getImagesNotOK(List<String> listTag, int number, List<String> listIdImageExclude) throws Exception;
 }

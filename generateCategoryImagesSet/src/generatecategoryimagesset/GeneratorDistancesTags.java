@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -32,11 +33,11 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
     }
 
     @Override
-    public List<String> getImagesOK(List<String> listTag, int number) throws Exception {
+    public List<String> getImagesOK(List<String> listTag, int number, List<String> listIdImageExclude) throws Exception {
         List<String> listTagsSimilar = getSimilarTags(listTag.get(0), nbTagsSimilar);
         listTagsSimilar.add(listTag.get(0));
         
-        List<String> listImagesId = getImagesWithListTags(listTagsSimilar, number);
+        List<String> listImagesId = getImagesWithListTags(listTagsSimilar, number, listIdImageExclude);
         
         System.out.println(listImagesId.size() + " images found OK for '" + listTag.get(0) + "'");
         
@@ -44,10 +45,10 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
     }
 
     @Override
-    public List<String> getImagesNotOK(List<String> listTag, int number) throws Exception {
+    public List<String> getImagesNotOK(List<String> listTag, int number, List<String> listIdImageExclude) throws Exception {
         List<String> listTagsSimilar = getOppositeTags(listTag.get(0), nbTagsSimilar);
         
-        List<String> listImagesId = getImagesWithListTags(listTagsSimilar, number);
+        List<String> listImagesId = getImagesWithListTags(listTagsSimilar, number, listIdImageExclude);
         
         System.out.println(listImagesId.size() + " images found Not OK for '" + listTag.get(0) + "'");
         
@@ -125,24 +126,50 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
     /**
      * Function to find images with a tag from the parameters list
      */
-    private List<String> getImagesWithListTags(List<String> listTag, int number) throws Exception{
+    private List<String> getImagesWithListTags(List<String> listTag, int number, List<String> listIdImageExclude) throws Exception{
         if(listTag == null || listTag.size() <= 0 || number <= 0) throw new Exception("List tag empty");
         
         List<String> listImagesId = new ArrayList<>();
-
-        String query =  "       SELECT imageid\n" +
-                        "       FROM \"imagetagfiltred\"\n" +
-                        "	WHERE tag ~ '(^|^.* )" + listTag.get(0) + "($| .*$)'\n";
+        
+        StringBuilder query =  new StringBuilder();
+        query.append("SELECT imageid\n");
+        query.append("FROM \"imagetagfiltred\"\n");
+        query.append("WHERE tag ~ '(^|^.* )");
+        query.append(listTag.get(0));
+        query.append("($| .*$)'\n");
         for(int i=1; i<listTag.size(); i++){
-            query +=    "UNION\n" +
-                        "	SELECT imageid\n" +
-                        "	FROM \"imagetagfiltred\"\n" +
-                        "	WHERE tag ~ '(^|^.* )" + listTag.get(i) + "($| .*$)'\n";
+            query.append("UNION\n");
+            query.append("	SELECT imageid\n");
+            query.append("	FROM \"imagetagfiltred\"\n");
+            query.append("	WHERE tag ~ '(^|^.* )");
+            query.append(listTag.get(i));
+            query.append("($| .*$)'\n");
         }
-        query += "LIMIT " + number + ";";
-        System.out.println(query);
+        
+        //Add exclusion
+        if(listIdImageExclude != null && listIdImageExclude.size() > 0){
+         query.insert(0, "SELECT * FROM (");
+         query.append(") AS U WHERE imageid NOT IN (");
+         Iterator<String> iter = listIdImageExclude.iterator();
+         while(iter.hasNext()){
+             query.append('\'');
+             query.append(iter.next());
+             query.append('\'');
+             if(iter.hasNext()){
+                 query.append(',');
+             }
+         }
+         query.append(")\n");
+        }        
+        
+        //Add Limit
+        query.append("LIMIT ");
+        query.append(number);
+        query.append(";");
+        
+        System.out.println(query.toString());
         Statement st = c.createStatement();
-        ResultSet rs = st.executeQuery(query);
+        ResultSet rs = st.executeQuery(query.toString());
         while (rs.next()) {
             listImagesId.add(rs.getString(1));
         }

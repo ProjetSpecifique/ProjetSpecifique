@@ -26,7 +26,8 @@ public class GeneratorSQLRequest implements GeneratorImageSet {
     /**
      * Function to find images with a tag from the parameters list
      */
-    public List<String> getImagesOK(List<String> listTag, int number) throws SQLException{
+    @Override
+    public List<String> getImagesOK(List<String> listTag, int number, List<String> listIdImageExclude) throws SQLException{
         if(listTag == null || listTag.size() <= 0 || number <= 0) return null;
         
         List<String> listImagesId = new ArrayList<>();
@@ -58,7 +59,8 @@ public class GeneratorSQLRequest implements GeneratorImageSet {
     /**
      * Function to have images without tags from the params list
      */
-    public List<String> getImagesNotOK(List<String> listTag, int number) throws SQLException{
+    @Override
+    public List<String> getImagesNotOK(List<String> listTag, int number, List<String> listIdImageExclude) throws SQLException{
         if(listTag == null || listTag.size() <= 0 || number <= 0) return null;
         
         List<String> listImagesId = new ArrayList<>();

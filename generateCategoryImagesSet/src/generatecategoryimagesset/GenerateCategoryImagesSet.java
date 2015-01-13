@@ -57,9 +57,10 @@ public class GenerateCategoryImagesSet {
             Iterator<List<String>> iter = categories.iterator(); 
             while (iter.hasNext()) { 
                 List<String> listTag = iter.next();
+                List<String> listIdImageOk = genImageSet.getImagesOK(listTag, nbImageOK, null);
                 csvPrinter.printCSVWithTag(listTag.get(0), 
-                        ImageWithTags.getListImageFromListString(c, genImageSet.getImagesOK(listTag, nbImageOK), true),
-                        ImageWithTags.getListImageFromListString(c, genImageSet.getImagesNotOK(listTag, nbImageNotOK), false)
+                        ImageWithTags.getListImageFromListString(c, listIdImageOk, true),
+                        ImageWithTags.getListImageFromListString(c, genImageSet.getImagesNotOK(listTag, nbImageNotOK, listIdImageOk), false)
                         );
                 //System.out.println(listTag);
             }
