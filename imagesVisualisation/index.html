@@ -10,17 +10,29 @@
 	<body>
 		<h1>Coucou</h1>
 		<input type="file" id="fileInputCsv" onchange="loadCsv()" />
-		<div>
-			<h3>Images OK:</h3>
-			<table id="tableImageOk"></table>
-			<h3>Tag cloud images OK:</h3>
-			<div id='tagCloudOk' class="tagCloud"></div>
-		</div>
-		<div>
-			<h3>Images Not OK:</h3>
-			<table id="tableImageNotOk"></table>
-			<h3>Tag cloud images Not OK:</h3>
-			<div id='tagCloudNotOk' class="tagCloud"></div>
+		<div id="main">
+			<table>
+				<tr>
+					<td><h3>Images OK:</h3></td>
+					<td><h3>Preview</h3></td>
+					<td><h3>Images Not OK:</h3></td>
+				</tr>
+				<tr>
+					<td><table id="tableImageOk"></table></td>
+					<td><img id='preview' src="Preview.png"></td>
+					<td><table id="tableImageNotOk"></table></td>
+				</tr>
+				<tr>
+					<td><h3>Tag cloud images OK:</h3></td>
+					<td></td>
+					<td><h3>Tag cloud images Not OK:</h3></td>
+				</tr>
+				<tr>
+					<td><div id='tagCloudOk' class="tagCloud"></div></td>
+					<td></td>
+					<td><div id='tagCloudNotOk' class="tagCloud"></div></td>
+				</tr>
+			</table>
 		</div>
 
 		<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
