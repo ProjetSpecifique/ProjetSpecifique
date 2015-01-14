@@ -5,9 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 
-import descripteurs.MyDescriptorType;
 import evaluators.MyEvaluator;
-import evaluators.MyLearnerType;
 
 public class Main {
 
@@ -29,9 +27,10 @@ public class Main {
 		String imgFolderPath = "C:/Users/So/Desktop/csvTestsEtImages/images/coastlineToTest/";
 
 		MyEvaluator.logResults = false;
-		ApplyModelComputation.complexExecution(csvPath, imgFolderPath, MyDescriptorType.AutoColorCorrelogram,
-				MyLearnerType.rProp);
-
+		//ApplyModelComputation.complexExecution(csvPath, imgFolderPath, MyDescriptorType.CEDD,
+			//	MyLearnerType.tree);
+		ApplyModelComputation.fullComplexExecution(csvPath, imgFolderPath);
+		
 		setDefaulConsole();
 		System.out.println("--- End ---");
 
