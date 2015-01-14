@@ -36,7 +36,7 @@ public class ApplyModelComputation {
 	 * @return probability : 0 to 1
 	 * */
 	public static Double simpleExecution(String imagePath, MyDescriptorType descriptorType, MyLearnerType learnerType,
-			String resultClass) throws Exception {
+			MyTerm term, String resultClass) throws Exception {
 		/* 1. init image */
 		BufferedImage image;
 		try {
@@ -53,7 +53,7 @@ public class ApplyModelComputation {
 		// System.out.println(histogram.length);
 
 		/* 3. Compute model path */
-		String modelPath = MyEvalPathFactory.buildModelPath(descriptorType, learnerType);
+		String modelPath = MyEvalPathFactory.buildModelPath(descriptorType, learnerType, term);
 
 		// Statistics stats = new Statistics(histogram);
 		// System.out.println(stats.getMean() + " " + stats.getVariance() + " "
@@ -71,7 +71,7 @@ public class ApplyModelComputation {
 	 * 
 	 * */
 	public static void complexExecution(String csvPath, String imageFolderPath, MyDescriptorType descriptorType,
-			MyLearnerType learnerType) {
+			MyLearnerType learnerType, MyTerm term) {
 		List<Double> positiveValues = new ArrayList<Double>();
 		List<Double> negativeValues = new ArrayList<Double>();
 
@@ -82,6 +82,7 @@ public class ApplyModelComputation {
 
 		System.out.println("-----------------------------------------");
 		System.out.println("Csv : " + csvPath);
+		System.out.println("Term : " + term);
 		System.out.println("Descriptor : " + descriptorType);
 		System.out.println("Learner : " + learnerType);
 
@@ -93,7 +94,7 @@ public class ApplyModelComputation {
 				imgPath = imageFolderPath + elems[0] + imageExtention;
 
 				// System.out.println("csv Winner :  " + elems[1]);
-				probability = simpleExecution(imgPath, descriptorType, learnerType, elems[1]);
+				probability = simpleExecution(imgPath, descriptorType, learnerType, term, elems[1]);
 
 				if ("1".equals(elems[1])) {
 					// positive class value
@@ -132,23 +133,25 @@ public class ApplyModelComputation {
 
 		for (MyDescriptorType descriptorType : MyDescriptorType.values()) {
 			for (MyLearnerType learnerType : MyLearnerType.values()) {
+				for (MyTerm term : MyTerm.values()) {
 
-				try {
-					// System.out.println("\n Descriptor Type : " +
-					// descriptorType + " Learner Type : " + learnerType);
-					simpleExecution(imagePath, descriptorType, learnerType, resultClass);
-				} catch (Exception e) {
-					// System.err.println(e);
+					try {
+						// System.out.println("\n Descriptor Type : " +
+						// descriptorType + " Learner Type : " + learnerType);
+						simpleExecution(imagePath, descriptorType, learnerType, term, resultClass);
+					} catch (Exception e) {
+						// System.err.println(e);
+					}
 				}
 			}
 		}
 	}
 
-	public static void fullComplexExecution(String csvPath, String imageFolderPath) {
+	public static void fullComplexExecution(String csvPath, String imageFolderPath, MyTerm term) {
 
 		for (MyDescriptorType descriptorType : MyDescriptorType.values()) {
 			for (MyLearnerType learnerType : MyLearnerType.values()) {
-				complexExecution(csvPath, imageFolderPath, descriptorType, learnerType);
+				complexExecution(csvPath, imageFolderPath, descriptorType, learnerType, term);
 			}
 		}
 	}

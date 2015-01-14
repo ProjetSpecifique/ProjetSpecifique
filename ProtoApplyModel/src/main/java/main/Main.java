@@ -27,10 +27,11 @@ public class Main {
 		String imgFolderPath = "C:/Users/So/Desktop/csvTestsEtImages/images/coastlineToTest/";
 
 		MyEvaluator.logResults = false;
-		//ApplyModelComputation.complexExecution(csvPath, imgFolderPath, MyDescriptorType.CEDD,
-			//	MyLearnerType.tree);
-		ApplyModelComputation.fullComplexExecution(csvPath, imgFolderPath);
-		
+		// ApplyModelComputation.complexExecution(csvPath, imgFolderPath,
+		// MyDescriptorType.CEDD,
+		// MyLearnerType.tree);
+		ApplyModelComputation.fullComplexExecution(csvPath, imgFolderPath, MyTerm.coastline);
+
 		setDefaulConsole();
 		System.out.println("--- End ---");
 

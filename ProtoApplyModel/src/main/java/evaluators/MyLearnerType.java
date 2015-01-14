@@ -1,10 +1,10 @@
 package evaluators;
 
 public enum MyLearnerType {
-	bayes, 
+	//bayes, 
 	rProp, 
-	sotaCos, 
-	sotaEucl, 
+	//sotaCos, 
+	//sotaEucl, 
 	svm, 
 	tree;
 }
