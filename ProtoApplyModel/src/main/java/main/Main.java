@@ -1,55 +1,51 @@
 package main;
 
-import java.awt.image.BufferedImage;
+import java.io.FileDescriptor;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 
-import javax.imageio.ImageIO;
-
-import descripteurs.MyDescriptor;
-import descripteurs.MyDescriptorFactory;
-import descripteurs.MyDescriptorType;
-import evaluators.MyEvalPathFactory;
 import evaluators.MyEvaluator;
-import evaluators.MyLearnerType;
 
 public class Main {
 
+	public static String textFilePath = "C:/Users/So/Desktop/protoLogs.txt";
+	public static FileOutputStream consoleFile = null;
+
 	public static void main(String[] args) throws Exception {
 		System.out.println("--- Start ---");
+		setConsoleToFile();
 
-		simpleExecution("../images/img1.JPG", MyDescriptorType.AutoColorCorrelogram, MyLearnerType.rProp);
-		System.out.println();
+		// String imagePath =
+		// "C:/Users/So/Desktop/csvTestsEtImages/images/coastlineToTest/1395702050.jpg";
+		// ApplyModelComputation.simpleExecution(imagePath,
+		// MyDescriptorType.AutoColorCorrelogram, MyLearnerType.rProp, "1");
 
-		simpleExecution("../images/img2.JPG", MyDescriptorType.JointHistogram, MyLearnerType.svm);
-		System.out.println();
+		// ApplyModelComputation.fullSimpleExecution(imagePath, "1");
 
-		simpleExecution("../images/img2.JPG", MyDescriptorType.CEDD, MyLearnerType.tree);
-		System.out.println();
+		String csvPath = "C:/Users/So/Desktop/csvTestsEtImages/csv/coastlineToTest.csv";
+		String imgFolderPath = "C:/Users/So/Desktop/csvTestsEtImages/images/coastlineToTest/";
 
-		simpleExecution("../images/img3.png", MyDescriptorType.AutoColorCorrelogram, MyLearnerType.rProp);
+		MyEvaluator.logResults = false;
+		// ApplyModelComputation.complexExecution(csvPath, imgFolderPath,
+		// MyDescriptorType.CEDD,
+		// MyLearnerType.tree);
+		ApplyModelComputation.fullComplexExecution(csvPath, imgFolderPath, MyTerm.coastline);
 
+		setDefaulConsole();
 		System.out.println("--- End ---");
 
 	}
 
-	private static void simpleExecution(String imagePath, MyDescriptorType descriptorType, MyLearnerType learnerType)
-			throws Exception {
-		/* 1. init image */
-		BufferedImage image;
-		try {
-			image = ImageIO.read(Main.class.getResourceAsStream(imagePath));
-		} catch (Exception e) {
-			throw new Exception("Cannot load image at : " + imagePath);
+	private static void setConsoleToFile() throws FileNotFoundException {
+		if (consoleFile == null) {
+			consoleFile = new FileOutputStream(textFilePath);
 		}
 
-		/* 2. comoute histogram */
-		MyDescriptor myDescriptor = MyDescriptorFactory.buildDescriptor(descriptorType, image);
-		double[] histogram = myDescriptor.computeHistogram();
-		// System.out.println(histogram.length);
+		System.setOut(new PrintStream(consoleFile));
+	}
 
-		/* 3. Compute model path */
-		String modelPath = MyEvalPathFactory.buildModelPath(descriptorType, learnerType);
-
-		/* 3. apply model */
-		MyEvaluator.evaluate(histogram, modelPath);
+	private static void setDefaulConsole() {
+		System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
 	}
 }

@@ -39,8 +39,10 @@ function displayTableImage(listImage, idTable, classImage){
 			tableLign = $('#lign_' + idTable + "_" + lignId);
 		}
 		tableLign.append("<td class='" + classImage + "'>" +
-							"<span title='" + listImage[i].tags + "'><img class='image' src='" + imagesPath + listImage[i].imageId + ".jpg'/>" +
-							"<p class='idImage'>" + listImage[i].imageId + "</p></span>" + 
+							"<span title='" + listImage[i].tags + "'><img id='"+listImage[i].imageId+"' class='image' src='" + imagesPath + listImage[i].imageId + ".jpg' "+
+							"onmouseover=document.getElementById('preview').src='"+imagesPath + listImage[i].imageId + ".jpg'; " +
+							/*"onmouseout=document.getElementById('preview').src='Preview.png';>" +*/
+							/*"<p class='idImage'>" + listImage[i].imageId + "</p>*/"</span>" + 
 						 "</td>");
 	}
 }
