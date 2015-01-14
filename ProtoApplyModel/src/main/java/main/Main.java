@@ -1,26 +1,23 @@
 package main;
 
+import java.io.FileDescriptor;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
 import descripteurs.MyDescriptorType;
 import evaluators.MyEvaluator;
 import evaluators.MyLearnerType;
 
 public class Main {
 
+	public static String textFilePath = "C:/Users/So/Desktop/protoLogs.txt";
+	public static FileOutputStream consoleFile = null;
+
 	public static void main(String[] args) throws Exception {
 		System.out.println("--- Start ---");
+		setConsoleToFile();
 
-		/*
-		 * simpleExecution("../images/img1.JPG",
-		 * MyDescriptorType.AutoColorCorrelogram, MyLearnerType.rProp);
-		 * System.out.println();
-		 * 
-		 * simpleExecution("../images/img2.JPG",
-		 * MyDescriptorType.JointHistogram, MyLearnerType.svm);
-		 * System.out.println();
-		 * 
-		 * simpleExecution("../images/img2.JPG", MyDescriptorType.CEDD,
-		 * MyLearnerType.tree); System.out.println();
-		 */
 		// String imagePath =
 		// "C:/Users/So/Desktop/csvTestsEtImages/images/coastlineToTest/1395702050.jpg";
 		// ApplyModelComputation.simpleExecution(imagePath,
@@ -28,13 +25,27 @@ public class Main {
 
 		// ApplyModelComputation.fullSimpleExecution(imagePath, "1");
 
+		String csvPath = "C:/Users/So/Desktop/csvTestsEtImages/csv/coastlineToTest.csv";
+		String imgFolderPath = "C:/Users/So/Desktop/csvTestsEtImages/images/coastlineToTest/";
+
 		MyEvaluator.logResults = false;
-		ApplyModelComputation.complexExecution("C:/Users/So/Desktop/csvTestsEtImages/csv/coastlineToTest.csv",
-				"C:/Users/So/Desktop/csvTestsEtImages/images/coastlineToTest/", MyDescriptorType.AutoColorCorrelogram,
+		ApplyModelComputation.complexExecution(csvPath, imgFolderPath, MyDescriptorType.AutoColorCorrelogram,
 				MyLearnerType.rProp);
 
+		setDefaulConsole();
 		System.out.println("--- End ---");
 
 	}
 
+	private static void setConsoleToFile() throws FileNotFoundException {
+		if (consoleFile == null) {
+			consoleFile = new FileOutputStream(textFilePath);
+		}
+
+		System.setOut(new PrintStream(consoleFile));
+	}
+
+	private static void setDefaulConsole() {
+		System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
+	}
 }

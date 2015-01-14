@@ -141,4 +141,19 @@ public class ApplyModelComputation {
 			}
 		}
 	}
+	
+	public static void fullComplexExecution(String csvPath, String imageFolderPath) {
+
+		for (MyDescriptorType descriptorType : MyDescriptorType.values()) {
+			for (MyLearnerType learnerType : MyLearnerType.values()) {
+
+				try {
+					//System.out.println("\n Descriptor Type : " + descriptorType + " Learner Type : " + learnerType);
+					complexExecution(csvPath, imageFolderPath, descriptorType, learnerType);
+				} catch (Exception e) {
+					//System.err.println(e);
+				}
+			}
+		}
+	}
 }
