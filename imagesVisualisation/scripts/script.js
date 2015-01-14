@@ -39,11 +39,22 @@ function displayTableImage(listImage, idTable, classImage){
 			tableLign = $('#lign_' + idTable + "_" + lignId);
 		}
 		tableLign.append("<td class='" + classImage + "'>" +
-							"<span title='" + listImage[i].tags + "'><img id='"+listImage[i].imageId+"' class='image' src='" + imagesPath + listImage[i].imageId + ".jpg' "+
-							"onmouseover=document.getElementById('preview').src='"+imagesPath + listImage[i].imageId + ".jpg'; " +
-							/*"onmouseout=document.getElementById('preview').src='Preview.png';>" +*/
-							/*"<p class='idImage'>" + listImage[i].imageId + "</p>*/"</span>" + 
+							"<span><img id='"+listImage[i].imageId+"' class='image' src='" + imagesPath + listImage[i].imageId + ".jpg' "+
+							"</img></span>" + 
 						 "</td>");
+		$('#' + listImage[i].imageId).mouseover(previewImage(listImage[i]));
+	}
+}
+
+function previewImage(image){
+	return function(){
+		//console.log(image);
+		$('#preview').attr("src", imagesPath + image.imageId + ".jpg");
+		var textTag = "";
+		image.tags.forEach(function(tag){
+			textTag = textTag + tag + ", ";
+		})
+		$('#previewTags').text(textTag);
 	}
 }
 
