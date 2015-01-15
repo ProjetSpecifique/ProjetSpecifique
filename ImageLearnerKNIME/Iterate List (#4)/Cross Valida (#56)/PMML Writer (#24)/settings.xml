@@ -11,16 +11,16 @@
 <entry key="EnabledStatus" type="xboolean" value="true"/>
 </config>
 <entry key="PMMLWriterFile" type="xstring" value="C:\Users\So\Desktop\Models_PMML\r.pmml"/>
-<config key="validatePMML_Internals">
-<entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-<entry key="EnabledStatus" type="xboolean" value="true"/>
-</config>
-<entry key="validatePMML" type="xboolean" value="true"/>
 <config key="overwriteOK_Internals">
 <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
 <entry key="EnabledStatus" type="xboolean" value="true"/>
 </config>
 <entry key="overwriteOK" type="xboolean" value="true"/>
+<config key="validatePMML_Internals">
+<entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+<entry key="EnabledStatus" type="xboolean" value="true"/>
+</config>
+<entry key="validatePMML" type="xboolean" value="true"/>
 </config>
 <config key="variables">
 <config key="PMMLWriterFile">
@@ -29,11 +29,7 @@
 </config>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
-<entry key="state" type="xstring" value="EXECUTED"/>
-<config key="nodecontainer_message">
-<entry key="type" type="xstring" value="WARNING"/>
-<entry key="message" type="xstring" value="File exists and will be overwritten"/>
-</config>
+<entry key="state" type="xstring" value="IDLE"/>
 <entry key="factory" type="xstring" value="org.knime.base.node.io.pmml.write.PMMLWriterNodeFactory"/>
 <entry key="node-name" type="xstring" value="PMML Writer"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -42,7 +38,7 @@
 <entry key="node-bundle-version" type="xstring" value="2.10.4.0044920"/>
 <config key="factory_settings"/>
 <entry key="name" type="xstring" value="PMML Writer"/>
-<entry key="hasContent" type="xboolean" value="true"/>
+<entry key="hasContent" type="xboolean" value="false"/>
 <entry key="isInactive" type="xboolean" value="false"/>
 <config key="ports"/>
 <config key="filestores">

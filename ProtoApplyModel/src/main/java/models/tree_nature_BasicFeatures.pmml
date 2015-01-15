@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2">
+  <Header copyright="So">
+    <Application name="KNIME" version="2.10.4"/>
+  </Header>
+  <DataDictionary numberOfFields="9">
+    <DataField name="TermClass" optype="categorical" dataType="string">
+      <Value value="1"/>
+      <Value value="0"/>
+    </DataField>
+    <DataField name="Col1" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.007099923212081194" rightMargin="0.9927569627761841"/>
+    </DataField>
+    <DataField name="Col2" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="0.8382853269577026"/>
+    </DataField>
+    <DataField name="Col3" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.030501604080200195" rightMargin="0.9617329239845276"/>
+    </DataField>
+    <DataField name="Col4" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="3.8523801777046174E-5" rightMargin="1.0526072978973389"/>
+    </DataField>
+    <DataField name="Col5" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="9.158569591581265E-19" rightMargin="0.9999733567237854"/>
+    </DataField>
+    <DataField name="Col6" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.010013360530138016" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col7" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="-11.739877700805664" rightMargin="13.289835929870605"/>
+    </DataField>
+    <DataField name="Col8" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.004871903918683529" rightMargin="789.8453979492188"/>
+    </DataField>
+  </DataDictionary>
+  <TreeModel modelName="DecisionTree" functionName="classification" splitCharacteristic="binarySplit" missingValueStrategy="lastPrediction" noTrueChildStrategy="returnNullPrediction">
+    <MiningSchema>
+      <MiningField name="Col1" invalidValueTreatment="asIs"/>
+      <MiningField name="Col2" invalidValueTreatment="asIs"/>
+      <MiningField name="Col3" invalidValueTreatment="asIs"/>
+      <MiningField name="Col4" invalidValueTreatment="asIs"/>
+      <MiningField name="Col5" invalidValueTreatment="asIs"/>
+      <MiningField name="Col6" invalidValueTreatment="asIs"/>
+      <MiningField name="Col7" invalidValueTreatment="asIs"/>
+      <MiningField name="Col8" invalidValueTreatment="asIs"/>
+      <MiningField name="TermClass" invalidValueTreatment="asIs" usageType="target"/>
+    </MiningSchema>
+    <Node id="0" score="1" recordCount="180.0">
+      <True/>
+      <ScoreDistribution value="1" recordCount="90.0"/>
+      <ScoreDistribution value="0" recordCount="90.0"/>
+      <Node id="1" score="0" recordCount="18.0">
+        <SimplePredicate field="Col8" operator="lessOrEqual" value="12.031257152557373"/>
+        <ScoreDistribution value="1" recordCount="1.0"/>
+        <ScoreDistribution value="0" recordCount="17.0"/>
+      </Node>
+      <Node id="4" score="1" recordCount="162.0">
+        <SimplePredicate field="Col8" operator="greaterThan" value="12.031257152557373"/>
+        <ScoreDistribution value="1" recordCount="89.0"/>
+        <ScoreDistribution value="0" recordCount="73.0"/>
+        <Node id="5" score="1" recordCount="77.0">
+          <SimplePredicate field="Col8" operator="lessOrEqual" value="550.0166931152344"/>
+          <ScoreDistribution value="1" recordCount="59.0"/>
+          <ScoreDistribution value="0" recordCount="18.0"/>
+          <Node id="6" score="1" recordCount="34.0">
+            <SimplePredicate field="Col4" operator="lessOrEqual" value="0.2118597999215126"/>
+            <ScoreDistribution value="1" recordCount="20.0"/>
+            <ScoreDistribution value="0" recordCount="14.0"/>
+            <Node id="7" score="0" recordCount="7.0">
+              <SimplePredicate field="Col3" operator="lessOrEqual" value="0.3569454401731491"/>
+              <ScoreDistribution value="1" recordCount="1.0"/>
+              <ScoreDistribution value="0" recordCount="6.0"/>
+            </Node>
+            <Node id="10" score="1" recordCount="27.0">
+              <SimplePredicate field="Col3" operator="greaterThan" value="0.3569454401731491"/>
+              <ScoreDistribution value="1" recordCount="19.0"/>
+              <ScoreDistribution value="0" recordCount="8.0"/>
+              <Node id="11" score="1" recordCount="20.0">
+                <SimplePredicate field="Col3" operator="lessOrEqual" value="0.4979008883237839"/>
+                <ScoreDistribution value="1" recordCount="17.0"/>
+                <ScoreDistribution value="0" recordCount="3.0"/>
+                <Node id="12" score="1" recordCount="18.0">
+                  <SimplePredicate field="Col1" operator="lessOrEqual" value="0.6428804993629456"/>
+                  <ScoreDistribution value="1" recordCount="17.0"/>
+                  <ScoreDistribution value="0" recordCount="1.0"/>
+                </Node>
+                <Node id="15" score="0" recordCount="2.0">
+                  <SimplePredicate field="Col1" operator="greaterThan" value="0.6428804993629456"/>
+                  <ScoreDistribution value="1" recordCount="0.0"/>
+                  <ScoreDistribution value="0" recordCount="2.0"/>
+                </Node>
+              </Node>
+              <Node id="16" score="0" recordCount="7.0">
+                <SimplePredicate field="Col3" operator="greaterThan" value="0.4979008883237839"/>
+                <ScoreDistribution value="1" recordCount="2.0"/>
+                <ScoreDistribution value="0" recordCount="5.0"/>
+                <Node id="17" score="1" recordCount="4.0">
+                  <SimplePredicate field="Col8" operator="lessOrEqual" value="288.5588150024414"/>
+                  <ScoreDistribution value="1" recordCount="2.0"/>
+                  <ScoreDistribution value="0" recordCount="2.0"/>
+                  <Node id="18" score="0" recordCount="2.0">
+                    <SimplePredicate field="Col8" operator="lessOrEqual" value="99.57046508789062"/>
+                    <ScoreDistribution value="1" recordCount="0.0"/>
+                    <ScoreDistribution value="0" recordCount="2.0"/>
+                  </Node>
+                  <Node id="19" score="1" recordCount="2.0">
+                    <SimplePredicate field="Col8" operator="greaterThan" value="99.57046508789062"/>
+                    <ScoreDistribution value="1" recordCount="2.0"/>
+                    <ScoreDistribution value="0" recordCount="0.0"/>
+                  </Node>
+                </Node>
+                <Node id="20" score="0" recordCount="3.0">
+                  <SimplePredicate field="Col8" operator="greaterThan" value="288.5588150024414"/>
+                  <ScoreDistribution value="1" recordCount="0.0"/>
+                  <ScoreDistribution value="0" recordCount="3.0"/>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+          <Node id="21" score="1" recordCount="43.0">
+            <SimplePredicate field="Col4" operator="greaterThan" value="0.2118597999215126"/>
+            <ScoreDistribution value="1" recordCount="39.0"/>
+            <ScoreDistribution value="0" recordCount="4.0"/>
+            <Node id="22" score="1" recordCount="21.0">
+              <SimplePredicate field="Col8" operator="lessOrEqual" value="364.7507629394531"/>
+              <ScoreDistribution value="1" recordCount="17.0"/>
+              <ScoreDistribution value="0" recordCount="4.0"/>
+              <Node id="23" score="1" recordCount="18.0">
+                <SimplePredicate field="Col8" operator="lessOrEqual" value="324.1300506591797"/>
+                <ScoreDistribution value="1" recordCount="17.0"/>
+                <ScoreDistribution value="0" recordCount="1.0"/>
+              </Node>
+              <Node id="26" score="0" recordCount="3.0">
+                <SimplePredicate field="Col8" operator="greaterThan" value="324.1300506591797"/>
+                <ScoreDistribution value="1" recordCount="0.0"/>
+                <ScoreDistribution value="0" recordCount="3.0"/>
+              </Node>
+            </Node>
+            <Node id="27" score="1" recordCount="22.0">
+              <SimplePredicate field="Col8" operator="greaterThan" value="364.7507629394531"/>
+              <ScoreDistribution value="1" recordCount="22.0"/>
+              <ScoreDistribution value="0" recordCount="0.0"/>
+            </Node>
+          </Node>
+        </Node>
+        <Node id="28" score="0" recordCount="85.0">
+          <SimplePredicate field="Col8" operator="greaterThan" value="550.0166931152344"/>
+          <ScoreDistribution value="1" recordCount="30.0"/>
+          <ScoreDistribution value="0" recordCount="55.0"/>
+          <Node id="29" score="0" recordCount="35.0">
+            <SimplePredicate field="Col4" operator="lessOrEqual" value="0.21572020649909973"/>
+            <ScoreDistribution value="1" recordCount="7.0"/>
+            <ScoreDistribution value="0" recordCount="28.0"/>
+            <Node id="30" score="0" recordCount="32.0">
+              <SimplePredicate field="Col5" operator="lessOrEqual" value="0.722468763589859"/>
+              <ScoreDistribution value="1" recordCount="5.0"/>
+              <ScoreDistribution value="0" recordCount="27.0"/>
+              <Node id="31" score="0" recordCount="7.0">
+                <SimplePredicate field="Col3" operator="lessOrEqual" value="0.33661481738090515"/>
+                <ScoreDistribution value="1" recordCount="3.0"/>
+                <ScoreDistribution value="0" recordCount="4.0"/>
+                <Node id="32" score="0" recordCount="4.0">
+                  <SimplePredicate field="Col6" operator="lessOrEqual" value="0.047627776861190796"/>
+                  <ScoreDistribution value="1" recordCount="0.0"/>
+                  <ScoreDistribution value="0" recordCount="4.0"/>
+                </Node>
+                <Node id="33" score="1" recordCount="3.0">
+                  <SimplePredicate field="Col6" operator="greaterThan" value="0.047627776861190796"/>
+                  <ScoreDistribution value="1" recordCount="3.0"/>
+                  <ScoreDistribution value="0" recordCount="0.0"/>
+                </Node>
+              </Node>
+              <Node id="34" score="0" recordCount="25.0">
+                <SimplePredicate field="Col3" operator="greaterThan" value="0.33661481738090515"/>
+                <ScoreDistribution value="1" recordCount="2.0"/>
+                <ScoreDistribution value="0" recordCount="23.0"/>
+              </Node>
+            </Node>
+            <Node id="41" score="1" recordCount="3.0">
+              <SimplePredicate field="Col5" operator="greaterThan" value="0.722468763589859"/>
+              <ScoreDistribution value="1" recordCount="2.0"/>
+              <ScoreDistribution value="0" recordCount="1.0"/>
+            </Node>
+          </Node>
+          <Node id="42" score="0" recordCount="50.0">
+            <SimplePredicate field="Col4" operator="greaterThan" value="0.21572020649909973"/>
+            <ScoreDistribution value="1" recordCount="23.0"/>
+            <ScoreDistribution value="0" recordCount="27.0"/>
+            <Node id="43" score="0" recordCount="5.0">
+              <SimplePredicate field="Col3" operator="lessOrEqual" value="0.3204164654016495"/>
+              <ScoreDistribution value="1" recordCount="0.0"/>
+              <ScoreDistribution value="0" recordCount="5.0"/>
+            </Node>
+            <Node id="44" score="1" recordCount="45.0">
+              <SimplePredicate field="Col3" operator="greaterThan" value="0.3204164654016495"/>
+              <ScoreDistribution value="1" recordCount="23.0"/>
+              <ScoreDistribution value="0" recordCount="22.0"/>
+              <Node id="45" score="0" recordCount="17.0">
+                <SimplePredicate field="Col7" operator="lessOrEqual" value="0.09040992520749569"/>
+                <ScoreDistribution value="1" recordCount="5.0"/>
+                <ScoreDistribution value="0" recordCount="12.0"/>
+                <Node id="46" score="1" recordCount="10.0">
+                  <SimplePredicate field="Col2" operator="lessOrEqual" value="9.299370576627553E-4"/>
+                  <ScoreDistribution value="1" recordCount="5.0"/>
+                  <ScoreDistribution value="0" recordCount="5.0"/>
+                  <Node id="47" score="1" recordCount="2.0">
+                    <SimplePredicate field="Col8" operator="lessOrEqual" value="581.334716796875"/>
+                    <ScoreDistribution value="1" recordCount="2.0"/>
+                    <ScoreDistribution value="0" recordCount="0.0"/>
+                  </Node>
+                  <Node id="48" score="0" recordCount="8.0">
+                    <SimplePredicate field="Col8" operator="greaterThan" value="581.334716796875"/>
+                    <ScoreDistribution value="1" recordCount="3.0"/>
+                    <ScoreDistribution value="0" recordCount="5.0"/>
+                    <Node id="49" score="0" recordCount="6.0">
+                      <SimplePredicate field="Col2" operator="lessOrEqual" value="1.2369342948659323E-4"/>
+                      <ScoreDistribution value="1" recordCount="1.0"/>
+                      <ScoreDistribution value="0" recordCount="5.0"/>
+                    </Node>
+                    <Node id="52" score="1" recordCount="2.0">
+                      <SimplePredicate field="Col2" operator="greaterThan" value="1.2369342948659323E-4"/>
+                      <ScoreDistribution value="1" recordCount="2.0"/>
+                      <ScoreDistribution value="0" recordCount="0.0"/>
+                    </Node>
+                  </Node>
+                </Node>
+                <Node id="53" score="0" recordCount="7.0">
+                  <SimplePredicate field="Col2" operator="greaterThan" value="9.299370576627553E-4"/>
+                  <ScoreDistribution value="1" recordCount="0.0"/>
+                  <ScoreDistribution value="0" recordCount="7.0"/>
+                </Node>
+              </Node>
+              <Node id="54" score="1" recordCount="28.0">
+                <SimplePredicate field="Col7" operator="greaterThan" value="0.09040992520749569"/>
+                <ScoreDistribution value="1" recordCount="18.0"/>
+                <ScoreDistribution value="0" recordCount="10.0"/>
+                <Node id="55" score="1" recordCount="21.0">
+                  <SimplePredicate field="Col1" operator="lessOrEqual" value="0.43861840665340424"/>
+                  <ScoreDistribution value="1" recordCount="11.0"/>
+                  <ScoreDistribution value="0" recordCount="10.0"/>
+                  <Node id="56" score="0" recordCount="12.0">
+                    <SimplePredicate field="Col3" operator="lessOrEqual" value="0.44298432767391205"/>
+                    <ScoreDistribution value="1" recordCount="4.0"/>
+                    <ScoreDistribution value="0" recordCount="8.0"/>
+                    <Node id="57" score="1" recordCount="2.0">
+                      <SimplePredicate field="Col3" operator="lessOrEqual" value="0.3446246534585953"/>
+                      <ScoreDistribution value="1" recordCount="2.0"/>
+                      <ScoreDistribution value="0" recordCount="0.0"/>
+                    </Node>
+                    <Node id="58" score="0" recordCount="10.0">
+                      <SimplePredicate field="Col3" operator="greaterThan" value="0.3446246534585953"/>
+                      <ScoreDistribution value="1" recordCount="2.0"/>
+                      <ScoreDistribution value="0" recordCount="8.0"/>
+                      <Node id="59" score="1" recordCount="4.0">
+                        <SimplePredicate field="Col8" operator="lessOrEqual" value="705.1698303222656"/>
+                        <ScoreDistribution value="1" recordCount="2.0"/>
+                        <ScoreDistribution value="0" recordCount="2.0"/>
+                        <Node id="60" score="1" recordCount="2.0">
+                          <SimplePredicate field="Col6" operator="lessOrEqual" value="0.09583587944507599"/>
+                          <ScoreDistribution value="1" recordCount="2.0"/>
+                          <ScoreDistribution value="0" recordCount="0.0"/>
+                        </Node>
+                        <Node id="61" score="0" recordCount="2.0">
+                          <SimplePredicate field="Col6" operator="greaterThan" value="0.09583587944507599"/>
+                          <ScoreDistribution value="1" recordCount="0.0"/>
+                          <ScoreDistribution value="0" recordCount="2.0"/>
+                        </Node>
+                      </Node>
+                      <Node id="62" score="0" recordCount="6.0">
+                        <SimplePredicate field="Col8" operator="greaterThan" value="705.1698303222656"/>
+                        <ScoreDistribution value="1" recordCount="0.0"/>
+                        <ScoreDistribution value="0" recordCount="6.0"/>
+                      </Node>
+                    </Node>
+                  </Node>
+                  <Node id="63" score="1" recordCount="9.0">
+                    <SimplePredicate field="Col3" operator="greaterThan" value="0.44298432767391205"/>
+                    <ScoreDistribution value="1" recordCount="7.0"/>
+                    <ScoreDistribution value="0" recordCount="2.0"/>
+                    <Node id="64" score="1" recordCount="7.0">
+                      <SimplePredicate field="Col1" operator="lessOrEqual" value="0.41629552841186523"/>
+                      <ScoreDistribution value="1" recordCount="7.0"/>
+                      <ScoreDistribution value="0" recordCount="0.0"/>
+                    </Node>
+                    <Node id="65" score="0" recordCount="2.0">
+                      <SimplePredicate field="Col1" operator="greaterThan" value="0.41629552841186523"/>
+                      <ScoreDistribution value="1" recordCount="0.0"/>
+                      <ScoreDistribution value="0" recordCount="2.0"/>
+                    </Node>
+                  </Node>
+                </Node>
+                <Node id="66" score="1" recordCount="7.0">
+                  <SimplePredicate field="Col1" operator="greaterThan" value="0.43861840665340424"/>
+                  <ScoreDistribution value="1" recordCount="7.0"/>
+                  <ScoreDistribution value="0" recordCount="0.0"/>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </Node>
+      </Node>
+    </Node>
+  </TreeModel>
+</PMML>

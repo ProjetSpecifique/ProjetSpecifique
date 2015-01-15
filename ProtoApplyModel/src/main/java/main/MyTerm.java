@@ -1,5 +1,5 @@
 package main;
 
 public enum MyTerm {
-	coastline
+	coastline, desert, dune, glacier, island, nature, sky, snow, urban, water
 }

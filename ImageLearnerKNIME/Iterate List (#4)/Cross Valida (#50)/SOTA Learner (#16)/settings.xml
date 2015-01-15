@@ -7,11 +7,11 @@
 </config>
 <config key="model">
 <entry key="LrWinner" type="xdouble" value="0.1"/>
-<entry key="LrSister" type="xdouble" value="0.01"/>
 <entry key="LrAncestor" type="xdouble" value="0.05"/>
+<entry key="LrSister" type="xdouble" value="0.01"/>
 <entry key="MinError" type="xdouble" value="0.1"/>
-<entry key="Variability" type="xdouble" value="0.0"/>
 <entry key="Resource" type="xdouble" value="0.01"/>
+<entry key="Variability" type="xdouble" value="0.0"/>
 <entry key="UseVar" type="xboolean" value="false"/>
 <entry key="UseDist" type="xstring" value="Euclidean"/>
 <entry key="HFD" type="xboolean" value="false"/>
@@ -38,7 +38,7 @@
 <config key="styles"/>
 </config>
 <entry key="customDescription" type="xstring" isnull="true" value=""/>
-<entry key="state" type="xstring" value="EXECUTED"/>
+<entry key="state" type="xstring" value="IDLE"/>
 <entry key="factory" type="xstring" value="org.knime.base.node.mine.sota.SotaLearnerNodeFactory"/>
 <entry key="node-name" type="xstring" value="SOTA Learner"/>
 <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
@@ -47,17 +47,12 @@
 <entry key="node-bundle-version" type="xstring" value="2.10.4.0044920"/>
 <config key="factory_settings"/>
 <entry key="name" type="xstring" value="SOTA Learner"/>
-<entry key="hasContent" type="xboolean" value="true"/>
+<entry key="hasContent" type="xboolean" value="false"/>
 <entry key="isInactive" type="xboolean" value="false"/>
 <config key="ports">
 <config key="port_1">
 <entry key="index" type="xint" value="1"/>
-<entry key="port_spec_class" type="xstring" value="org.knime.base.node.mine.sota.SotaPortObjectSpec"/>
-<entry key="port_object_class" type="xstring" value="org.knime.base.node.mine.sota.SotaPortObject"/>
-<entry key="port_object_summary" type="xstring" value="Sota Port"/>
-<entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
-<entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
-<entry key="port_dir_location" type="xstring" value="port_1"/>
+<entry key="port_dir_location" type="xstring" isnull="true" value=""/>
 </config>
 </config>
 <config key="filestores">

@@ -21,7 +21,7 @@ public class MyEvaluator {
 
 	public static boolean logResults = true;
 
-	public static Double evaluate(double[] histogram, String modelPath, String resultClass) throws Exception {
+	public static String evaluate(double[] histogram, String modelPath, String resultClass) throws Exception {
 		PMML pmml;
 		try {
 			pmml = JAXBUtil.unmarshalPMML(ImportFilter.apply(new InputSource(MyNaiveBayesEvaluator.class
@@ -70,12 +70,14 @@ public class MyEvaluator {
 		}
 
 		FieldName targetName = evaluator.getTargetField();
-		Double proba = getProbabilityForClass(result.get(targetName), resultClass);
+		Object targetValue = result.get(targetName);
+		// FieldName targetName = evaluator.getTargetField();
+		Double proba = getProbabilityForClass(targetValue, resultClass);
 		if (logResults) {
 			System.out.println("Probability for class " + resultClass + " : " + proba);
 		}
 
-		return proba;
+		return (String) EvaluatorUtil.decode(targetValue);
 	}
 
 	private static Double getProbabilityForClass(Object targetValue, String resultClass) {

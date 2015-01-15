@@ -1,0 +1,2815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2">
+  <Header copyright="So">
+    <Application name="KNIME" version="2.10.4"/>
+  </Header>
+  <DataDictionary numberOfFields="145">
+    <DataField name="TermClass" optype="categorical" dataType="string">
+      <Value value="1"/>
+      <Value value="0"/>
+    </DataField>
+    <DataField name="Col1" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col2" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col3" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col4" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col5" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col6" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col7" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col8" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col9" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col10" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col11" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col12" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col13" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col14" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col15" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col16" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col17" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col18" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col19" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col20" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col21" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col22" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col23" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col24" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col25" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col26" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col27" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col28" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col29" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col30" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col31" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col32" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col33" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col34" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col35" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col36" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col37" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col38" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col39" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col40" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col41" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col42" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col43" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col44" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col45" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col46" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col47" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col48" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col49" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col50" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col51" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col52" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col53" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col54" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col55" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col56" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col57" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col58" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col59" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col60" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col61" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col62" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col63" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col64" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col65" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col66" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col67" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col68" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col69" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col70" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col71" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col72" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col73" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col74" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col75" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col76" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col77" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col78" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col79" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col80" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col81" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col82" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col83" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col84" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col85" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col86" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col87" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col88" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col89" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col90" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col91" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col92" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col93" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col94" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col95" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col96" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col97" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col98" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col99" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col100" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col101" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col102" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col103" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col104" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col105" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col106" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col107" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col108" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col109" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col110" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col111" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col112" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col113" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col114" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col115" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col116" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col117" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col118" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col119" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col120" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col121" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col122" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col123" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col124" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col125" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col126" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col127" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col128" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col129" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col130" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col131" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col132" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col133" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col134" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col135" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col136" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col137" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col138" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col139" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col140" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col141" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col142" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col143" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col144" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+  </DataDictionary>
+  <NeuralNetwork functionName="classification" algorithmName="RProp" activationFunction="logistic" normalizationMethod="none" width="0.0" numberOfLayers="2">
+    <MiningSchema>
+      <MiningField name="Col1" invalidValueTreatment="asIs"/>
+      <MiningField name="Col2" invalidValueTreatment="asIs"/>
+      <MiningField name="Col3" invalidValueTreatment="asIs"/>
+      <MiningField name="Col4" invalidValueTreatment="asIs"/>
+      <MiningField name="Col5" invalidValueTreatment="asIs"/>
+      <MiningField name="Col6" invalidValueTreatment="asIs"/>
+      <MiningField name="Col7" invalidValueTreatment="asIs"/>
+      <MiningField name="Col8" invalidValueTreatment="asIs"/>
+      <MiningField name="Col9" invalidValueTreatment="asIs"/>
+      <MiningField name="Col10" invalidValueTreatment="asIs"/>
+      <MiningField name="Col11" invalidValueTreatment="asIs"/>
+      <MiningField name="Col12" invalidValueTreatment="asIs"/>
+      <MiningField name="Col13" invalidValueTreatment="asIs"/>
+      <MiningField name="Col14" invalidValueTreatment="asIs"/>
+      <MiningField name="Col15" invalidValueTreatment="asIs"/>
+      <MiningField name="Col16" invalidValueTreatment="asIs"/>
+      <MiningField name="Col17" invalidValueTreatment="asIs"/>
+      <MiningField name="Col18" invalidValueTreatment="asIs"/>
+      <MiningField name="Col19" invalidValueTreatment="asIs"/>
+      <MiningField name="Col20" invalidValueTreatment="asIs"/>
+      <MiningField name="Col21" invalidValueTreatment="asIs"/>
+      <MiningField name="Col22" invalidValueTreatment="asIs"/>
+      <MiningField name="Col23" invalidValueTreatment="asIs"/>
+      <MiningField name="Col24" invalidValueTreatment="asIs"/>
+      <MiningField name="Col25" invalidValueTreatment="asIs"/>
+      <MiningField name="Col26" invalidValueTreatment="asIs"/>
+      <MiningField name="Col27" invalidValueTreatment="asIs"/>
+      <MiningField name="Col28" invalidValueTreatment="asIs"/>
+      <MiningField name="Col29" invalidValueTreatment="asIs"/>
+      <MiningField name="Col30" invalidValueTreatment="asIs"/>
+      <MiningField name="Col31" invalidValueTreatment="asIs"/>
+      <MiningField name="Col32" invalidValueTreatment="asIs"/>
+      <MiningField name="Col33" invalidValueTreatment="asIs"/>
+      <MiningField name="Col34" invalidValueTreatment="asIs"/>
+      <MiningField name="Col35" invalidValueTreatment="asIs"/>
+      <MiningField name="Col36" invalidValueTreatment="asIs"/>
+      <MiningField name="Col37" invalidValueTreatment="asIs"/>
+      <MiningField name="Col38" invalidValueTreatment="asIs"/>
+      <MiningField name="Col39" invalidValueTreatment="asIs"/>
+      <MiningField name="Col40" invalidValueTreatment="asIs"/>
+      <MiningField name="Col41" invalidValueTreatment="asIs"/>
+      <MiningField name="Col42" invalidValueTreatment="asIs"/>
+      <MiningField name="Col43" invalidValueTreatment="asIs"/>
+      <MiningField name="Col44" invalidValueTreatment="asIs"/>
+      <MiningField name="Col45" invalidValueTreatment="asIs"/>
+      <MiningField name="Col46" invalidValueTreatment="asIs"/>
+      <MiningField name="Col47" invalidValueTreatment="asIs"/>
+      <MiningField name="Col48" invalidValueTreatment="asIs"/>
+      <MiningField name="Col49" invalidValueTreatment="asIs"/>
+      <MiningField name="Col50" invalidValueTreatment="asIs"/>
+      <MiningField name="Col51" invalidValueTreatment="asIs"/>
+      <MiningField name="Col52" invalidValueTreatment="asIs"/>
+      <MiningField name="Col53" invalidValueTreatment="asIs"/>
+      <MiningField name="Col54" invalidValueTreatment="asIs"/>
+      <MiningField name="Col55" invalidValueTreatment="asIs"/>
+      <MiningField name="Col56" invalidValueTreatment="asIs"/>
+      <MiningField name="Col57" invalidValueTreatment="asIs"/>
+      <MiningField name="Col58" invalidValueTreatment="asIs"/>
+      <MiningField name="Col59" invalidValueTreatment="asIs"/>
+      <MiningField name="Col60" invalidValueTreatment="asIs"/>
+      <MiningField name="Col61" invalidValueTreatment="asIs"/>
+      <MiningField name="Col62" invalidValueTreatment="asIs"/>
+      <MiningField name="Col63" invalidValueTreatment="asIs"/>
+      <MiningField name="Col64" invalidValueTreatment="asIs"/>
+      <MiningField name="Col65" invalidValueTreatment="asIs"/>
+      <MiningField name="Col66" invalidValueTreatment="asIs"/>
+      <MiningField name="Col67" invalidValueTreatment="asIs"/>
+      <MiningField name="Col68" invalidValueTreatment="asIs"/>
+      <MiningField name="Col69" invalidValueTreatment="asIs"/>
+      <MiningField name="Col70" invalidValueTreatment="asIs"/>
+      <MiningField name="Col71" invalidValueTreatment="asIs"/>
+      <MiningField name="Col72" invalidValueTreatment="asIs"/>
+      <MiningField name="Col73" invalidValueTreatment="asIs"/>
+      <MiningField name="Col74" invalidValueTreatment="asIs"/>
+      <MiningField name="Col75" invalidValueTreatment="asIs"/>
+      <MiningField name="Col76" invalidValueTreatment="asIs"/>
+      <MiningField name="Col77" invalidValueTreatment="asIs"/>
+      <MiningField name="Col78" invalidValueTreatment="asIs"/>
+      <MiningField name="Col79" invalidValueTreatment="asIs"/>
+      <MiningField name="Col80" invalidValueTreatment="asIs"/>
+      <MiningField name="Col81" invalidValueTreatment="asIs"/>
+      <MiningField name="Col82" invalidValueTreatment="asIs"/>
+      <MiningField name="Col83" invalidValueTreatment="asIs"/>
+      <MiningField name="Col84" invalidValueTreatment="asIs"/>
+      <MiningField name="Col85" invalidValueTreatment="asIs"/>
+      <MiningField name="Col86" invalidValueTreatment="asIs"/>
+      <MiningField name="Col87" invalidValueTreatment="asIs"/>
+      <MiningField name="Col88" invalidValueTreatment="asIs"/>
+      <MiningField name="Col89" invalidValueTreatment="asIs"/>
+      <MiningField name="Col90" invalidValueTreatment="asIs"/>
+      <MiningField name="Col91" invalidValueTreatment="asIs"/>
+      <MiningField name="Col92" invalidValueTreatment="asIs"/>
+      <MiningField name="Col93" invalidValueTreatment="asIs"/>
+      <MiningField name="Col94" invalidValueTreatment="asIs"/>
+      <MiningField name="Col95" invalidValueTreatment="asIs"/>
+      <MiningField name="Col96" invalidValueTreatment="asIs"/>
+      <MiningField name="Col97" invalidValueTreatment="asIs"/>
+      <MiningField name="Col98" invalidValueTreatment="asIs"/>
+      <MiningField name="Col99" invalidValueTreatment="asIs"/>
+      <MiningField name="Col100" invalidValueTreatment="asIs"/>
+      <MiningField name="Col101" invalidValueTreatment="asIs"/>
+      <MiningField name="Col102" invalidValueTreatment="asIs"/>
+      <MiningField name="Col103" invalidValueTreatment="asIs"/>
+      <MiningField name="Col104" invalidValueTreatment="asIs"/>
+      <MiningField name="Col105" invalidValueTreatment="asIs"/>
+      <MiningField name="Col106" invalidValueTreatment="asIs"/>
+      <MiningField name="Col107" invalidValueTreatment="asIs"/>
+      <MiningField name="Col108" invalidValueTreatment="asIs"/>
+      <MiningField name="Col109" invalidValueTreatment="asIs"/>
+      <MiningField name="Col110" invalidValueTreatment="asIs"/>
+      <MiningField name="Col111" invalidValueTreatment="asIs"/>
+      <MiningField name="Col112" invalidValueTreatment="asIs"/>
+      <MiningField name="Col113" invalidValueTreatment="asIs"/>
+      <MiningField name="Col114" invalidValueTreatment="asIs"/>
+      <MiningField name="Col115" invalidValueTreatment="asIs"/>
+      <MiningField name="Col116" invalidValueTreatment="asIs"/>
+      <MiningField name="Col117" invalidValueTreatment="asIs"/>
+      <MiningField name="Col118" invalidValueTreatment="asIs"/>
+      <MiningField name="Col119" invalidValueTreatment="asIs"/>
+      <MiningField name="Col120" invalidValueTreatment="asIs"/>
+      <MiningField name="Col121" invalidValueTreatment="asIs"/>
+      <MiningField name="Col122" invalidValueTreatment="asIs"/>
+      <MiningField name="Col123" invalidValueTreatment="asIs"/>
+      <MiningField name="Col124" invalidValueTreatment="asIs"/>
+      <MiningField name="Col125" invalidValueTreatment="asIs"/>
+      <MiningField name="Col126" invalidValueTreatment="asIs"/>
+      <MiningField name="Col127" invalidValueTreatment="asIs"/>
+      <MiningField name="Col128" invalidValueTreatment="asIs"/>
+      <MiningField name="Col129" invalidValueTreatment="asIs"/>
+      <MiningField name="Col130" invalidValueTreatment="asIs"/>
+      <MiningField name="Col131" invalidValueTreatment="asIs"/>
+      <MiningField name="Col132" invalidValueTreatment="asIs"/>
+      <MiningField name="Col133" invalidValueTreatment="asIs"/>
+      <MiningField name="Col134" invalidValueTreatment="asIs"/>
+      <MiningField name="Col135" invalidValueTreatment="asIs"/>
+      <MiningField name="Col136" invalidValueTreatment="asIs"/>
+      <MiningField name="Col137" invalidValueTreatment="asIs"/>
+      <MiningField name="Col138" invalidValueTreatment="asIs"/>
+      <MiningField name="Col139" invalidValueTreatment="asIs"/>
+      <MiningField name="Col140" invalidValueTreatment="asIs"/>
+      <MiningField name="Col141" invalidValueTreatment="asIs"/>
+      <MiningField name="Col142" invalidValueTreatment="asIs"/>
+      <MiningField name="Col143" invalidValueTreatment="asIs"/>
+      <MiningField name="Col144" invalidValueTreatment="asIs"/>
+      <MiningField name="TermClass" invalidValueTreatment="asIs" usageType="target"/>
+    </MiningSchema>
+    <NeuralInputs numberOfInputs="144">
+      <NeuralInput id="0,0">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col1"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,1">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col2"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,2">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col3"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,3">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col4"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,4">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col5"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,5">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col6"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,6">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col7"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,7">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col8"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,8">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col9"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,9">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col10"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,10">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col11"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,11">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col12"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,12">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col13"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,13">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col14"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,14">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col15"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,15">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col16"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,16">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col17"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,17">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col18"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,18">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col19"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,19">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col20"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,20">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col21"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,21">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col22"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,22">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col23"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,23">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col24"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,24">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col25"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,25">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col26"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,26">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col27"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,27">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col28"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,28">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col29"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,29">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col30"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,30">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col31"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,31">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col32"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,32">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col33"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,33">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col34"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,34">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col35"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,35">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col36"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,36">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col37"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,37">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col38"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,38">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col39"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,39">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col40"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,40">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col41"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,41">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col42"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,42">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col43"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,43">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col44"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,44">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col45"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,45">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col46"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,46">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col47"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,47">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col48"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,48">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col49"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,49">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col50"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,50">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col51"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,51">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col52"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,52">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col53"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,53">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col54"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,54">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col55"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,55">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col56"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,56">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col57"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,57">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col58"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,58">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col59"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,59">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col60"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,60">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col61"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,61">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col62"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,62">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col63"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,63">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col64"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,64">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col65"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,65">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col66"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,66">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col67"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,67">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col68"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,68">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col69"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,69">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col70"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,70">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col71"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,71">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col72"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,72">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col73"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,73">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col74"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,74">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col75"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,75">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col76"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,76">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col77"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,77">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col78"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,78">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col79"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,79">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col80"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,80">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col81"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,81">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col82"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,82">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col83"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,83">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col84"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,84">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col85"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,85">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col86"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,86">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col87"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,87">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col88"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,88">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col89"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,89">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col90"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,90">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col91"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,91">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col92"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,92">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col93"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,93">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col94"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,94">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col95"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,95">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col96"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,96">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col97"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,97">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col98"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,98">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col99"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,99">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col100"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,100">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col101"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,101">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col102"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,102">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col103"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,103">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col104"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,104">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col105"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,105">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col106"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,106">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col107"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,107">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col108"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,108">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col109"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,109">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col110"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,110">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col111"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,111">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col112"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,112">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col113"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,113">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col114"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,114">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col115"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,115">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col116"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,116">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col117"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,117">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col118"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,118">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col119"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,119">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col120"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,120">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col121"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,121">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col122"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,122">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col123"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,123">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col124"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,124">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col125"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,125">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col126"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,126">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col127"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,127">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col128"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,128">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col129"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,129">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col130"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,130">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col131"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,131">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col132"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,132">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col133"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,133">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col134"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,134">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col135"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,135">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col136"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,136">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col137"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,137">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col138"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,138">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col139"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,139">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col140"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,140">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col141"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,141">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col142"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,142">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col143"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,143">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col144"/>
+        </DerivedField>
+      </NeuralInput>
+    </NeuralInputs>
+    <NeuralLayer>
+      <Neuron id="1,0" bias="-0.3543375691254054">
+        <Con from="0,0" weight="0.8140824307466421"/>
+        <Con from="0,1" weight="-0.6037664658406383"/>
+        <Con from="0,2" weight="-0.6158832362938036"/>
+        <Con from="0,3" weight="3.2886387584657406"/>
+        <Con from="0,4" weight="54.746879861584816"/>
+        <Con from="0,5" weight="-144.1159884128275"/>
+        <Con from="0,6" weight="-1.0850863033495448"/>
+        <Con from="0,7" weight="3.0191371286251267"/>
+        <Con from="0,8" weight="2.258048891696459"/>
+        <Con from="0,9" weight="18.06461695435319"/>
+        <Con from="0,10" weight="-131.96477450453511"/>
+        <Con from="0,11" weight="1.954825657397392"/>
+        <Con from="0,12" weight="-73.51246235362683"/>
+        <Con from="0,13" weight="166.08677637104307"/>
+        <Con from="0,14" weight="0.47285235686070975"/>
+        <Con from="0,15" weight="-9.172482344507902"/>
+        <Con from="0,16" weight="-10.506410873634227"/>
+        <Con from="0,17" weight="0.04173064265982661"/>
+        <Con from="0,18" weight="0.037786060101345165"/>
+        <Con from="0,19" weight="-1.5660003294097724"/>
+        <Con from="0,20" weight="-0.014712750093625961"/>
+        <Con from="0,21" weight="8.074608092721197"/>
+        <Con from="0,22" weight="127.3364370377935"/>
+        <Con from="0,23" weight="238.22173687371316"/>
+        <Con from="0,24" weight="-1.5579941500430186"/>
+        <Con from="0,25" weight="0.9776627384074819"/>
+        <Con from="0,26" weight="0.7428150486189362"/>
+        <Con from="0,27" weight="-1.6167985466441612"/>
+        <Con from="0,28" weight="197.5259967742469"/>
+        <Con from="0,29" weight="-2.1380134091917213"/>
+        <Con from="0,30" weight="-0.6624322321998334"/>
+        <Con from="0,31" weight="-0.5146023184747929"/>
+        <Con from="0,32" weight="-0.028126583472304387"/>
+        <Con from="0,33" weight="0.12998467454312643"/>
+        <Con from="0,34" weight="-4.649792567467222"/>
+        <Con from="0,35" weight="0.3787741490210245"/>
+        <Con from="0,36" weight="-6.991092359908232"/>
+        <Con from="0,37" weight="-49.335452363620504"/>
+        <Con from="0,38" weight="0.8605304267145361"/>
+        <Con from="0,39" weight="11.42588547851411"/>
+        <Con from="0,40" weight="-42.720273429752446"/>
+        <Con from="0,41" weight="-12.773452907608647"/>
+        <Con from="0,42" weight="-1.0311551555551048"/>
+        <Con from="0,43" weight="-0.9820409288058242"/>
+        <Con from="0,44" weight="-1.0737930861803042"/>
+        <Con from="0,45" weight="16.423318638964826"/>
+        <Con from="0,46" weight="-9.228362268105334"/>
+        <Con from="0,47" weight="0.9573436762710171"/>
+        <Con from="0,48" weight="0.015638223788915055"/>
+        <Con from="0,49" weight="0.6597767584191095"/>
+        <Con from="0,50" weight="-0.8067363838563976"/>
+        <Con from="0,51" weight="189.58699935538996"/>
+        <Con from="0,52" weight="-293.0133357637835"/>
+        <Con from="0,53" weight="-176.71100735289625"/>
+        <Con from="0,54" weight="-0.1648771939596063"/>
+        <Con from="0,55" weight="-3.1320398626498718"/>
+        <Con from="0,56" weight="-0.7540690182223656"/>
+        <Con from="0,57" weight="-0.20268346031521486"/>
+        <Con from="0,58" weight="-39.543821063339884"/>
+        <Con from="0,59" weight="-1.0160292030514275"/>
+        <Con from="0,60" weight="-7.087967853582319"/>
+        <Con from="0,61" weight="-13.757092625482766"/>
+        <Con from="0,62" weight="-0.3052972682261063"/>
+        <Con from="0,63" weight="4.115446455136665"/>
+        <Con from="0,64" weight="3.1774233987750473"/>
+        <Con from="0,65" weight="3.9205278360521425"/>
+        <Con from="0,66" weight="-0.5530736719695037"/>
+        <Con from="0,67" weight="-0.2095248103428645"/>
+        <Con from="0,68" weight="-0.8173436081677848"/>
+        <Con from="0,69" weight="-65.17312033237044"/>
+        <Con from="0,70" weight="534.7370803552507"/>
+        <Con from="0,71" weight="-228.26807116562526"/>
+        <Con from="0,72" weight="-1.985610400290664"/>
+        <Con from="0,73" weight="-0.5231215742048184"/>
+        <Con from="0,74" weight="0.1771296725390193"/>
+        <Con from="0,75" weight="0.30549051595934584"/>
+        <Con from="0,76" weight="-15.067251791352831"/>
+        <Con from="0,77" weight="-1.759462484604414"/>
+        <Con from="0,78" weight="3.2767616874240275"/>
+        <Con from="0,79" weight="0.3124753458719164"/>
+        <Con from="0,80" weight="-0.27631926548438773"/>
+        <Con from="0,81" weight="-0.9349046044561872"/>
+        <Con from="0,82" weight="-0.08726239493631872"/>
+        <Con from="0,83" weight="-0.8643145901174294"/>
+        <Con from="0,84" weight="-109.96743961209586"/>
+        <Con from="0,85" weight="413.7713889137109"/>
+        <Con from="0,86" weight="0.6156665655700526"/>
+        <Con from="0,87" weight="0.005503062225863609"/>
+        <Con from="0,88" weight="633.0844748771254"/>
+        <Con from="0,89" weight="-30.096825126101628"/>
+        <Con from="0,90" weight="0.7968282797060777"/>
+        <Con from="0,91" weight="-1.6939147931158716"/>
+        <Con from="0,92" weight="-0.6478213293952625"/>
+        <Con from="0,93" weight="71.80996953964726"/>
+        <Con from="0,94" weight="-460.6886619718667"/>
+        <Con from="0,95" weight="-89.2343282925457"/>
+        <Con from="0,96" weight="2.0892039086944987"/>
+        <Con from="0,97" weight="-0.45093360823433287"/>
+        <Con from="0,98" weight="0.43546684468168423"/>
+        <Con from="0,99" weight="37.27048111642967"/>
+        <Con from="0,100" weight="-77.25294897570065"/>
+        <Con from="0,101" weight="1.9661826770848707"/>
+        <Con from="0,102" weight="-0.7099249443194874"/>
+        <Con from="0,103" weight="-1.444926376711507"/>
+        <Con from="0,104" weight="-0.016265358206906857"/>
+        <Con from="0,105" weight="0.8920803064353928"/>
+        <Con from="0,106" weight="-13.186167613060277"/>
+        <Con from="0,107" weight="-0.0301156066240465"/>
+        <Con from="0,108" weight="59.55779207953922"/>
+        <Con from="0,109" weight="-24.985684880535935"/>
+        <Con from="0,110" weight="0.5366010097465941"/>
+        <Con from="0,111" weight="-230.7817282891488"/>
+        <Con from="0,112" weight="-141.3305544388611"/>
+        <Con from="0,113" weight="29.379728866239265"/>
+        <Con from="0,114" weight="1.2036954097425994"/>
+        <Con from="0,115" weight="4.2203156812589215"/>
+        <Con from="0,116" weight="-0.39754860310659534"/>
+        <Con from="0,117" weight="16.74056362293914"/>
+        <Con from="0,118" weight="126.9377175430351"/>
+        <Con from="0,119" weight="273.4038779629401"/>
+        <Con from="0,120" weight="-0.4088967067204765"/>
+        <Con from="0,121" weight="0.6698899307805434"/>
+        <Con from="0,122" weight="-2.8549572547093485"/>
+        <Con from="0,123" weight="38.11791370540541"/>
+        <Con from="0,124" weight="-0.17500783053964303"/>
+        <Con from="0,125" weight="0.5469661501460225"/>
+        <Con from="0,126" weight="4.189066708261801"/>
+        <Con from="0,127" weight="-1.9200709017445765"/>
+        <Con from="0,128" weight="-0.6958574375495576"/>
+        <Con from="0,129" weight="2.5667704274649297"/>
+        <Con from="0,130" weight="-358.5281424200157"/>
+        <Con from="0,131" weight="0.7954044962435911"/>
+        <Con from="0,132" weight="14.580868754163026"/>
+        <Con from="0,133" weight="-211.60579254296738"/>
+        <Con from="0,134" weight="30.982964156601938"/>
+        <Con from="0,135" weight="-82.53048137774894"/>
+        <Con from="0,136" weight="-692.1635935185966"/>
+        <Con from="0,137" weight="4.181941487533172"/>
+        <Con from="0,138" weight="1.0551607346999088"/>
+        <Con from="0,139" weight="2.876496457766973"/>
+        <Con from="0,140" weight="0.3082298742494962"/>
+        <Con from="0,141" weight="15.286474831662703"/>
+        <Con from="0,142" weight="126.94944954561421"/>
+        <Con from="0,143" weight="1.269290782014859"/>
+      </Neuron>
+      <Neuron id="1,1" bias="0.4406592696519939">
+        <Con from="0,0" weight="1.404652780623764"/>
+        <Con from="0,1" weight="4.303663999139491"/>
+        <Con from="0,2" weight="-0.15589142780306917"/>
+        <Con from="0,3" weight="-17.531080812134284"/>
+        <Con from="0,4" weight="-51.91632995756521"/>
+        <Con from="0,5" weight="157.67754279407816"/>
+        <Con from="0,6" weight="-0.010605323717346087"/>
+        <Con from="0,7" weight="27.704054268915474"/>
+        <Con from="0,8" weight="-0.27888676443856375"/>
+        <Con from="0,9" weight="-7.9249420954093415"/>
+        <Con from="0,10" weight="1.7929753292989217"/>
+        <Con from="0,11" weight="-3.787371134795124"/>
+        <Con from="0,12" weight="94.39407811640038"/>
+        <Con from="0,13" weight="-328.23095432450907"/>
+        <Con from="0,14" weight="109.20807222576637"/>
+        <Con from="0,15" weight="-6.322632444300289"/>
+        <Con from="0,16" weight="13.267652473070346"/>
+        <Con from="0,17" weight="-0.983970533313435"/>
+        <Con from="0,18" weight="-0.4043179160030935"/>
+        <Con from="0,19" weight="-0.018112126863241776"/>
+        <Con from="0,20" weight="0.8583340207392558"/>
+        <Con from="0,21" weight="-8.255519901811208"/>
+        <Con from="0,22" weight="-103.86756062545892"/>
+        <Con from="0,23" weight="-119.29781106071479"/>
+        <Con from="0,24" weight="0.06816850792086458"/>
+        <Con from="0,25" weight="0.6850421444474095"/>
+        <Con from="0,26" weight="-0.6873653797598852"/>
+        <Con from="0,27" weight="28.697647313446453"/>
+        <Con from="0,28" weight="-161.99481558814554"/>
+        <Con from="0,29" weight="54.385007300517636"/>
+        <Con from="0,30" weight="-0.8456412382891614"/>
+        <Con from="0,31" weight="-1.4453918420274798"/>
+        <Con from="0,32" weight="0.17754940440309494"/>
+        <Con from="0,33" weight="1.0708357975400253"/>
+        <Con from="0,34" weight="2.093965543006599"/>
+        <Con from="0,35" weight="0.7547851590456056"/>
+        <Con from="0,36" weight="3.470799929137671"/>
+        <Con from="0,37" weight="8.804751377050279"/>
+        <Con from="0,38" weight="-0.45038809790426804"/>
+        <Con from="0,39" weight="-5.049762816149568"/>
+        <Con from="0,40" weight="27.046225767244323"/>
+        <Con from="0,41" weight="-4.247365704314882"/>
+        <Con from="0,42" weight="7.021033497707754"/>
+        <Con from="0,43" weight="3.9876444930965844"/>
+        <Con from="0,44" weight="-0.7375650292490039"/>
+        <Con from="0,45" weight="-13.421198647305356"/>
+        <Con from="0,46" weight="1.1505866653460404"/>
+        <Con from="0,47" weight="-0.3626600260511438"/>
+        <Con from="0,48" weight="0.8368081670387438"/>
+        <Con from="0,49" weight="-0.6687191197073077"/>
+        <Con from="0,50" weight="-1.1646690051354314"/>
+        <Con from="0,51" weight="-7.524460992206459"/>
+        <Con from="0,52" weight="244.15749187825193"/>
+        <Con from="0,53" weight="1.157431977384798"/>
+        <Con from="0,54" weight="0.49783426309650947"/>
+        <Con from="0,55" weight="-0.2038737965504412"/>
+        <Con from="0,56" weight="0.12515367893901086"/>
+        <Con from="0,57" weight="-0.10406884950993063"/>
+        <Con from="0,58" weight="-0.07073862642553573"/>
+        <Con from="0,59" weight="1.328136031729565"/>
+        <Con from="0,60" weight="17.0895183908322"/>
+        <Con from="0,61" weight="2.592674922026432"/>
+        <Con from="0,62" weight="1.1151292801528412"/>
+        <Con from="0,63" weight="-4.8344870085676055"/>
+        <Con from="0,64" weight="0.7144220784520107"/>
+        <Con from="0,65" weight="34.44842778804794"/>
+        <Con from="0,66" weight="0.47267990532167137"/>
+        <Con from="0,67" weight="-0.37521429707877374"/>
+        <Con from="0,68" weight="-0.08327204513956739"/>
+        <Con from="0,69" weight="100.0574561446194"/>
+        <Con from="0,70" weight="-401.7331578855443"/>
+        <Con from="0,71" weight="144.13721303435221"/>
+        <Con from="0,72" weight="-0.8006836367374547"/>
+        <Con from="0,73" weight="-0.2603009999538112"/>
+        <Con from="0,74" weight="-0.7455929336985856"/>
+        <Con from="0,75" weight="0.6127189977325536"/>
+        <Con from="0,76" weight="-32.73654688591756"/>
+        <Con from="0,77" weight="14.808886322393587"/>
+        <Con from="0,78" weight="0.3530634234866023"/>
+        <Con from="0,79" weight="0.036350996859674176"/>
+        <Con from="0,80" weight="0.32694782156450525"/>
+        <Con from="0,81" weight="-0.3428403185914116"/>
+        <Con from="0,82" weight="-0.32241084386814"/>
+        <Con from="0,83" weight="0.4269664989447023"/>
+        <Con from="0,84" weight="147.2086901627202"/>
+        <Con from="0,85" weight="-338.56566116260376"/>
+        <Con from="0,86" weight="-0.09051254873118884"/>
+        <Con from="0,87" weight="0.3342458073252599"/>
+        <Con from="0,88" weight="-9.43897326719649"/>
+        <Con from="0,89" weight="-4.578610669865597"/>
+        <Con from="0,90" weight="-0.800207060662178"/>
+        <Con from="0,91" weight="17.01321045399466"/>
+        <Con from="0,92" weight="-0.12254425250920503"/>
+        <Con from="0,93" weight="-73.86112627079076"/>
+        <Con from="0,94" weight="577.9189996612323"/>
+        <Con from="0,95" weight="180.62258788089747"/>
+        <Con from="0,96" weight="-1.4347001269079562"/>
+        <Con from="0,97" weight="-0.9895839629126577"/>
+        <Con from="0,98" weight="0.23513212882618906"/>
+        <Con from="0,99" weight="-106.11076229468041"/>
+        <Con from="0,100" weight="20.110109504594888"/>
+        <Con from="0,101" weight="5.9282764754246315"/>
+        <Con from="0,102" weight="-0.9748288955598743"/>
+        <Con from="0,103" weight="-1.5608665056025006"/>
+        <Con from="0,104" weight="-1.0137875789075055"/>
+        <Con from="0,105" weight="0.3657963246335807"/>
+        <Con from="0,106" weight="-1.1839686957028954"/>
+        <Con from="0,107" weight="0.8844993845043974"/>
+        <Con from="0,108" weight="-128.76401197567574"/>
+        <Con from="0,109" weight="106.14951244954779"/>
+        <Con from="0,110" weight="-0.11471125004484822"/>
+        <Con from="0,111" weight="1.0024315046861851"/>
+        <Con from="0,112" weight="-18.56209601902004"/>
+        <Con from="0,113" weight="-13.896114548675456"/>
+        <Con from="0,114" weight="0.7195747277127023"/>
+        <Con from="0,115" weight="-0.7381842970508621"/>
+        <Con from="0,116" weight="-7.115212010702667"/>
+        <Con from="0,117" weight="-12.574208470611975"/>
+        <Con from="0,118" weight="-105.20481549834658"/>
+        <Con from="0,119" weight="-345.7925973679024"/>
+        <Con from="0,120" weight="-0.48805230587006193"/>
+        <Con from="0,121" weight="0.20827223245301896"/>
+        <Con from="0,122" weight="1.4060100744051738"/>
+        <Con from="0,123" weight="-106.74704431930228"/>
+        <Con from="0,124" weight="155.27278315477645"/>
+        <Con from="0,125" weight="2.0050745760882887"/>
+        <Con from="0,126" weight="-2.3073988376470256"/>
+        <Con from="0,127" weight="-0.7648561039578551"/>
+        <Con from="0,128" weight="0.5339184930965643"/>
+        <Con from="0,129" weight="6.863538925779234"/>
+        <Con from="0,130" weight="-0.7704493176999565"/>
+        <Con from="0,131" weight="-0.330425925772811"/>
+        <Con from="0,132" weight="16.56707775076664"/>
+        <Con from="0,133" weight="305.8139854089512"/>
+        <Con from="0,134" weight="-6.058002693187149"/>
+        <Con from="0,135" weight="17.270635323830835"/>
+        <Con from="0,136" weight="-56.12692238090626"/>
+        <Con from="0,137" weight="0.8619309211960478"/>
+        <Con from="0,138" weight="3.9920349988286383"/>
+        <Con from="0,139" weight="-0.2821270606224707"/>
+        <Con from="0,140" weight="1.0334274971720714"/>
+        <Con from="0,141" weight="-12.853036943891622"/>
+        <Con from="0,142" weight="-105.1172659308989"/>
+        <Con from="0,143" weight="-0.5824723584669803"/>
+      </Neuron>
+      <Neuron id="1,2" bias="-1.134578135269943">
+        <Con from="0,0" weight="-3.5806371337981346"/>
+        <Con from="0,1" weight="-0.2818014362633402"/>
+        <Con from="0,2" weight="3.486064500210242"/>
+        <Con from="0,3" weight="2.334963653712406"/>
+        <Con from="0,4" weight="7.61208151540674"/>
+        <Con from="0,5" weight="-208.1214859801773"/>
+        <Con from="0,6" weight="-2.30075169729828"/>
+        <Con from="0,7" weight="-25.689980166770304"/>
+        <Con from="0,8" weight="-0.13357617424741072"/>
+        <Con from="0,9" weight="-16.68398176344947"/>
+        <Con from="0,10" weight="-0.6828965768993069"/>
+        <Con from="0,11" weight="1.3339452186555054"/>
+        <Con from="0,12" weight="-11.23466381710749"/>
+        <Con from="0,13" weight="287.1796798572955"/>
+        <Con from="0,14" weight="-182.96499592237873"/>
+        <Con from="0,15" weight="62.69052858403714"/>
+        <Con from="0,16" weight="-160.31753369432903"/>
+        <Con from="0,17" weight="-12.529433799433182"/>
+        <Con from="0,18" weight="-2.447398924050429"/>
+        <Con from="0,19" weight="-4.435804511518562"/>
+        <Con from="0,20" weight="-5.115485926959888"/>
+        <Con from="0,21" weight="7.588463898074071"/>
+        <Con from="0,22" weight="28.646367244553122"/>
+        <Con from="0,23" weight="2.6209361054220977"/>
+        <Con from="0,24" weight="-0.5281552031369117"/>
+        <Con from="0,25" weight="-0.21918436479776252"/>
+        <Con from="0,26" weight="0.1127753607527305"/>
+        <Con from="0,27" weight="-0.3865475679570647"/>
+        <Con from="0,28" weight="226.46755330420348"/>
+        <Con from="0,29" weight="-438.17729724908065"/>
+        <Con from="0,30" weight="-0.9213290167858729"/>
+        <Con from="0,31" weight="-0.7501009613726765"/>
+        <Con from="0,32" weight="0.017789112254896218"/>
+        <Con from="0,33" weight="1.735173330388136"/>
+        <Con from="0,34" weight="1.0024571395191433"/>
+        <Con from="0,35" weight="-1.03312498719099"/>
+        <Con from="0,36" weight="-78.71943345910447"/>
+        <Con from="0,37" weight="-18.99386670158406"/>
+        <Con from="0,38" weight="-40.81591644914249"/>
+        <Con from="0,39" weight="1.2712296868481263"/>
+        <Con from="0,40" weight="-244.26340973784147"/>
+        <Con from="0,41" weight="385.2178776339614"/>
+        <Con from="0,42" weight="-0.5157976453023922"/>
+        <Con from="0,43" weight="-131.29622420028545"/>
+        <Con from="0,44" weight="-2.762126039100957"/>
+        <Con from="0,45" weight="4.82616173155843"/>
+        <Con from="0,46" weight="-0.6289980861507161"/>
+        <Con from="0,47" weight="0.27452762251381413"/>
+        <Con from="0,48" weight="1.465669312905179"/>
+        <Con from="0,49" weight="0.18518615214605846"/>
+        <Con from="0,50" weight="-0.2369406464485465"/>
+        <Con from="0,51" weight="7.656933726191628"/>
+        <Con from="0,52" weight="-556.9956422286815"/>
+        <Con from="0,53" weight="44.90765688678856"/>
+        <Con from="0,54" weight="0.10875905441701658"/>
+        <Con from="0,55" weight="-0.39622072519978047"/>
+        <Con from="0,56" weight="0.6594789487492687"/>
+        <Con from="0,57" weight="0.4247503483645017"/>
+        <Con from="0,58" weight="-0.9448302646567293"/>
+        <Con from="0,59" weight="-0.010124046159062282"/>
+        <Con from="0,60" weight="-184.75346872177593"/>
+        <Con from="0,61" weight="-221.3896079029694"/>
+        <Con from="0,62" weight="-4.119133862887888"/>
+        <Con from="0,63" weight="40.55548028904131"/>
+        <Con from="0,64" weight="-0.27050142221040585"/>
+        <Con from="0,65" weight="-238.15550547369236"/>
+        <Con from="0,66" weight="-0.10833946194235908"/>
+        <Con from="0,67" weight="-1.5077788302030852"/>
+        <Con from="0,68" weight="0.7659122099476801"/>
+        <Con from="0,69" weight="5.278440009352948"/>
+        <Con from="0,70" weight="2.2232067612222046"/>
+        <Con from="0,71" weight="-217.72859721271251"/>
+        <Con from="0,72" weight="-207.54677422164193"/>
+        <Con from="0,73" weight="0.19502994041725324"/>
+        <Con from="0,74" weight="0.9071221807655003"/>
+        <Con from="0,75" weight="-8.004962831115222"/>
+        <Con from="0,76" weight="-27.121264933055258"/>
+        <Con from="0,77" weight="488.9057576189941"/>
+        <Con from="0,78" weight="1.0334396351475044"/>
+        <Con from="0,79" weight="1.883760499694424"/>
+        <Con from="0,80" weight="0.223576925975919"/>
+        <Con from="0,81" weight="5.192891392693268"/>
+        <Con from="0,82" weight="20.1412641743388"/>
+        <Con from="0,83" weight="-0.6165259596917289"/>
+        <Con from="0,84" weight="-157.3877205670752"/>
+        <Con from="0,85" weight="38.97318566435167"/>
+        <Con from="0,86" weight="-233.280959361716"/>
+        <Con from="0,87" weight="-0.6006687113361133"/>
+        <Con from="0,88" weight="32.297991273814745"/>
+        <Con from="0,89" weight="-19.774686153852976"/>
+        <Con from="0,90" weight="102.32883468265905"/>
+        <Con from="0,91" weight="210.5511881263638"/>
+        <Con from="0,92" weight="-2.448256271341849"/>
+        <Con from="0,93" weight="12.22060254566809"/>
+        <Con from="0,94" weight="-3.3080109819711594"/>
+        <Con from="0,95" weight="-578.1929825161219"/>
+        <Con from="0,96" weight="-0.5064861960186441"/>
+        <Con from="0,97" weight="0.3902377417638226"/>
+        <Con from="0,98" weight="-0.9681815583181019"/>
+        <Con from="0,99" weight="-6.7549573496537345"/>
+        <Con from="0,100" weight="-1.052979454647418"/>
+        <Con from="0,101" weight="-9.57997440412716"/>
+        <Con from="0,102" weight="0.7205249575052889"/>
+        <Con from="0,103" weight="-0.6415661732249451"/>
+        <Con from="0,104" weight="-0.1400381534027757"/>
+        <Con from="0,105" weight="-0.7269868354860705"/>
+        <Con from="0,106" weight="44.628039091910175"/>
+        <Con from="0,107" weight="0.12968236687585885"/>
+        <Con from="0,108" weight="-10.240438265766652"/>
+        <Con from="0,109" weight="-0.6480271649475282"/>
+        <Con from="0,110" weight="-16.17453512384444"/>
+        <Con from="0,111" weight="7.360891420936111"/>
+        <Con from="0,112" weight="-515.7787994829021"/>
+        <Con from="0,113" weight="50.21387237719245"/>
+        <Con from="0,114" weight="-0.1419825784052396"/>
+        <Con from="0,115" weight="-353.4332248802976"/>
+        <Con from="0,116" weight="-783.3669657097087"/>
+        <Con from="0,117" weight="4.007966443236482"/>
+        <Con from="0,118" weight="29.594588898062046"/>
+        <Con from="0,119" weight="-10.65858417820979"/>
+        <Con from="0,120" weight="7.215239157719631"/>
+        <Con from="0,121" weight="-0.37138837624717597"/>
+        <Con from="0,122" weight="-0.38645051188389196"/>
+        <Con from="0,123" weight="-7.406917831337664"/>
+        <Con from="0,124" weight="74.02416827198104"/>
+        <Con from="0,125" weight="-1.0261392994198673"/>
+        <Con from="0,126" weight="0.9365224267069212"/>
+        <Con from="0,127" weight="0.17399666480125864"/>
+        <Con from="0,128" weight="0.8314956860339235"/>
+        <Con from="0,129" weight="-4.91289428504086"/>
+        <Con from="0,130" weight="44.300805315991454"/>
+        <Con from="0,131" weight="0.8426102140962987"/>
+        <Con from="0,132" weight="-1.893330602971679"/>
+        <Con from="0,133" weight="-19.952485577809362"/>
+        <Con from="0,134" weight="-171.31241327091078"/>
+        <Con from="0,135" weight="-37.649629971571606"/>
+        <Con from="0,136" weight="-555.3543328086237"/>
+        <Con from="0,137" weight="1.4773276901413288"/>
+        <Con from="0,138" weight="181.25918895994047"/>
+        <Con from="0,139" weight="-145.88040197943602"/>
+        <Con from="0,140" weight="-73.34159345592593"/>
+        <Con from="0,141" weight="4.818603710378844"/>
+        <Con from="0,142" weight="28.544179957282925"/>
+        <Con from="0,143" weight="-0.6207824462950008"/>
+      </Neuron>
+      <Neuron id="1,3" bias="0.3238646184134565">
+        <Con from="0,0" weight="-1.9309881487346374"/>
+        <Con from="0,1" weight="-3.5473870333517556"/>
+        <Con from="0,2" weight="-0.1814987141043701"/>
+        <Con from="0,3" weight="116.85286180029544"/>
+        <Con from="0,4" weight="48.05547894545306"/>
+        <Con from="0,5" weight="-425.95973829093487"/>
+        <Con from="0,6" weight="-10.09112098029501"/>
+        <Con from="0,7" weight="-1.6872118509753309"/>
+        <Con from="0,8" weight="-1.847358769401456"/>
+        <Con from="0,9" weight="0.7297021286546675"/>
+        <Con from="0,10" weight="6.628042658214241"/>
+        <Con from="0,11" weight="2.2856197641033242"/>
+        <Con from="0,12" weight="-54.41037956663616"/>
+        <Con from="0,13" weight="302.9420601008144"/>
+        <Con from="0,14" weight="-11.580953390879658"/>
+        <Con from="0,15" weight="-20.734457435686696"/>
+        <Con from="0,16" weight="0.6459944313026396"/>
+        <Con from="0,17" weight="1.1460020196409435"/>
+        <Con from="0,18" weight="1.0912566479493537"/>
+        <Con from="0,19" weight="-0.6599422611939469"/>
+        <Con from="0,20" weight="1.0468767157968832"/>
+        <Con from="0,21" weight="8.026368104242952"/>
+        <Con from="0,22" weight="78.70155462671687"/>
+        <Con from="0,23" weight="243.91043447646769"/>
+        <Con from="0,24" weight="-0.7243539489542825"/>
+        <Con from="0,25" weight="0.5728760179853822"/>
+        <Con from="0,26" weight="3.060465363385155"/>
+        <Con from="0,27" weight="-1.083930478669327"/>
+        <Con from="0,28" weight="4.562559711449732"/>
+        <Con from="0,29" weight="-108.75537501243367"/>
+        <Con from="0,30" weight="-0.17734783029449458"/>
+        <Con from="0,31" weight="-0.11754731973192983"/>
+        <Con from="0,32" weight="-0.5721385507929551"/>
+        <Con from="0,33" weight="1.5783703867603067"/>
+        <Con from="0,34" weight="0.3636962254623239"/>
+        <Con from="0,35" weight="-0.049586183404333774"/>
+        <Con from="0,36" weight="9.113687676662614"/>
+        <Con from="0,37" weight="8.648112497781863"/>
+        <Con from="0,38" weight="5.308838293759696"/>
+        <Con from="0,39" weight="32.18230270791919"/>
+        <Con from="0,40" weight="-1.8345347246106762"/>
+        <Con from="0,41" weight="-12.471255817266625"/>
+        <Con from="0,42" weight="-2.1587554990178712"/>
+        <Con from="0,43" weight="-7.100455078702954"/>
+        <Con from="0,44" weight="-0.043134804125699734"/>
+        <Con from="0,45" weight="79.38724069888923"/>
+        <Con from="0,46" weight="23.788151177394354"/>
+        <Con from="0,47" weight="20.978211227782943"/>
+        <Con from="0,48" weight="0.29574710625282435"/>
+        <Con from="0,49" weight="-0.7035375937903016"/>
+        <Con from="0,50" weight="1.2195798703558114"/>
+        <Con from="0,51" weight="146.43226044635205"/>
+        <Con from="0,52" weight="-323.60338308479"/>
+        <Con from="0,53" weight="13.695603970676137"/>
+        <Con from="0,54" weight="-6.040992073596581"/>
+        <Con from="0,55" weight="0.46527939045703537"/>
+        <Con from="0,56" weight="-3.490562878549145"/>
+        <Con from="0,57" weight="0.12848526368798366"/>
+        <Con from="0,58" weight="-0.5176225998752395"/>
+        <Con from="0,59" weight="0.09051951918045015"/>
+        <Con from="0,60" weight="-4.38925289076961"/>
+        <Con from="0,61" weight="-150.10240015350388"/>
+        <Con from="0,62" weight="4.030267024516342"/>
+        <Con from="0,63" weight="-0.7411279095348842"/>
+        <Con from="0,64" weight="1.7101325762983854"/>
+        <Con from="0,65" weight="-0.7091357239096006"/>
+        <Con from="0,66" weight="-1.1305232971354016"/>
+        <Con from="0,67" weight="0.8143358155044298"/>
+        <Con from="0,68" weight="2.5708223174081644"/>
+        <Con from="0,69" weight="-199.88491457454157"/>
+        <Con from="0,70" weight="11.119098218122568"/>
+        <Con from="0,71" weight="-439.1269433308273"/>
+        <Con from="0,72" weight="0.7396455476424175"/>
+        <Con from="0,73" weight="-1.0442260015566962"/>
+        <Con from="0,74" weight="0.43193093947692246"/>
+        <Con from="0,75" weight="-1.855028605065695"/>
+        <Con from="0,76" weight="-1.1942807042831576"/>
+        <Con from="0,77" weight="-16.644441650066433"/>
+        <Con from="0,78" weight="-0.42531766058068715"/>
+        <Con from="0,79" weight="-0.30665990251858966"/>
+        <Con from="0,80" weight="-1.474428317304661"/>
+        <Con from="0,81" weight="2.822719095322158"/>
+        <Con from="0,82" weight="-0.010640545552054199"/>
+        <Con from="0,83" weight="-0.43925287670947455"/>
+        <Con from="0,84" weight="-108.31822030223533"/>
+        <Con from="0,85" weight="372.377382009016"/>
+        <Con from="0,86" weight="0.48442057901872226"/>
+        <Con from="0,87" weight="0.8451675807549532"/>
+        <Con from="0,88" weight="7.17503198470128"/>
+        <Con from="0,89" weight="-1.0606068863513252"/>
+        <Con from="0,90" weight="-0.7443952864080483"/>
+        <Con from="0,91" weight="-0.4589530020451038"/>
+        <Con from="0,92" weight="-1.0106963865771355"/>
+        <Con from="0,93" weight="46.5106286390223"/>
+        <Con from="0,94" weight="-22.090648074669197"/>
+        <Con from="0,95" weight="-78.9774490984229"/>
+        <Con from="0,96" weight="0.0987856178787244"/>
+        <Con from="0,97" weight="0.8254864992354763"/>
+        <Con from="0,98" weight="-1.115425789088145"/>
+        <Con from="0,99" weight="1.6762099700301865"/>
+        <Con from="0,100" weight="-1.2684472669655493"/>
+        <Con from="0,101" weight="-51.666913410704915"/>
+        <Con from="0,102" weight="-1.477036018358358"/>
+        <Con from="0,103" weight="3.1225305676344193"/>
+        <Con from="0,104" weight="-0.45470798032985554"/>
+        <Con from="0,105" weight="0.5544060726477542"/>
+        <Con from="0,106" weight="-0.10830886129234127"/>
+        <Con from="0,107" weight="-0.3284104219516535"/>
+        <Con from="0,108" weight="94.15184243432995"/>
+        <Con from="0,109" weight="-599.1653650299602"/>
+        <Con from="0,110" weight="-0.1997008069670972"/>
+        <Con from="0,111" weight="1.0095385510118458"/>
+        <Con from="0,112" weight="0.40185925903009057"/>
+        <Con from="0,113" weight="15.616941250649395"/>
+        <Con from="0,114" weight="1.0848195454226675"/>
+        <Con from="0,115" weight="0.05641832266400376"/>
+        <Con from="0,116" weight="1.88673978739468"/>
+        <Con from="0,117" weight="78.97906367945737"/>
+        <Con from="0,118" weight="78.56456843436345"/>
+        <Con from="0,119" weight="72.2466114598067"/>
+        <Con from="0,120" weight="-0.5584220264915922"/>
+        <Con from="0,121" weight="-0.5249290933555821"/>
+        <Con from="0,122" weight="0.5062153592683631"/>
+        <Con from="0,123" weight="2.9014033918675066"/>
+        <Con from="0,124" weight="68.44788366551653"/>
+        <Con from="0,125" weight="-1.2630806872510016"/>
+        <Con from="0,126" weight="3.2329331115835753"/>
+        <Con from="0,127" weight="1.207402861325537"/>
+        <Con from="0,128" weight="-0.5497215540980704"/>
+        <Con from="0,129" weight="-2.5371052601458395"/>
+        <Con from="0,130" weight="-2.3737484120392254"/>
+        <Con from="0,131" weight="-1.3510242606535736"/>
+        <Con from="0,132" weight="-26.163729787164968"/>
+        <Con from="0,133" weight="-73.29623894316991"/>
+        <Con from="0,134" weight="3.1895466390940883"/>
+        <Con from="0,135" weight="-18.44728096101515"/>
+        <Con from="0,136" weight="4.243183976556459"/>
+        <Con from="0,137" weight="-1.0934911972691062"/>
+        <Con from="0,138" weight="-0.6966630957213903"/>
+        <Con from="0,139" weight="1.2014171605507422"/>
+        <Con from="0,140" weight="0.025225271141420147"/>
+        <Con from="0,141" weight="78.52462632817758"/>
+        <Con from="0,142" weight="79.91418946198549"/>
+        <Con from="0,143" weight="19.592107155577036"/>
+      </Neuron>
+      <Neuron id="1,4" bias="0.5828522821900906">
+        <Con from="0,0" weight="-0.23283766056688668"/>
+        <Con from="0,1" weight="1.8931669093585672"/>
+        <Con from="0,2" weight="1.1450968685018066"/>
+        <Con from="0,3" weight="-133.75879888370804"/>
+        <Con from="0,4" weight="100.11928257940372"/>
+        <Con from="0,5" weight="203.0616241976206"/>
+        <Con from="0,6" weight="0.9137256569206686"/>
+        <Con from="0,7" weight="-0.5274074995248145"/>
+        <Con from="0,8" weight="-4.640638437102713"/>
+        <Con from="0,9" weight="-6.7515316053965835"/>
+        <Con from="0,10" weight="129.09571724191227"/>
+        <Con from="0,11" weight="-0.7937691388742951"/>
+        <Con from="0,12" weight="-66.26790384607455"/>
+        <Con from="0,13" weight="-336.46584153738354"/>
+        <Con from="0,14" weight="7.435680625770629"/>
+        <Con from="0,15" weight="-2.8840176608988255"/>
+        <Con from="0,16" weight="1.0173730737041302"/>
+        <Con from="0,17" weight="4.195384961174909"/>
+        <Con from="0,18" weight="-0.741638100459621"/>
+        <Con from="0,19" weight="-0.32456459088520423"/>
+        <Con from="0,20" weight="0.2640760306233053"/>
+        <Con from="0,21" weight="-13.404469028738157"/>
+        <Con from="0,22" weight="-6.138877489627901"/>
+        <Con from="0,23" weight="-283.1254239374905"/>
+        <Con from="0,24" weight="-0.16921468045268187"/>
+        <Con from="0,25" weight="0.4352831259673488"/>
+        <Con from="0,26" weight="-0.47994470117208937"/>
+        <Con from="0,27" weight="0.6992354806529348"/>
+        <Con from="0,28" weight="-226.6007426382089"/>
+        <Con from="0,29" weight="0.30020996888750023"/>
+        <Con from="0,30" weight="0.37041704385186836"/>
+        <Con from="0,31" weight="-2.1891866510162186"/>
+        <Con from="0,32" weight="0.41577948193531644"/>
+        <Con from="0,33" weight="-6.763688700016336"/>
+        <Con from="0,34" weight="6.431603290520303"/>
+        <Con from="0,35" weight="2.4747587037815193"/>
+        <Con from="0,36" weight="-153.6845840417018"/>
+        <Con from="0,37" weight="-111.33792113086307"/>
+        <Con from="0,38" weight="2.632671722417342"/>
+        <Con from="0,39" weight="-20.683413535408874"/>
+        <Con from="0,40" weight="65.27112178418524"/>
+        <Con from="0,41" weight="0.5713527690422585"/>
+        <Con from="0,42" weight="9.48064407930487"/>
+        <Con from="0,43" weight="1.0284137300527525"/>
+        <Con from="0,44" weight="-0.8040354468981554"/>
+        <Con from="0,45" weight="-21.976045295638023"/>
+        <Con from="0,46" weight="121.29942954812944"/>
+        <Con from="0,47" weight="-3.803259471637709"/>
+        <Con from="0,48" weight="0.024405800699184712"/>
+        <Con from="0,49" weight="-1.095114089184833"/>
+        <Con from="0,50" weight="-2.2868207685652626"/>
+        <Con from="0,51" weight="-1.40849511590605"/>
+        <Con from="0,52" weight="243.86875190043588"/>
+        <Con from="0,53" weight="222.19431300304814"/>
+        <Con from="0,54" weight="-0.6681231945448394"/>
+        <Con from="0,55" weight="3.523344745823246"/>
+        <Con from="0,56" weight="1.0263874162694517"/>
+        <Con from="0,57" weight="-4.311933080486751"/>
+        <Con from="0,58" weight="44.90190224052998"/>
+        <Con from="0,59" weight="0.9548761295158217"/>
+        <Con from="0,60" weight="247.87022295508814"/>
+        <Con from="0,61" weight="50.34073703379587"/>
+        <Con from="0,62" weight="3.1654513482216755"/>
+        <Con from="0,63" weight="0.8708130176180683"/>
+        <Con from="0,64" weight="-2.599562880823016"/>
+        <Con from="0,65" weight="-6.1073721774101015"/>
+        <Con from="0,66" weight="0.636643124808472"/>
+        <Con from="0,67" weight="-1.3430721562112313"/>
+        <Con from="0,68" weight="-0.3822129894298811"/>
+        <Con from="0,69" weight="93.98135937064681"/>
+        <Con from="0,70" weight="-1052.969655743036"/>
+        <Con from="0,71" weight="92.25671355856919"/>
+        <Con from="0,72" weight="0.7459206989956403"/>
+        <Con from="0,73" weight="0.8291980765974064"/>
+        <Con from="0,74" weight="-0.29670319080973157"/>
+        <Con from="0,75" weight="1.649223842727255"/>
+        <Con from="0,76" weight="-82.98744953004548"/>
+        <Con from="0,77" weight="1.330348644042932"/>
+        <Con from="0,78" weight="0.9695707600990654"/>
+        <Con from="0,79" weight="0.7968219225713432"/>
+        <Con from="0,80" weight="0.6592111724581008"/>
+        <Con from="0,81" weight="-2.0484487484946"/>
+        <Con from="0,82" weight="-23.372090199846287"/>
+        <Con from="0,83" weight="-0.08123504796312662"/>
+        <Con from="0,84" weight="169.980743459163"/>
+        <Con from="0,85" weight="-1.0124989706342813"/>
+        <Con from="0,86" weight="-0.12276165587938168"/>
+        <Con from="0,87" weight="-0.7087665195206803"/>
+        <Con from="0,88" weight="-58.63365571485721"/>
+        <Con from="0,89" weight="-0.02303473582179161"/>
+        <Con from="0,90" weight="-0.5037212539503457"/>
+        <Con from="0,91" weight="9.879728863221596"/>
+        <Con from="0,92" weight="0.9307199208800777"/>
+        <Con from="0,93" weight="-256.85060648968965"/>
+        <Con from="0,94" weight="538.9010411651019"/>
+        <Con from="0,95" weight="18.193718457860836"/>
+        <Con from="0,96" weight="-5.748541073197167"/>
+        <Con from="0,97" weight="0.28873098965588595"/>
+        <Con from="0,98" weight="0.6411250575078956"/>
+        <Con from="0,99" weight="-31.653001587256387"/>
+        <Con from="0,100" weight="-41.53771017334675"/>
+        <Con from="0,101" weight="-1.3197550181859932"/>
+        <Con from="0,102" weight="0.4259470983644138"/>
+        <Con from="0,103" weight="3.202213970595304"/>
+        <Con from="0,104" weight="-0.929907282536381"/>
+        <Con from="0,105" weight="0.6894091144016625"/>
+        <Con from="0,106" weight="-4.236324622811366"/>
+        <Con from="0,107" weight="2.218953632892087"/>
+        <Con from="0,108" weight="-14.944959121580403"/>
+        <Con from="0,109" weight="28.8722998583929"/>
+        <Con from="0,110" weight="-19.098100565744847"/>
+        <Con from="0,111" weight="5.645196767438748"/>
+        <Con from="0,112" weight="-2.5899335170018105"/>
+        <Con from="0,113" weight="-14.285905247722235"/>
+        <Con from="0,114" weight="-0.7071416457710732"/>
+        <Con from="0,115" weight="-7.273163967225171"/>
+        <Con from="0,116" weight="-2.305489397259234"/>
+        <Con from="0,117" weight="-21.10579478192212"/>
+        <Con from="0,118" weight="-7.572146150735874"/>
+        <Con from="0,119" weight="-180.57920075914302"/>
+        <Con from="0,120" weight="0.5444566788520975"/>
+        <Con from="0,121" weight="-1.0600232777633332"/>
+        <Con from="0,122" weight="0.26475006326443656"/>
+        <Con from="0,123" weight="-30.91729165315732"/>
+        <Con from="0,124" weight="187.9523226776725"/>
+        <Con from="0,125" weight="-0.6197276612898378"/>
+        <Con from="0,126" weight="0.12520920952078668"/>
+        <Con from="0,127" weight="-0.08859254457504055"/>
+        <Con from="0,128" weight="1.0703736024317139"/>
+        <Con from="0,129" weight="-0.9486522330927617"/>
+        <Con from="0,130" weight="7.9810651476324095"/>
+        <Con from="0,131" weight="0.7962852384531468"/>
+        <Con from="0,132" weight="12.673433225876263"/>
+        <Con from="0,133" weight="29.2501408536493"/>
+        <Con from="0,134" weight="-0.18456556717179579"/>
+        <Con from="0,135" weight="30.42572814162064"/>
+        <Con from="0,136" weight="-34.92856369512817"/>
+        <Con from="0,137" weight="-2.390919274767268"/>
+        <Con from="0,138" weight="0.5493922441063189"/>
+        <Con from="0,139" weight="1.2576538003860394"/>
+        <Con from="0,140" weight="-0.8162052297377677"/>
+        <Con from="0,141" weight="-21.726317223071735"/>
+        <Con from="0,142" weight="-7.604182749483619"/>
+        <Con from="0,143" weight="-4.307309927416412"/>
+      </Neuron>
+      <Neuron id="1,5" bias="-0.2114361485610934">
+        <Con from="0,0" weight="-3.1557195001123945"/>
+        <Con from="0,1" weight="4.478675177391759"/>
+        <Con from="0,2" weight="-0.5728796668244942"/>
+        <Con from="0,3" weight="-5.562316950864332"/>
+        <Con from="0,4" weight="196.27027283993704"/>
+        <Con from="0,5" weight="0.14701998787993373"/>
+        <Con from="0,6" weight="-0.7734884192665996"/>
+        <Con from="0,7" weight="-3.4669103662830376"/>
+        <Con from="0,8" weight="-0.8622257524807668"/>
+        <Con from="0,9" weight="-27.401667542425717"/>
+        <Con from="0,10" weight="22.27353824269188"/>
+        <Con from="0,11" weight="0.10771985445534285"/>
+        <Con from="0,12" weight="-19.53869213553221"/>
+        <Con from="0,13" weight="-94.61411442865729"/>
+        <Con from="0,14" weight="2.2834008813364854"/>
+        <Con from="0,15" weight="-0.8128501416584162"/>
+        <Con from="0,16" weight="1.1415040899644788"/>
+        <Con from="0,17" weight="0.12290429785809227"/>
+        <Con from="0,18" weight="0.18985136350888698"/>
+        <Con from="0,19" weight="0.3168430362034276"/>
+        <Con from="0,20" weight="10.863030076304685"/>
+        <Con from="0,21" weight="-14.537365623224558"/>
+        <Con from="0,22" weight="-5.4654025345471515"/>
+        <Con from="0,23" weight="-19.885289625454593"/>
+        <Con from="0,24" weight="0.28601093553582774"/>
+        <Con from="0,25" weight="-0.07576449961155737"/>
+        <Con from="0,26" weight="-0.18719826979088922"/>
+        <Con from="0,27" weight="19.721009240026937"/>
+        <Con from="0,28" weight="-74.26347697121994"/>
+        <Con from="0,29" weight="115.07546264415774"/>
+        <Con from="0,30" weight="0.9631336824541412"/>
+        <Con from="0,31" weight="-4.459722909762299"/>
+        <Con from="0,32" weight="1.389677813668201"/>
+        <Con from="0,33" weight="-0.3023233891488395"/>
+        <Con from="0,34" weight="-1.5864027756971297"/>
+        <Con from="0,35" weight="1.168298379232082"/>
+        <Con from="0,36" weight="0.6542055573277643"/>
+        <Con from="0,37" weight="29.54736756044016"/>
+        <Con from="0,38" weight="0.29898437070692996"/>
+        <Con from="0,39" weight="1.4971368118101704"/>
+        <Con from="0,40" weight="36.05486136975788"/>
+        <Con from="0,41" weight="-21.255607004109255"/>
+        <Con from="0,42" weight="0.21040368208079208"/>
+        <Con from="0,43" weight="39.88179214476814"/>
+        <Con from="0,44" weight="1.5887589576881802"/>
+        <Con from="0,45" weight="-15.56341396052027"/>
+        <Con from="0,46" weight="11.88079398989988"/>
+        <Con from="0,47" weight="-3.61627050912803"/>
+        <Con from="0,48" weight="-0.5219764492910203"/>
+        <Con from="0,49" weight="-0.5226008445626948"/>
+        <Con from="0,50" weight="-0.519207917468426"/>
+        <Con from="0,51" weight="-104.471983682346"/>
+        <Con from="0,52" weight="260.3138169972171"/>
+        <Con from="0,53" weight="30.666110459538963"/>
+        <Con from="0,54" weight="0.5024566021205955"/>
+        <Con from="0,55" weight="0.8531790587492625"/>
+        <Con from="0,56" weight="1.7024889273880561"/>
+        <Con from="0,57" weight="2.835033630091225"/>
+        <Con from="0,58" weight="15.328496226244152"/>
+        <Con from="0,59" weight="0.6118098793257386"/>
+        <Con from="0,60" weight="27.74131318483109"/>
+        <Con from="0,61" weight="0.7845306128819318"/>
+        <Con from="0,62" weight="17.312716261890642"/>
+        <Con from="0,63" weight="-3.8922788953364433"/>
+        <Con from="0,64" weight="11.09807375130538"/>
+        <Con from="0,65" weight="0.06600464868537075"/>
+        <Con from="0,66" weight="-0.13170351665102617"/>
+        <Con from="0,67" weight="-1.859405949378495"/>
+        <Con from="0,68" weight="0.21324888560906047"/>
+        <Con from="0,69" weight="66.43809454295612"/>
+        <Con from="0,70" weight="-69.82345105620776"/>
+        <Con from="0,71" weight="344.0589836456196"/>
+        <Con from="0,72" weight="-2.6414891076689123E-4"/>
+        <Con from="0,73" weight="-0.12129810089321139"/>
+        <Con from="0,74" weight="-0.10314786206156178"/>
+        <Con from="0,75" weight="26.668016628495774"/>
+        <Con from="0,76" weight="-10.56230664989831"/>
+        <Con from="0,77" weight="-0.16798263259949583"/>
+        <Con from="0,78" weight="1.3031382773940738"/>
+        <Con from="0,79" weight="145.807248209322"/>
+        <Con from="0,80" weight="0.294406552312741"/>
+        <Con from="0,81" weight="-3.3123004657569908"/>
+        <Con from="0,82" weight="0.0406455676698775"/>
+        <Con from="0,83" weight="1.6120694908541127"/>
+        <Con from="0,84" weight="4.054996352670893"/>
+        <Con from="0,85" weight="-320.76536652216924"/>
+        <Con from="0,86" weight="-0.9274345918511923"/>
+        <Con from="0,87" weight="0.5500082568925737"/>
+        <Con from="0,88" weight="-392.10530593082296"/>
+        <Con from="0,89" weight="117.85317200992989"/>
+        <Con from="0,90" weight="-0.36866503129575234"/>
+        <Con from="0,91" weight="60.99607255760183"/>
+        <Con from="0,92" weight="5.055234057426633"/>
+        <Con from="0,93" weight="-89.60850542224327"/>
+        <Con from="0,94" weight="11.881332477001003"/>
+        <Con from="0,95" weight="-0.2603134883718366"/>
+        <Con from="0,96" weight="-0.8846257928965305"/>
+        <Con from="0,97" weight="0.8782626719594221"/>
+        <Con from="0,98" weight="-0.62799281867645"/>
+        <Con from="0,99" weight="-0.5224456668092152"/>
+        <Con from="0,100" weight="4.589734175610226"/>
+        <Con from="0,101" weight="-0.7977047328507403"/>
+        <Con from="0,102" weight="-15.052505370903276"/>
+        <Con from="0,103" weight="32.81315884827629"/>
+        <Con from="0,104" weight="-2.952133703184199"/>
+        <Con from="0,105" weight="0.8800925751795918"/>
+        <Con from="0,106" weight="0.3225954629852438"/>
+        <Con from="0,107" weight="1.9004314339279758"/>
+        <Con from="0,108" weight="117.5759870576184"/>
+        <Con from="0,109" weight="27.768604074938523"/>
+        <Con from="0,110" weight="-26.340089990800113"/>
+        <Con from="0,111" weight="2.942542665568006"/>
+        <Con from="0,112" weight="49.823845621285685"/>
+        <Con from="0,113" weight="-8.727902245914056"/>
+        <Con from="0,114" weight="-1.0985837738583988"/>
+        <Con from="0,115" weight="-35.00315545119153"/>
+        <Con from="0,116" weight="-1.2192972307750405"/>
+        <Con from="0,117" weight="-14.092259508460362"/>
+        <Con from="0,118" weight="-6.479185333908441"/>
+        <Con from="0,119" weight="-2.4132909899072095"/>
+        <Con from="0,120" weight="1.5286840775937127"/>
+        <Con from="0,121" weight="0.23090439553817674"/>
+        <Con from="0,122" weight="-0.24929214592559956"/>
+        <Con from="0,123" weight="-0.6251210369486552"/>
+        <Con from="0,124" weight="61.0610392724402"/>
+        <Con from="0,125" weight="2.2457743160717074"/>
+        <Con from="0,126" weight="3.141980859966497"/>
+        <Con from="0,127" weight="44.03662313198758"/>
+        <Con from="0,128" weight="-1.914474121043416"/>
+        <Con from="0,129" weight="-38.775742699698725"/>
+        <Con from="0,130" weight="415.4968408248727"/>
+        <Con from="0,131" weight="1.2615961237656925"/>
+        <Con from="0,132" weight="10.277087926252708"/>
+        <Con from="0,133" weight="84.05959316391726"/>
+        <Con from="0,134" weight="-50.4822587860795"/>
+        <Con from="0,135" weight="92.0048105129003"/>
+        <Con from="0,136" weight="43.77021061370055"/>
+        <Con from="0,137" weight="-1.2128864020272172"/>
+        <Con from="0,138" weight="-4.838326844774533"/>
+        <Con from="0,139" weight="-87.69145456686941"/>
+        <Con from="0,140" weight="-0.45472884829385035"/>
+        <Con from="0,141" weight="-14.792600591250824"/>
+        <Con from="0,142" weight="-5.268319548472963"/>
+        <Con from="0,143" weight="-2.293151416838668"/>
+      </Neuron>
+      <Neuron id="1,6" bias="0.6519794871512141">
+        <Con from="0,0" weight="0.6273270004982487"/>
+        <Con from="0,1" weight="-1.8711262898328647"/>
+        <Con from="0,2" weight="-1.580215012326905"/>
+        <Con from="0,3" weight="6.884987008619073"/>
+        <Con from="0,4" weight="149.36337004548116"/>
+        <Con from="0,5" weight="-175.2255594594487"/>
+        <Con from="0,6" weight="-0.11824651360634694"/>
+        <Con from="0,7" weight="-0.5689658302558127"/>
+        <Con from="0,8" weight="4.201719534339627"/>
+        <Con from="0,9" weight="1.4775576413578242"/>
+        <Con from="0,10" weight="-3.2770485706925307"/>
+        <Con from="0,11" weight="-0.721072012389317"/>
+        <Con from="0,12" weight="-41.87006922242115"/>
+        <Con from="0,13" weight="306.98405710996474"/>
+        <Con from="0,14" weight="-0.4277017880037818"/>
+        <Con from="0,15" weight="14.720601763058667"/>
+        <Con from="0,16" weight="-45.58617132856471"/>
+        <Con from="0,17" weight="-2.1091632738472823"/>
+        <Con from="0,18" weight="-0.15400117641488575"/>
+        <Con from="0,19" weight="0.35005596044624987"/>
+        <Con from="0,20" weight="-0.6096415916994068"/>
+        <Con from="0,21" weight="8.887893424865771"/>
+        <Con from="0,22" weight="12.925074875610674"/>
+        <Con from="0,23" weight="593.804636790007"/>
+        <Con from="0,24" weight="6.255810189109309"/>
+        <Con from="0,25" weight="0.09907472490744956"/>
+        <Con from="0,26" weight="0.7830841739717207"/>
+        <Con from="0,27" weight="4.420440380449961"/>
+        <Con from="0,28" weight="306.0060125885676"/>
+        <Con from="0,29" weight="-21.352122286248715"/>
+        <Con from="0,30" weight="0.13444213088467935"/>
+        <Con from="0,31" weight="0.4226055937636926"/>
+        <Con from="0,32" weight="-0.6159070478636215"/>
+        <Con from="0,33" weight="-0.14165358123200533"/>
+        <Con from="0,34" weight="-2.5515246517005035"/>
+        <Con from="0,35" weight="-0.3951801883764574"/>
+        <Con from="0,36" weight="75.72677496938476"/>
+        <Con from="0,37" weight="19.593333355409936"/>
+        <Con from="0,38" weight="0.4529655155993194"/>
+        <Con from="0,39" weight="-35.62887631556525"/>
+        <Con from="0,40" weight="-0.5414213912636977"/>
+        <Con from="0,41" weight="-14.6437591101494"/>
+        <Con from="0,42" weight="-18.127817353680385"/>
+        <Con from="0,43" weight="-158.31701558807643"/>
+        <Con from="0,44" weight="6.412657585700142"/>
+        <Con from="0,45" weight="15.186548262101866"/>
+        <Con from="0,46" weight="-97.76904369146598"/>
+        <Con from="0,47" weight="5.201834352535393"/>
+        <Con from="0,48" weight="-1.4740909109801352"/>
+        <Con from="0,49" weight="0.937389364467943"/>
+        <Con from="0,50" weight="0.4907303970618554"/>
+        <Con from="0,51" weight="59.536799956554816"/>
+        <Con from="0,52" weight="-172.04527143029776"/>
+        <Con from="0,53" weight="-390.64949889581015"/>
+        <Con from="0,54" weight="0.43237764278607504"/>
+        <Con from="0,55" weight="-0.3192153105465248"/>
+        <Con from="0,56" weight="-3.166626161357137"/>
+        <Con from="0,57" weight="1.0551683590142897"/>
+        <Con from="0,58" weight="0.06893856547273516"/>
+        <Con from="0,59" weight="-2.4617296712345738"/>
+        <Con from="0,60" weight="-306.0278248287805"/>
+        <Con from="0,61" weight="-121.11218187736227"/>
+        <Con from="0,62" weight="-2.628820491881002"/>
+        <Con from="0,63" weight="0.5542692708761563"/>
+        <Con from="0,64" weight="176.91384946581184"/>
+        <Con from="0,65" weight="-23.522990888504378"/>
+        <Con from="0,66" weight="-1.2891587192865221"/>
+        <Con from="0,67" weight="-1.284560167788247"/>
+        <Con from="0,68" weight="2.579945314590865"/>
+        <Con from="0,69" weight="-34.83857333880947"/>
+        <Con from="0,70" weight="780.7974151974554"/>
+        <Con from="0,71" weight="-132.749504824979"/>
+        <Con from="0,72" weight="-1.3040521465220059"/>
+        <Con from="0,73" weight="0.050788621893170724"/>
+        <Con from="0,74" weight="-0.8465190587328357"/>
+        <Con from="0,75" weight="0.5124894652606524"/>
+        <Con from="0,76" weight="0.06786655428777637"/>
+        <Con from="0,77" weight="107.04005307426274"/>
+        <Con from="0,78" weight="0.7939232523762869"/>
+        <Con from="0,79" weight="-0.20053188333178934"/>
+        <Con from="0,80" weight="-0.19010950314303918"/>
+        <Con from="0,81" weight="0.4387074041807929"/>
+        <Con from="0,82" weight="0.7335843013408536"/>
+        <Con from="0,83" weight="-1.0878120725527713"/>
+        <Con from="0,84" weight="-18.494615379275473"/>
+        <Con from="0,85" weight="557.5245484349416"/>
+        <Con from="0,86" weight="1.052021522256036"/>
+        <Con from="0,87" weight="133.55644919741013"/>
+        <Con from="0,88" weight="27.849389537443724"/>
+        <Con from="0,89" weight="6.613279769661495"/>
+        <Con from="0,90" weight="-0.5108779434005967"/>
+        <Con from="0,91" weight="-14.993886360548359"/>
+        <Con from="0,92" weight="-0.1557257260183679"/>
+        <Con from="0,93" weight="134.54526457222957"/>
+        <Con from="0,94" weight="-362.9487473531988"/>
+        <Con from="0,95" weight="-79.49208857220148"/>
+        <Con from="0,96" weight="1.0373393297619082"/>
+        <Con from="0,97" weight="0.3118396368100335"/>
+        <Con from="0,98" weight="-1.2253514842831301"/>
+        <Con from="0,99" weight="130.6359050771079"/>
+        <Con from="0,100" weight="-125.33555913688836"/>
+        <Con from="0,101" weight="4.4189635610168585"/>
+        <Con from="0,102" weight="0.5006991614120809"/>
+        <Con from="0,103" weight="0.7479616887399374"/>
+        <Con from="0,104" weight="-0.33988471436170464"/>
+        <Con from="0,105" weight="-0.17503801797405416"/>
+        <Con from="0,106" weight="0.8705253408556264"/>
+        <Con from="0,107" weight="-0.3530650414777797"/>
+        <Con from="0,108" weight="51.15683828932659"/>
+        <Con from="0,109" weight="-341.88836491009147"/>
+        <Con from="0,110" weight="2.930539474935569"/>
+        <Con from="0,111" weight="-40.87472745342171"/>
+        <Con from="0,112" weight="-0.48650223442007556"/>
+        <Con from="0,113" weight="368.29873134083874"/>
+        <Con from="0,114" weight="0.31041106743755176"/>
+        <Con from="0,115" weight="-160.8078244509108"/>
+        <Con from="0,116" weight="1.947819440082922"/>
+        <Con from="0,117" weight="14.631705466612122"/>
+        <Con from="0,118" weight="11.561287751128681"/>
+        <Con from="0,119" weight="198.01444124876062"/>
+        <Con from="0,120" weight="0.24747182623453495"/>
+        <Con from="0,121" weight="0.7552309767359883"/>
+        <Con from="0,122" weight="-2.9070651824549443"/>
+        <Con from="0,123" weight="131.53069731361884"/>
+        <Con from="0,124" weight="-28.916680808551856"/>
+        <Con from="0,125" weight="-0.7597719021053959"/>
+        <Con from="0,126" weight="0.896726418966558"/>
+        <Con from="0,127" weight="-0.40325522487473064"/>
+        <Con from="0,128" weight="0.5724670663981938"/>
+        <Con from="0,129" weight="-0.30516760596579734"/>
+        <Con from="0,130" weight="3.8172018036858604"/>
+        <Con from="0,131" weight="0.2767943899759282"/>
+        <Con from="0,132" weight="-74.00189223915228"/>
+        <Con from="0,133" weight="-340.7634566690487"/>
+        <Con from="0,134" weight="23.743555937989424"/>
+        <Con from="0,135" weight="-162.85105235131422"/>
+        <Con from="0,136" weight="93.13087670114099"/>
+        <Con from="0,137" weight="124.87898380914619"/>
+        <Con from="0,138" weight="-4.272731378971447"/>
+        <Con from="0,139" weight="21.17385476932495"/>
+        <Con from="0,140" weight="-0.37756578629408616"/>
+        <Con from="0,141" weight="15.911706011699383"/>
+        <Con from="0,142" weight="11.458704824728095"/>
+        <Con from="0,143" weight="5.07517988540801"/>
+      </Neuron>
+      <Neuron id="1,7" bias="0.1011768690858587">
+        <Con from="0,0" weight="-0.8435309075594248"/>
+        <Con from="0,1" weight="-4.702372825425948"/>
+        <Con from="0,2" weight="-1.6709275433490125"/>
+        <Con from="0,3" weight="77.66015021706558"/>
+        <Con from="0,4" weight="161.45463197162985"/>
+        <Con from="0,5" weight="-186.10660380014366"/>
+        <Con from="0,6" weight="-7.171095255023498"/>
+        <Con from="0,7" weight="-6.354338697611403"/>
+        <Con from="0,8" weight="0.51494624394602"/>
+        <Con from="0,9" weight="1.1577273377327326"/>
+        <Con from="0,10" weight="10.125065821020057"/>
+        <Con from="0,11" weight="-10.742310864380956"/>
+        <Con from="0,12" weight="-49.074633094206234"/>
+        <Con from="0,13" weight="346.71965209060227"/>
+        <Con from="0,14" weight="-46.05437717772689"/>
+        <Con from="0,15" weight="-34.01626447332936"/>
+        <Con from="0,16" weight="-88.10157470926869"/>
+        <Con from="0,17" weight="-1.5925162296270814"/>
+        <Con from="0,18" weight="0.27045192468599955"/>
+        <Con from="0,19" weight="0.8484326722544531"/>
+        <Con from="0,20" weight="-0.15019896176458208"/>
+        <Con from="0,21" weight="8.560930779834585"/>
+        <Con from="0,22" weight="17.870178092315644"/>
+        <Con from="0,23" weight="296.2162715540141"/>
+        <Con from="0,24" weight="-0.8076771043302019"/>
+        <Con from="0,25" weight="2.0110014598453176"/>
+        <Con from="0,26" weight="0.545261381316745"/>
+        <Con from="0,27" weight="0.397025137225704"/>
+        <Con from="0,28" weight="256.88056746566497"/>
+        <Con from="0,29" weight="-122.36497556228457"/>
+        <Con from="0,30" weight="-0.6428746514679216"/>
+        <Con from="0,31" weight="-0.8739890487377494"/>
+        <Con from="0,32" weight="0.11795668100818461"/>
+        <Con from="0,33" weight="2.234071078748199"/>
+        <Con from="0,34" weight="-0.8321872209162243"/>
+        <Con from="0,35" weight="-25.895916088235563"/>
+        <Con from="0,36" weight="1.4322872029595939"/>
+        <Con from="0,37" weight="15.266337359920156"/>
+        <Con from="0,38" weight="-116.42328325236286"/>
+        <Con from="0,39" weight="97.19306101856291"/>
+        <Con from="0,40" weight="-196.37407402108119"/>
+        <Con from="0,41" weight="-113.82207391065329"/>
+        <Con from="0,42" weight="-4.733038792247209"/>
+        <Con from="0,43" weight="-7.786847020579982"/>
+        <Con from="0,44" weight="0.8177234819344259"/>
+        <Con from="0,45" weight="27.105076911434008"/>
+        <Con from="0,46" weight="-175.85982591327144"/>
+        <Con from="0,47" weight="29.1620947070433"/>
+        <Con from="0,48" weight="-0.8293540205614662"/>
+        <Con from="0,49" weight="-0.5579767479765811"/>
+        <Con from="0,50" weight="1.2329570410606783"/>
+        <Con from="0,51" weight="-0.4993227518135396"/>
+        <Con from="0,52" weight="-234.86368605837833"/>
+        <Con from="0,53" weight="46.959985573754956"/>
+        <Con from="0,54" weight="-2.096371183115457"/>
+        <Con from="0,55" weight="0.4524518282874763"/>
+        <Con from="0,56" weight="-1.5606964947284745"/>
+        <Con from="0,57" weight="2.3441274729723482"/>
+        <Con from="0,58" weight="0.9576647553891476"/>
+        <Con from="0,59" weight="-1.6347750865875539"/>
+        <Con from="0,60" weight="-468.01755549933165"/>
+        <Con from="0,61" weight="-9.266170882051252"/>
+        <Con from="0,62" weight="-5.642751209431302"/>
+        <Con from="0,63" weight="12.523396836326851"/>
+        <Con from="0,64" weight="122.46131992224629"/>
+        <Con from="0,65" weight="36.50020113452182"/>
+        <Con from="0,66" weight="-0.5418174356956676"/>
+        <Con from="0,67" weight="0.8221978170094262"/>
+        <Con from="0,68" weight="-0.167408633245357"/>
+        <Con from="0,69" weight="-202.96963799130427"/>
+        <Con from="0,70" weight="1043.758315435674"/>
+        <Con from="0,71" weight="-184.82922096462968"/>
+        <Con from="0,72" weight="1.2734303148320343"/>
+        <Con from="0,73" weight="-0.11467892079918153"/>
+        <Con from="0,74" weight="0.7602881483314069"/>
+        <Con from="0,75" weight="-3.1713674432570795"/>
+        <Con from="0,76" weight="-15.412589864661657"/>
+        <Con from="0,77" weight="-1.9297135000030994"/>
+        <Con from="0,78" weight="0.7978066516905338"/>
+        <Con from="0,79" weight="0.5612240532686038"/>
+        <Con from="0,80" weight="0.6846686436900523"/>
+        <Con from="0,81" weight="-0.6489672915994447"/>
+        <Con from="0,82" weight="-0.5406648691121235"/>
+        <Con from="0,83" weight="-8.73005058343346"/>
+        <Con from="0,84" weight="-0.7539989252166395"/>
+        <Con from="0,85" weight="62.89562058060071"/>
+        <Con from="0,86" weight="-4.438221151071865"/>
+        <Con from="0,87" weight="89.45404965752093"/>
+        <Con from="0,88" weight="303.01104720111755"/>
+        <Con from="0,89" weight="63.880249837094325"/>
+        <Con from="0,90" weight="-0.6952461347401193"/>
+        <Con from="0,91" weight="-5.2033189702125995"/>
+        <Con from="0,92" weight="-2.0722958391150863"/>
+        <Con from="0,93" weight="284.71840755649185"/>
+        <Con from="0,94" weight="-500.41359626277915"/>
+        <Con from="0,95" weight="-63.78376687097001"/>
+        <Con from="0,96" weight="0.16678289900812826"/>
+        <Con from="0,97" weight="1.3324685207513014"/>
+        <Con from="0,98" weight="-0.2793309024937069"/>
+        <Con from="0,99" weight="27.23816953508746"/>
+        <Con from="0,100" weight="-3.9440159395910546"/>
+        <Con from="0,101" weight="-75.92242196856282"/>
+        <Con from="0,102" weight="0.3462497567632029"/>
+        <Con from="0,103" weight="1.3416758099181134"/>
+        <Con from="0,104" weight="-0.6887311457253289"/>
+        <Con from="0,105" weight="0.14528735365467443"/>
+        <Con from="0,106" weight="4.284658031235271"/>
+        <Con from="0,107" weight="-11.223169234760874"/>
+        <Con from="0,108" weight="88.43617550470485"/>
+        <Con from="0,109" weight="-27.070474333688438"/>
+        <Con from="0,110" weight="2.022137663843604"/>
+        <Con from="0,111" weight="-136.42903345851"/>
+        <Con from="0,112" weight="-173.83216122383817"/>
+        <Con from="0,113" weight="84.3815745446097"/>
+        <Con from="0,114" weight="0.023104418223962607"/>
+        <Con from="0,115" weight="-2.091451231942297"/>
+        <Con from="0,116" weight="2.556347529449466"/>
+        <Con from="0,117" weight="26.84878104278507"/>
+        <Con from="0,118" weight="17.751164464417332"/>
+        <Con from="0,119" weight="117.08153657952678"/>
+        <Con from="0,120" weight="0.7206524247972688"/>
+        <Con from="0,121" weight="2.2031196720199078"/>
+        <Con from="0,122" weight="-0.5923070765189866"/>
+        <Con from="0,123" weight="25.893019718556165"/>
+        <Con from="0,124" weight="9.982995566140307"/>
+        <Con from="0,125" weight="-1.0790097302243105"/>
+        <Con from="0,126" weight="1.8634822533439939"/>
+        <Con from="0,127" weight="1.9755164304566333"/>
+        <Con from="0,128" weight="-0.11794417482422383"/>
+        <Con from="0,129" weight="-1.5783661139183724"/>
+        <Con from="0,130" weight="34.697038221913644"/>
+        <Con from="0,131" weight="-0.4534928856033602"/>
+        <Con from="0,132" weight="-0.12394010617683693"/>
+        <Con from="0,133" weight="-80.84876793470448"/>
+        <Con from="0,134" weight="205.1074519560882"/>
+        <Con from="0,135" weight="-215.8215880330173"/>
+        <Con from="0,136" weight="-227.87641254279674"/>
+        <Con from="0,137" weight="-0.39367533894822937"/>
+        <Con from="0,138" weight="-4.772316402889952"/>
+        <Con from="0,139" weight="-0.6937310119761847"/>
+        <Con from="0,140" weight="-0.5019565608200889"/>
+        <Con from="0,141" weight="26.431610156308388"/>
+        <Con from="0,142" weight="18.20234568728028"/>
+        <Con from="0,143" weight="29.205450861587348"/>
+      </Neuron>
+      <Neuron id="1,8" bias="-0.7025393195428594">
+        <Con from="0,0" weight="0.367482914366177"/>
+        <Con from="0,1" weight="-1.099746580721155"/>
+        <Con from="0,2" weight="-0.6796583214260242"/>
+        <Con from="0,3" weight="-20.835597428127198"/>
+        <Con from="0,4" weight="-24.140150731123175"/>
+        <Con from="0,5" weight="-249.34861052336962"/>
+        <Con from="0,6" weight="-1.1501660936861091"/>
+        <Con from="0,7" weight="-14.363283527780473"/>
+        <Con from="0,8" weight="-0.4799727005277423"/>
+        <Con from="0,9" weight="10.744578345280948"/>
+        <Con from="0,10" weight="0.7078480448639863"/>
+        <Con from="0,11" weight="1.7301944158196318"/>
+        <Con from="0,12" weight="-122.03306874195916"/>
+        <Con from="0,13" weight="289.1485093629174"/>
+        <Con from="0,14" weight="-10.705241331381817"/>
+        <Con from="0,15" weight="6.860090316450493"/>
+        <Con from="0,16" weight="-211.76293507367131"/>
+        <Con from="0,17" weight="1.1646980655317327"/>
+        <Con from="0,18" weight="0.020700284368971814"/>
+        <Con from="0,19" weight="-0.38902499927608025"/>
+        <Con from="0,20" weight="-0.9823069217897171"/>
+        <Con from="0,21" weight="9.081490705272717"/>
+        <Con from="0,22" weight="25.394554679866552"/>
+        <Con from="0,23" weight="-10.111885810749836"/>
+        <Con from="0,24" weight="-0.06502622604061183"/>
+        <Con from="0,25" weight="-0.17227945310026166"/>
+        <Con from="0,26" weight="1.2301046907681672"/>
+        <Con from="0,27" weight="-0.27635751307811046"/>
+        <Con from="0,28" weight="381.0606198219955"/>
+        <Con from="0,29" weight="-72.11704116301476"/>
+        <Con from="0,30" weight="-0.7415441465301417"/>
+        <Con from="0,31" weight="1.0770327523121523"/>
+        <Con from="0,32" weight="0.2264154692463375"/>
+        <Con from="0,33" weight="0.897144711910485"/>
+        <Con from="0,34" weight="-1.3697584173033357"/>
+        <Con from="0,35" weight="-1.2803564945998902"/>
+        <Con from="0,36" weight="-71.74240586728064"/>
+        <Con from="0,37" weight="34.120166721218105"/>
+        <Con from="0,38" weight="4.552127254031522"/>
+        <Con from="0,39" weight="-59.575660378381095"/>
+        <Con from="0,40" weight="-1038.648566153862"/>
+        <Con from="0,41" weight="22.636783064523534"/>
+        <Con from="0,42" weight="-2.8747954972817467"/>
+        <Con from="0,43" weight="-77.14182688038186"/>
+        <Con from="0,44" weight="-4.347023332961045"/>
+        <Con from="0,45" weight="45.834857003423565"/>
+        <Con from="0,46" weight="-9.148352374325807"/>
+        <Con from="0,47" weight="-12.229758473667992"/>
+        <Con from="0,48" weight="0.08662378138630278"/>
+        <Con from="0,49" weight="0.29931297285631553"/>
+        <Con from="0,50" weight="0.19682551890905242"/>
+        <Con from="0,51" weight="0.5459168415572556"/>
+        <Con from="0,52" weight="-257.6912418924839"/>
+        <Con from="0,53" weight="0.0909361521701052"/>
+        <Con from="0,54" weight="-1.4509688082354137"/>
+        <Con from="0,55" weight="0.1414672495451964"/>
+        <Con from="0,56" weight="-0.37539602236909564"/>
+        <Con from="0,57" weight="1.7367287711917696"/>
+        <Con from="0,58" weight="0.22466670665949268"/>
+        <Con from="0,59" weight="-0.26378984304879616"/>
+        <Con from="0,60" weight="-16.221207928280432"/>
+        <Con from="0,61" weight="-150.5072908109798"/>
+        <Con from="0,62" weight="-0.5023913542085061"/>
+        <Con from="0,63" weight="24.601718989561462"/>
+        <Con from="0,64" weight="335.38585385600277"/>
+        <Con from="0,65" weight="-12.811792517757262"/>
+        <Con from="0,66" weight="-0.16241107627817872"/>
+        <Con from="0,67" weight="-0.17324677842687325"/>
+        <Con from="0,68" weight="-0.9537785877166488"/>
+        <Con from="0,69" weight="-95.41958594793479"/>
+        <Con from="0,70" weight="-1.5639822449826708"/>
+        <Con from="0,71" weight="-183.55195873089946"/>
+        <Con from="0,72" weight="-1.4577321746596694"/>
+        <Con from="0,73" weight="0.42278230588311083"/>
+        <Con from="0,74" weight="-0.6186909724347646"/>
+        <Con from="0,75" weight="0.8537720123751208"/>
+        <Con from="0,76" weight="41.79399516616185"/>
+        <Con from="0,77" weight="68.97226883628417"/>
+        <Con from="0,78" weight="1.967997173838623"/>
+        <Con from="0,79" weight="0.9459359199331827"/>
+        <Con from="0,80" weight="-0.338724253397986"/>
+        <Con from="0,81" weight="-0.41981115407482117"/>
+        <Con from="0,82" weight="0.6199990841120226"/>
+        <Con from="0,83" weight="-0.6498008202553193"/>
+        <Con from="0,84" weight="-25.00388937378742"/>
+        <Con from="0,85" weight="55.830735211761855"/>
+        <Con from="0,86" weight="-0.3780479959173869"/>
+        <Con from="0,87" weight="187.4344339461392"/>
+        <Con from="0,88" weight="536.9946894087554"/>
+        <Con from="0,89" weight="0.5786576038744833"/>
+        <Con from="0,90" weight="0.32921152629684935"/>
+        <Con from="0,91" weight="173.9081032328931"/>
+        <Con from="0,92" weight="-0.9038243861320363"/>
+        <Con from="0,93" weight="153.950357247358"/>
+        <Con from="0,94" weight="-9.357161459826482"/>
+        <Con from="0,95" weight="-463.4312335344502"/>
+        <Con from="0,96" weight="-0.736277624844994"/>
+        <Con from="0,97" weight="0.4562264495340136"/>
+        <Con from="0,98" weight="0.9218760817122195"/>
+        <Con from="0,99" weight="104.22327847000092"/>
+        <Con from="0,100" weight="-120.79361392856778"/>
+        <Con from="0,101" weight="13.370589236205026"/>
+        <Con from="0,102" weight="-0.4220998046000671"/>
+        <Con from="0,103" weight="0.4920164564416542"/>
+        <Con from="0,104" weight="0.02464136338146436"/>
+        <Con from="0,105" weight="-3.644810213866898"/>
+        <Con from="0,106" weight="2.2814709341881874"/>
+        <Con from="0,107" weight="0.21891754100796937"/>
+        <Con from="0,108" weight="62.201841255024455"/>
+        <Con from="0,109" weight="-50.16403264038516"/>
+        <Con from="0,110" weight="1.4442218400359117"/>
+        <Con from="0,111" weight="-93.03962735710721"/>
+        <Con from="0,112" weight="-55.24241985301768"/>
+        <Con from="0,113" weight="-0.9374559801807756"/>
+        <Con from="0,114" weight="-1.190036697303626"/>
+        <Con from="0,115" weight="-23.95541802322265"/>
+        <Con from="0,116" weight="-0.996401974228217"/>
+        <Con from="0,117" weight="47.299726336044344"/>
+        <Con from="0,118" weight="25.84843896625469"/>
+        <Con from="0,119" weight="-11.032674365014334"/>
+        <Con from="0,120" weight="0.2959249238344834"/>
+        <Con from="0,121" weight="0.5615924081155512"/>
+        <Con from="0,122" weight="-0.7162638158477351"/>
+        <Con from="0,123" weight="104.60279475247809"/>
+        <Con from="0,124" weight="-25.65933124605489"/>
+        <Con from="0,125" weight="0.009188295566063582"/>
+        <Con from="0,126" weight="2.532892914090473"/>
+        <Con from="0,127" weight="0.8469567107117931"/>
+        <Con from="0,128" weight="-0.3381552579407848"/>
+        <Con from="0,129" weight="-1.6454044604928848"/>
+        <Con from="0,130" weight="2.0209805478915936"/>
+        <Con from="0,131" weight="-1.0009411169242668"/>
+        <Con from="0,132" weight="-14.646015303486417"/>
+        <Con from="0,133" weight="-48.42419886053179"/>
+        <Con from="0,134" weight="13.55064801417216"/>
+        <Con from="0,135" weight="-321.180585326764"/>
+        <Con from="0,136" weight="-98.04137320471574"/>
+        <Con from="0,137" weight="-29.156068136687637"/>
+        <Con from="0,138" weight="14.174561965180564"/>
+        <Con from="0,139" weight="-255.70197383996432"/>
+        <Con from="0,140" weight="-190.4211527400658"/>
+        <Con from="0,141" weight="45.92120402379135"/>
+        <Con from="0,142" weight="25.920839916178355"/>
+        <Con from="0,143" weight="-11.585797136818544"/>
+      </Neuron>
+      <Neuron id="1,9" bias="-0.5905622851401842">
+        <Con from="0,0" weight="-2.4364849237370225"/>
+        <Con from="0,1" weight="0.7629713880770296"/>
+        <Con from="0,2" weight="-0.14151860535469687"/>
+        <Con from="0,3" weight="-1.801399662044086"/>
+        <Con from="0,4" weight="51.792374033415086"/>
+        <Con from="0,5" weight="-190.3601076241993"/>
+        <Con from="0,6" weight="-1.0104358811900265"/>
+        <Con from="0,7" weight="1.7773459598607384"/>
+        <Con from="0,8" weight="0.22728553518829694"/>
+        <Con from="0,9" weight="0.5256959172472319"/>
+        <Con from="0,10" weight="-1.8384800729666273"/>
+        <Con from="0,11" weight="5.020909159792133"/>
+        <Con from="0,12" weight="-95.50524568966863"/>
+        <Con from="0,13" weight="554.1843639178861"/>
+        <Con from="0,14" weight="-0.47775503380702455"/>
+        <Con from="0,15" weight="-0.08747908764830549"/>
+        <Con from="0,16" weight="-19.871998210323248"/>
+        <Con from="0,17" weight="-0.9229710791858747"/>
+        <Con from="0,18" weight="-4.445045614845973"/>
+        <Con from="0,19" weight="-1.1319603571657308"/>
+        <Con from="0,20" weight="-7.049685980719456"/>
+        <Con from="0,21" weight="6.20469856419314"/>
+        <Con from="0,22" weight="17.78112103965765"/>
+        <Con from="0,23" weight="-0.7701456565350455"/>
+        <Con from="0,24" weight="0.2022454808195958"/>
+        <Con from="0,25" weight="0.8001375925667793"/>
+        <Con from="0,26" weight="0.5884706845088044"/>
+        <Con from="0,27" weight="1.023941483753704"/>
+        <Con from="0,28" weight="97.85099929004487"/>
+        <Con from="0,29" weight="-149.0695305817036"/>
+        <Con from="0,30" weight="-0.6417253738975406"/>
+        <Con from="0,31" weight="0.5121793715141438"/>
+        <Con from="0,32" weight="0.5722937202881134"/>
+        <Con from="0,33" weight="-0.36599326089888273"/>
+        <Con from="0,34" weight="0.4006466287050563"/>
+        <Con from="0,35" weight="-1.1389497513003748"/>
+        <Con from="0,36" weight="-7.7938941815462925"/>
+        <Con from="0,37" weight="-5.327028471519909"/>
+        <Con from="0,38" weight="0.6496031726569104"/>
+        <Con from="0,39" weight="-21.07580308193812"/>
+        <Con from="0,40" weight="-29.002188921031653"/>
+        <Con from="0,41" weight="21.625934033925493"/>
+        <Con from="0,42" weight="-9.709371441461919"/>
+        <Con from="0,43" weight="-57.272927156637266"/>
+        <Con from="0,44" weight="-24.010614193627077"/>
+        <Con from="0,45" weight="19.275531549994874"/>
+        <Con from="0,46" weight="-0.8955196910274674"/>
+        <Con from="0,47" weight="-13.619310678255898"/>
+        <Con from="0,48" weight="0.285751131223639"/>
+        <Con from="0,49" weight="-0.8097970944704946"/>
+        <Con from="0,50" weight="-0.7017697111641655"/>
+        <Con from="0,51" weight="3.689929701584116"/>
+        <Con from="0,52" weight="-449.3603782351479"/>
+        <Con from="0,53" weight="-5.513076690223929"/>
+        <Con from="0,54" weight="-0.513504130002574"/>
+        <Con from="0,55" weight="0.7073181718550209"/>
+        <Con from="0,56" weight="-0.03200318983060611"/>
+        <Con from="0,57" weight="1.3019909604356656"/>
+        <Con from="0,58" weight="-0.7823642489365662"/>
+        <Con from="0,59" weight="-0.01975067322825794"/>
+        <Con from="0,60" weight="-2.0845117010329046"/>
+        <Con from="0,61" weight="-148.70536119912205"/>
+        <Con from="0,62" weight="-1.3484971555805394"/>
+        <Con from="0,63" weight="24.689389459062472"/>
+        <Con from="0,64" weight="1.3035339550223692"/>
+        <Con from="0,65" weight="3.0118513662208057"/>
+        <Con from="0,66" weight="-0.9462513230009412"/>
+        <Con from="0,67" weight="-1.1354705475205429"/>
+        <Con from="0,68" weight="1.343408548091796"/>
+        <Con from="0,69" weight="4.342581208237216"/>
+        <Con from="0,70" weight="1.67395795311071"/>
+        <Con from="0,71" weight="-221.2929156292132"/>
+        <Con from="0,72" weight="-10.03993522258138"/>
+        <Con from="0,73" weight="0.022906019556231696"/>
+        <Con from="0,74" weight="0.8563031232865754"/>
+        <Con from="0,75" weight="0.6348977870518252"/>
+        <Con from="0,76" weight="16.69143824952717"/>
+        <Con from="0,77" weight="189.66665295698286"/>
+        <Con from="0,78" weight="2.5867925230546485"/>
+        <Con from="0,79" weight="1.8395018206627038"/>
+        <Con from="0,80" weight="-0.4123088650690551"/>
+        <Con from="0,81" weight="-1.6272011742312864"/>
+        <Con from="0,82" weight="0.4576417296146698"/>
+        <Con from="0,83" weight="0.0878862239161586"/>
+        <Con from="0,84" weight="-234.75321125808247"/>
+        <Con from="0,85" weight="424.9607596169781"/>
+        <Con from="0,86" weight="0.06533535204316117"/>
+        <Con from="0,87" weight="2.07239150397327"/>
+        <Con from="0,88" weight="3.4451027118461353"/>
+        <Con from="0,89" weight="18.461141458674987"/>
+        <Con from="0,90" weight="8.976357788199769"/>
+        <Con from="0,91" weight="66.13098257801474"/>
+        <Con from="0,92" weight="0.5074088869890528"/>
+        <Con from="0,93" weight="208.56578914508822"/>
+        <Con from="0,94" weight="0.37317241481095953"/>
+        <Con from="0,95" weight="-533.7249999439462"/>
+        <Con from="0,96" weight="19.538518384297674"/>
+        <Con from="0,97" weight="0.2810241370766829"/>
+        <Con from="0,98" weight="-0.396896281936476"/>
+        <Con from="0,99" weight="86.45085054615382"/>
+        <Con from="0,100" weight="-19.20916308814034"/>
+        <Con from="0,101" weight="33.904259281900686"/>
+        <Con from="0,102" weight="0.5535826795959249"/>
+        <Con from="0,103" weight="-0.4406394738602474"/>
+        <Con from="0,104" weight="0.6122104301310822"/>
+        <Con from="0,105" weight="-0.8408498868135695"/>
+        <Con from="0,106" weight="0.8120961677709322"/>
+        <Con from="0,107" weight="-0.4549209527349007"/>
+        <Con from="0,108" weight="111.42495785335514"/>
+        <Con from="0,109" weight="-290.3734180360672"/>
+        <Con from="0,110" weight="-1.1815847695327077"/>
+        <Con from="0,111" weight="-0.45815803544128025"/>
+        <Con from="0,112" weight="31.853824807683203"/>
+        <Con from="0,113" weight="0.9808890274793243"/>
+        <Con from="0,114" weight="-7.246031802486526"/>
+        <Con from="0,115" weight="-197.66387749432684"/>
+        <Con from="0,116" weight="-245.12218849821994"/>
+        <Con from="0,117" weight="19.902424436232693"/>
+        <Con from="0,118" weight="16.39791721469033"/>
+        <Con from="0,119" weight="-22.694060984035275"/>
+        <Con from="0,120" weight="-0.1694923633166719"/>
+        <Con from="0,121" weight="1.9991446669699182"/>
+        <Con from="0,122" weight="-2.308923368847966"/>
+        <Con from="0,123" weight="85.43046591574884"/>
+        <Con from="0,124" weight="96.17871913487953"/>
+        <Con from="0,125" weight="3.9607385579686922"/>
+        <Con from="0,126" weight="3.6601824085089185"/>
+        <Con from="0,127" weight="0.687634069786179"/>
+        <Con from="0,128" weight="-0.1937029468045123"/>
+        <Con from="0,129" weight="-2.5502085715696556"/>
+        <Con from="0,130" weight="0.04417283673130038"/>
+        <Con from="0,131" weight="0.44054645059554237"/>
+        <Con from="0,132" weight="-2.5258491515061396"/>
+        <Con from="0,133" weight="-290.2399607431417"/>
+        <Con from="0,134" weight="9.658240186412115"/>
+        <Con from="0,135" weight="-18.091036022699715"/>
+        <Con from="0,136" weight="28.779313907613258"/>
+        <Con from="0,137" weight="1.852619280354099"/>
+        <Con from="0,138" weight="17.75878432203"/>
+        <Con from="0,139" weight="7.784304821262209"/>
+        <Con from="0,140" weight="-17.002954359339686"/>
+        <Con from="0,141" weight="19.359277083322066"/>
+        <Con from="0,142" weight="17.963233493145463"/>
+        <Con from="0,143" weight="-13.731603297662936"/>
+      </Neuron>
+    </NeuralLayer>
+    <NeuralLayer>
+      <Neuron id="2,0" bias="1.3149123030950043">
+        <Con from="1,0" weight="-24.62141686474545"/>
+        <Con from="1,1" weight="7.634241282006346"/>
+        <Con from="1,2" weight="-18.872313718303516"/>
+        <Con from="1,3" weight="-13.818381402827889"/>
+        <Con from="1,4" weight="22.77779404470116"/>
+        <Con from="1,5" weight="-0.16054453682389386"/>
+        <Con from="1,6" weight="-8.027818390083118"/>
+        <Con from="1,7" weight="-12.539784124143114"/>
+        <Con from="1,8" weight="-13.624322900978347"/>
+        <Con from="1,9" weight="-12.149057365761893"/>
+      </Neuron>
+      <Neuron id="2,1" bias="-1.2185184610382032">
+        <Con from="1,0" weight="23.9437647366512"/>
+        <Con from="1,1" weight="-7.022866018541059"/>
+        <Con from="1,2" weight="12.880922722419811"/>
+        <Con from="1,3" weight="8.585690053726006"/>
+        <Con from="1,4" weight="-18.64584580734388"/>
+        <Con from="1,5" weight="-1.2727861291979978"/>
+        <Con from="1,6" weight="5.370685732570733"/>
+        <Con from="1,7" weight="15.73249767290391"/>
+        <Con from="1,8" weight="11.709974724178528"/>
+        <Con from="1,9" weight="10.999776777544623"/>
+      </Neuron>
+    </NeuralLayer>
+    <NeuralOutputs numberOfOutputs="2">
+      <NeuralOutput outputNeuron="2,0">
+        <DerivedField optype="categorical" dataType="string">
+          <NormDiscrete field="TermClass" value="1"/>
+        </DerivedField>
+      </NeuralOutput>
+      <NeuralOutput outputNeuron="2,1">
+        <DerivedField optype="categorical" dataType="string">
+          <NormDiscrete field="TermClass" value="0"/>
+        </DerivedField>
+      </NeuralOutput>
+    </NeuralOutputs>
+  </NeuralNetwork>
+</PMML>
