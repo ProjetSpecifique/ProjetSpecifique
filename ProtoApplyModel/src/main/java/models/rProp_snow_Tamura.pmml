@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2">
+  <Header copyright="So">
+    <Application name="KNIME" version="2.10.4"/>
+  </Header>
+  <DataDictionary numberOfFields="19">
+    <DataField name="TermClass" optype="categorical" dataType="string">
+      <Value value="1"/>
+      <Value value="0"/>
+    </DataField>
+    <DataField name="Col1" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col2" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col3" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col4" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col5" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col6" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col7" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col8" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col9" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col10" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col11" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col12" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col13" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col14" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col15" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col16" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col17" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+    <DataField name="Col18" optype="continuous" dataType="double">
+      <Interval closure="closedClosed" leftMargin="0.0" rightMargin="1.0"/>
+    </DataField>
+  </DataDictionary>
+  <NeuralNetwork functionName="classification" algorithmName="RProp" activationFunction="logistic" normalizationMethod="none" width="0.0" numberOfLayers="2">
+    <MiningSchema>
+      <MiningField name="Col1" invalidValueTreatment="asIs"/>
+      <MiningField name="Col2" invalidValueTreatment="asIs"/>
+      <MiningField name="Col3" invalidValueTreatment="asIs"/>
+      <MiningField name="Col4" invalidValueTreatment="asIs"/>
+      <MiningField name="Col5" invalidValueTreatment="asIs"/>
+      <MiningField name="Col6" invalidValueTreatment="asIs"/>
+      <MiningField name="Col7" invalidValueTreatment="asIs"/>
+      <MiningField name="Col8" invalidValueTreatment="asIs"/>
+      <MiningField name="Col9" invalidValueTreatment="asIs"/>
+      <MiningField name="Col10" invalidValueTreatment="asIs"/>
+      <MiningField name="Col11" invalidValueTreatment="asIs"/>
+      <MiningField name="Col12" invalidValueTreatment="asIs"/>
+      <MiningField name="Col13" invalidValueTreatment="asIs"/>
+      <MiningField name="Col14" invalidValueTreatment="asIs"/>
+      <MiningField name="Col15" invalidValueTreatment="asIs"/>
+      <MiningField name="Col16" invalidValueTreatment="asIs"/>
+      <MiningField name="Col17" invalidValueTreatment="asIs"/>
+      <MiningField name="Col18" invalidValueTreatment="asIs"/>
+      <MiningField name="TermClass" invalidValueTreatment="asIs" usageType="target"/>
+    </MiningSchema>
+    <NeuralInputs numberOfInputs="18">
+      <NeuralInput id="0,0">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col1"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,1">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col2"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,2">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col3"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,3">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col4"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,4">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col5"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,5">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col6"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,6">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col7"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,7">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col8"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,8">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col9"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,9">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col10"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,10">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col11"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,11">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col12"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,12">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col13"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,13">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col14"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,14">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col15"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,15">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col16"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,16">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col17"/>
+        </DerivedField>
+      </NeuralInput>
+      <NeuralInput id="0,17">
+        <DerivedField optype="continuous" dataType="double">
+          <FieldRef field="Col18"/>
+        </DerivedField>
+      </NeuralInput>
+    </NeuralInputs>
+    <NeuralLayer>
+      <Neuron id="1,0" bias="-0.8501428705657641">
+        <Con from="0,0" weight="0.46594862955336047"/>
+        <Con from="0,1" weight="-5.9160746106603375"/>
+        <Con from="0,2" weight="-0.0868726747864965"/>
+        <Con from="0,3" weight="-0.4360331594271286"/>
+        <Con from="0,4" weight="9.371671790887705"/>
+        <Con from="0,5" weight="0.41950214634072475"/>
+        <Con from="0,6" weight="2.039627539476237"/>
+        <Con from="0,7" weight="0.5626862433040198"/>
+        <Con from="0,8" weight="0.2926118153052441"/>
+        <Con from="0,9" weight="-11.336944734473542"/>
+        <Con from="0,10" weight="-0.06106435607147518"/>
+        <Con from="0,11" weight="-0.6750091306423053"/>
+        <Con from="0,12" weight="1.6945480735617064"/>
+        <Con from="0,13" weight="-0.3195049782148996"/>
+        <Con from="0,14" weight="0.9727952292567302"/>
+        <Con from="0,15" weight="-0.3207176884961564"/>
+        <Con from="0,16" weight="0.21434613851427675"/>
+        <Con from="0,17" weight="-0.3299450854139366"/>
+      </Neuron>
+      <Neuron id="1,1" bias="0.4162207156094396">
+        <Con from="0,0" weight="0.11440219373172172"/>
+        <Con from="0,1" weight="12.031310589883626"/>
+        <Con from="0,2" weight="-16.76810867903292"/>
+        <Con from="0,3" weight="-0.7469629989994557"/>
+        <Con from="0,4" weight="-0.8906105375853242"/>
+        <Con from="0,5" weight="0.18445463560729997"/>
+        <Con from="0,6" weight="-1.0518420911772375"/>
+        <Con from="0,7" weight="-1.07537615363595"/>
+        <Con from="0,8" weight="-11.272810140511503"/>
+        <Con from="0,9" weight="0.4665710858604906"/>
+        <Con from="0,10" weight="0.5460180325478675"/>
+        <Con from="0,11" weight="2.8064663192223076"/>
+        <Con from="0,12" weight="0.21733358367594058"/>
+        <Con from="0,13" weight="0.194619903472473"/>
+        <Con from="0,14" weight="-40.5679443477058"/>
+        <Con from="0,15" weight="-1.381837251637017"/>
+        <Con from="0,16" weight="-0.6335091982262385"/>
+        <Con from="0,17" weight="0.5428779221938491"/>
+      </Neuron>
+      <Neuron id="1,2" bias="0.4797092523488963">
+        <Con from="0,0" weight="-0.9046485017773177"/>
+        <Con from="0,1" weight="-5.046027617863422"/>
+        <Con from="0,2" weight="5.993608182526348"/>
+        <Con from="0,3" weight="0.28854693309122115"/>
+        <Con from="0,4" weight="-1.016512589555249"/>
+        <Con from="0,5" weight="0.11077801351545509"/>
+        <Con from="0,6" weight="-0.40251139045345297"/>
+        <Con from="0,7" weight="0.37280868474806217"/>
+        <Con from="0,8" weight="-0.10783657391569955"/>
+        <Con from="0,9" weight="-0.576248565026161"/>
+        <Con from="0,10" weight="-3.5150089743435147"/>
+        <Con from="0,11" weight="0.5835455524622561"/>
+        <Con from="0,12" weight="-9.957192768657167"/>
+        <Con from="0,13" weight="1.0373687915337082"/>
+        <Con from="0,14" weight="0.7772649657543038"/>
+        <Con from="0,15" weight="0.6943397226523658"/>
+        <Con from="0,16" weight="7.880851866654848"/>
+        <Con from="0,17" weight="6.9606351545792124"/>
+      </Neuron>
+      <Neuron id="1,3" bias="-0.3388892806530135">
+        <Con from="0,0" weight="-0.6407692129832481"/>
+        <Con from="0,1" weight="4.883063788029383"/>
+        <Con from="0,2" weight="-1.29521920886374"/>
+        <Con from="0,3" weight="-0.984674499758647"/>
+        <Con from="0,4" weight="0.17327398568381855"/>
+        <Con from="0,5" weight="0.3589753102964587"/>
+        <Con from="0,6" weight="-0.3589789359049381"/>
+        <Con from="0,7" weight="0.14464639649040562"/>
+        <Con from="0,8" weight="0.3243242949695002"/>
+        <Con from="0,9" weight="0.849853489051132"/>
+        <Con from="0,10" weight="3.1483566968090755"/>
+        <Con from="0,11" weight="0.2818932249214435"/>
+        <Con from="0,12" weight="2.2059447948381528"/>
+        <Con from="0,13" weight="-0.5692250780366395"/>
+        <Con from="0,14" weight="1.533336835373568"/>
+        <Con from="0,15" weight="-0.29354756870619386"/>
+        <Con from="0,16" weight="-3.0344671352946264"/>
+        <Con from="0,17" weight="-1.883084418541255"/>
+      </Neuron>
+      <Neuron id="1,4" bias="0.5801782853399827">
+        <Con from="0,0" weight="0.6940861121849412"/>
+        <Con from="0,1" weight="6.3620025423545"/>
+        <Con from="0,2" weight="12.124636806730082"/>
+        <Con from="0,3" weight="-3.766067728269259"/>
+        <Con from="0,4" weight="-0.9689726687524799"/>
+        <Con from="0,5" weight="-0.39773227397904987"/>
+        <Con from="0,6" weight="-0.4014150299407399"/>
+        <Con from="0,7" weight="-0.04470815398123768"/>
+        <Con from="0,8" weight="1.2075148457164824"/>
+        <Con from="0,9" weight="-1.9287243168549093"/>
+        <Con from="0,10" weight="0.5459077693256942"/>
+        <Con from="0,11" weight="-0.4717742543518576"/>
+        <Con from="0,12" weight="1.9585433936792578"/>
+        <Con from="0,13" weight="-0.46967253926879865"/>
+        <Con from="0,14" weight="1.1722499634965482"/>
+        <Con from="0,15" weight="-0.0379624595102326"/>
+        <Con from="0,16" weight="-3.0570893215189914"/>
+        <Con from="0,17" weight="-4.710160857001368"/>
+      </Neuron>
+      <Neuron id="1,5" bias="-0.3668483171850642">
+        <Con from="0,0" weight="0.7603455825269815"/>
+        <Con from="0,1" weight="1.082772410518377"/>
+        <Con from="0,2" weight="4.874074643780124"/>
+        <Con from="0,3" weight="-0.5955644894091484"/>
+        <Con from="0,4" weight="-0.09133204610557434"/>
+        <Con from="0,5" weight="0.900553616407003"/>
+        <Con from="0,6" weight="0.22807284825260654"/>
+        <Con from="0,7" weight="0.8210130211918741"/>
+        <Con from="0,8" weight="2.1780938021930525"/>
+        <Con from="0,9" weight="0.7696260880119645"/>
+        <Con from="0,10" weight="0.9353296830183438"/>
+        <Con from="0,11" weight="-2.9078001377787674"/>
+        <Con from="0,12" weight="2.9826241075530286"/>
+        <Con from="0,13" weight="-0.6529613431818003"/>
+        <Con from="0,14" weight="1.051762026378274"/>
+        <Con from="0,15" weight="-0.8460164169333321"/>
+        <Con from="0,16" weight="-2.7581660002013586"/>
+        <Con from="0,17" weight="-3.1344205913745093"/>
+      </Neuron>
+      <Neuron id="1,6" bias="0.05618423669302971">
+        <Con from="0,0" weight="0.3136311998575789"/>
+        <Con from="0,1" weight="1.9400105201345172"/>
+        <Con from="0,2" weight="-42.453742403190645"/>
+        <Con from="0,3" weight="0.061097968680055945"/>
+        <Con from="0,4" weight="0.40846826548402004"/>
+        <Con from="0,5" weight="0.7478474068738149"/>
+        <Con from="0,6" weight="-1.1416054003718457"/>
+        <Con from="0,7" weight="0.37294527879734773"/>
+        <Con from="0,8" weight="-3.518581279872127"/>
+        <Con from="0,9" weight="3.385210324609031"/>
+        <Con from="0,10" weight="-1.5167084586113397"/>
+        <Con from="0,11" weight="1.9624440965845342"/>
+        <Con from="0,12" weight="5.194956951669626"/>
+        <Con from="0,13" weight="1.3626398537942463"/>
+        <Con from="0,14" weight="-1.2514093018468408"/>
+        <Con from="0,15" weight="-0.6181428509278966"/>
+        <Con from="0,16" weight="0.17771953102455154"/>
+        <Con from="0,17" weight="1.436144810363572"/>
+      </Neuron>
+      <Neuron id="1,7" bias="-0.8199479728135162">
+        <Con from="0,0" weight="-0.5602575385972642"/>
+        <Con from="0,1" weight="0.5998290206408576"/>
+        <Con from="0,2" weight="-0.8373671165409408"/>
+        <Con from="0,3" weight="-0.19101535562430422"/>
+        <Con from="0,4" weight="-0.41680985026782713"/>
+        <Con from="0,5" weight="-0.38467187652162677"/>
+        <Con from="0,6" weight="0.11035307405735174"/>
+        <Con from="0,7" weight="0.6255864859326661"/>
+        <Con from="0,8" weight="-0.2674229304113018"/>
+        <Con from="0,9" weight="-0.17537108720648803"/>
+        <Con from="0,10" weight="-0.18654092951280185"/>
+        <Con from="0,11" weight="0.0907707943224133"/>
+        <Con from="0,12" weight="-0.4815948068884194"/>
+        <Con from="0,13" weight="0.23969696061563833"/>
+        <Con from="0,14" weight="0.23833039326898195"/>
+        <Con from="0,15" weight="0.5654881430734218"/>
+        <Con from="0,16" weight="0.15265616404144836"/>
+        <Con from="0,17" weight="0.1872245010943082"/>
+      </Neuron>
+      <Neuron id="1,8" bias="0.12897936555372874">
+        <Con from="0,0" weight="0.22775516765091292"/>
+        <Con from="0,1" weight="0.35890647731520064"/>
+        <Con from="0,2" weight="-0.602314059716434"/>
+        <Con from="0,3" weight="-0.30300164109388283"/>
+        <Con from="0,4" weight="-1.331615623046386"/>
+        <Con from="0,5" weight="-0.13355885578168247"/>
+        <Con from="0,6" weight="0.01494442754146306"/>
+        <Con from="0,7" weight="0.5717689158779343"/>
+        <Con from="0,8" weight="-1.4214961891647946"/>
+        <Con from="0,9" weight="1.2498448140970884"/>
+        <Con from="0,10" weight="-2.768184028212293"/>
+        <Con from="0,11" weight="2.518508957144801"/>
+        <Con from="0,12" weight="-1.217111819775267"/>
+        <Con from="0,13" weight="-0.7644355290066998"/>
+        <Con from="0,14" weight="-0.989754660960125"/>
+        <Con from="0,15" weight="-0.6646913772225579"/>
+        <Con from="0,16" weight="1.3388002944083341"/>
+        <Con from="0,17" weight="2.4317217402130487"/>
+      </Neuron>
+      <Neuron id="1,9" bias="-0.597700403329501">
+        <Con from="0,0" weight="0.5938781587969789"/>
+        <Con from="0,1" weight="0.21451648355015474"/>
+        <Con from="0,2" weight="0.06435036383239828"/>
+        <Con from="0,3" weight="0.36441716645085254"/>
+        <Con from="0,4" weight="0.19825160831593702"/>
+        <Con from="0,5" weight="-0.17151786591449067"/>
+        <Con from="0,6" weight="-0.41824739684628237"/>
+        <Con from="0,7" weight="0.7757070940363748"/>
+        <Con from="0,8" weight="0.3736541177668095"/>
+        <Con from="0,9" weight="-0.17443562292779843"/>
+        <Con from="0,10" weight="-0.19164492062280417"/>
+        <Con from="0,11" weight="0.5190843963294702"/>
+        <Con from="0,12" weight="-0.5473377286684099"/>
+        <Con from="0,13" weight="-0.5425329904664362"/>
+        <Con from="0,14" weight="-0.2146385135826747"/>
+        <Con from="0,15" weight="0.7863962205331297"/>
+        <Con from="0,16" weight="0.3405362555303162"/>
+        <Con from="0,17" weight="0.43261116826366525"/>
+      </Neuron>
+    </NeuralLayer>
+    <NeuralLayer>
+      <Neuron id="2,0" bias="-0.668527960837221">
+        <Con from="1,0" weight="2.018895201012909"/>
+        <Con from="1,1" weight="-14.959345461458614"/>
+        <Con from="1,2" weight="-2.645018909600746"/>
+        <Con from="1,3" weight="1.2194164725321945"/>
+        <Con from="1,4" weight="0.9994058955538924"/>
+        <Con from="1,5" weight="0.9588048586587008"/>
+        <Con from="1,6" weight="-1.9563323291239"/>
+        <Con from="1,7" weight="0.4309765227479439"/>
+        <Con from="1,8" weight="-1.474332972278266"/>
+        <Con from="1,9" weight="-0.3249368231466113"/>
+      </Neuron>
+      <Neuron id="2,1" bias="0.1764994988623351">
+        <Con from="1,0" weight="-2.019755048161973"/>
+        <Con from="1,1" weight="11.95830546015872"/>
+        <Con from="1,2" weight="2.798870606703964"/>
+        <Con from="1,3" weight="-0.9405736047598445"/>
+        <Con from="1,4" weight="-1.207292090742152"/>
+        <Con from="1,5" weight="-0.7097109603870465"/>
+        <Con from="1,6" weight="1.4887441698810666"/>
+        <Con from="1,7" weight="0.52458801272142"/>
+        <Con from="1,8" weight="3.5201116897666695"/>
+        <Con from="1,9" weight="-0.5529297619013602"/>
+      </Neuron>
+    </NeuralLayer>
+    <NeuralOutputs numberOfOutputs="2">
+      <NeuralOutput outputNeuron="2,0">
+        <DerivedField optype="categorical" dataType="string">
+          <NormDiscrete field="TermClass" value="1"/>
+        </DerivedField>
+      </NeuralOutput>
+      <NeuralOutput outputNeuron="2,1">
+        <DerivedField optype="categorical" dataType="string">
+          <NormDiscrete field="TermClass" value="0"/>
+        </DerivedField>
+      </NeuralOutput>
+    </NeuralOutputs>
+  </NeuralNetwork>
+</PMML>

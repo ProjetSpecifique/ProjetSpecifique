@@ -125,8 +125,8 @@ public class ApplyModelComputation {
 			br.close();
 
 			System.out.println("Analysed Images : " + (tp0 + fp0 + tp1 + fp1));
-			System.out.println(tp0 + " " + fp0 + " " + fn0);
-			System.out.println(tp1 + " " + fp1 + " " + fn1);
+//			System.out.println(tp0 + " " + fp0 + " " + fn0);
+//			System.out.println(tp1 + " " + fp1 + " " + fn1);
 			float precision0 = (float) tp0 / (tp0 + fp0), precision1 = (float) tp1 / (tp1 + fp1);
 			System.out.println("Precision class 1 :" + precision1);
 			System.out.println("Precision class 0 :" + precision0);

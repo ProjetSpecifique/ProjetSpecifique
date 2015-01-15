@@ -9,8 +9,9 @@ import evaluators.MyEvaluator;
 
 public class Main {
 
-	public static String textFilePath = "C:/Users/So/Desktop/protoLogs.txt";
-	public static FileOutputStream consoleFile = null;
+	private static String textFolderPath = "C:/Users/So/Desktop/javaLogs/";
+	private static String csvFolderPath = "C:/Users/So/Desktop/TermCSV/set10Janv2015/";
+	private static String imgFolderPath = "C:/Users/So/Desktop/PS-Images/";
 
 	public static void main(String[] args) throws Exception {
 		System.out.println("--- Start ---");
@@ -21,25 +22,23 @@ public class Main {
 		// MyTerm.coastline, "1");
 		// ApplyModelComputation.fullSimpleExecution(imagePath, "1");
 
-		String csvPath = "C:/Users/So/Desktop/TermCSV/set10Janv2015/coastline.csv";
-		String imgFolderPath = "C:/Users/So/Desktop/PS-Images/";
-
 		MyEvaluator.logResults = false;
-		setConsoleToFile();
+		for (MyTerm term : MyTerm.values()) {
+			setConsoleToFile(textFolderPath + term.name() + "Logs.txt");
+			ApplyModelComputation.fullComplexExecution(csvFolderPath + term.name() + ".csv", imgFolderPath, term);
+		}
+
 		// ApplyModelComputation.complexExecution(csvPath, imgFolderPath,
 		// MyDescriptorType.BasicFeatures, MyLearnerType.tree,
 		// MyTerm.coastline);
-		ApplyModelComputation.fullComplexExecution(csvPath, imgFolderPath, MyTerm.coastline);
 
 		setDefaulConsole();
 		System.out.println("--- End ---");
 
 	}
 
-	private static void setConsoleToFile() throws FileNotFoundException {
-		if (consoleFile == null) {
-			consoleFile = new FileOutputStream(textFilePath);
-		}
+	private static void setConsoleToFile(String path) throws FileNotFoundException {
+		FileOutputStream consoleFile = new FileOutputStream(path);
 
 		System.setOut(new PrintStream(consoleFile));
 	}
