@@ -4,12 +4,8 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.imageio.ImageIO;
-
-import com.google.common.primitives.Doubles;
 
 import descripteurs.MyDescriptor;
 import descripteurs.MyDescriptorFactory;
@@ -35,7 +31,7 @@ public class ApplyModelComputation {
 	 * 
 	 * @return probability : 0 to 1
 	 * */
-	public static Double simpleExecution(String imagePath, MyDescriptorType descriptorType, MyLearnerType learnerType,
+	public static String simpleExecution(String imagePath, MyDescriptorType descriptorType, MyLearnerType learnerType,
 			MyTerm term, String resultClass) throws Exception {
 		/* 1. init image */
 		BufferedImage image;
@@ -72,13 +68,23 @@ public class ApplyModelComputation {
 	 * */
 	public static void complexExecution(String csvPath, String imageFolderPath, MyDescriptorType descriptorType,
 			MyLearnerType learnerType, MyTerm term) {
-		List<Double> positiveValues = new ArrayList<Double>();
-		List<Double> negativeValues = new ArrayList<Double>();
+		// http://fr.wikipedia.org/wiki/Pr%C3%A9cision_et_rappel
+		// tp = true positive = items correctly labeled as belonging to the
+		// class
+		int tp0 = 0, tp1 = 0;
+		// fp = false positive = items incorrectly labeled as belonging to the
+		// class
+		int fp0 = 0, fp1 = 0;
+		// fn = false negative = items which were not labeled as belonging to
+		// the positive class but should have been
+		int fn0 = 0, fn1 = 0;
+
+		// fn0 = fp1 and fn1 = fp0
 
 		BufferedReader br = null;
 		String line = "";
 		String imgPath;
-		Double probability;
+		String modelWinnerClass;
 
 		System.out.println("-----------------------------------------");
 		System.out.println("Csv : " + csvPath);
@@ -94,34 +100,41 @@ public class ApplyModelComputation {
 				imgPath = imageFolderPath + elems[0] + imageExtention;
 
 				// System.out.println("csv Winner :  " + elems[1]);
-				probability = simpleExecution(imgPath, descriptorType, learnerType, term, elems[1]);
+				modelWinnerClass = simpleExecution(imgPath, descriptorType, learnerType, term, elems[1]);
 
-				if ("1".equals(elems[1])) {
-					// positive class value
-					positiveValues.add(probability);
+				if (modelWinnerClass != null && modelWinnerClass.equals(elems[1])) {
+					// correctly labeled
+					if ("1".equals(elems[1])) {
+						tp1++;
+					} else {
+						tp0++;
+					}
 				} else {
-					// negative class value
-					negativeValues.add(probability);
+					// incorrectly labeled
+					if ("1".equals(elems[1])) {
+						// items were label 0 but they were 1
+						fp0++;
+						fn1++;
+					} else {
+						// items were label 1 but they were 0
+						fp1++;
+						fn0++;
+					}
 				}
 			}
 			br.close();
 
-			Statistics statistics;
-			System.out.println("Statistics for Postive values");
-			if (positiveValues.size() > 0) {
-				statistics = new Statistics(Doubles.toArray(positiveValues));
-				statistics.writeStatistics();
-			} else {
-				System.out.println("No positive values");
-			}
-
-			System.out.println("Statistics for Negative values");
-			if (negativeValues.size() > 0) {
-				statistics = new Statistics(Doubles.toArray(negativeValues));
-				statistics.writeStatistics();
-			} else {
-				System.out.println("No negative values");
-			}
+			System.out.println("Analysed Images : " + (tp0 + fp0 + tp1 + fp1));
+			System.out.println(tp0 + " " + fp0 + " " + fn0);
+			System.out.println(tp1 + " " + fp1 + " " + fn1);
+			float precision0 = (float) tp0 / (tp0 + fp0), precision1 = (float) tp1 / (tp1 + fp1);
+			System.out.println("Precision class 1 :" + precision1);
+			System.out.println("Precision class 0 :" + precision0);
+			System.out.println("Precision :" + (precision0 + precision1) / 2);
+			float recall0 = (float) tp0 / (tp0 + fn0), recall1 = (float) tp1 / (tp1 + fn1);
+			System.out.println("Recall class 1 :" + recall1);
+			System.out.println("Recall class 0 :" + recall0);
+			System.out.println("Recall :" + (recall0 + recall1) / 2);
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
 		}

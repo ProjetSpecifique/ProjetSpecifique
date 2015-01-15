@@ -14,22 +14,21 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		System.out.println("--- Start ---");
-		setConsoleToFile();
 
-		// String imagePath =
-		// "C:/Users/So/Desktop/csvTestsEtImages/images/coastlineToTest/1395702050.jpg";
+		// String imagePath = "C:/Users/So/Desktop/PS-Images/1395702050.jpg";
 		// ApplyModelComputation.simpleExecution(imagePath,
-		// MyDescriptorType.AutoColorCorrelogram, MyLearnerType.rProp, "1");
-
+		// MyDescriptorType.AutoColorCorrelogram, MyLearnerType.rProp,
+		// MyTerm.coastline, "1");
 		// ApplyModelComputation.fullSimpleExecution(imagePath, "1");
 
-		String csvPath = "C:/Users/So/Desktop/csvTestsEtImages/csv/coastlineToTest.csv";
-		String imgFolderPath = "C:/Users/So/Desktop/csvTestsEtImages/images/coastlineToTest/";
+		String csvPath = "C:/Users/So/Desktop/TermCSV/set10Janv2015/coastline.csv";
+		String imgFolderPath = "C:/Users/So/Desktop/PS-Images/";
 
 		MyEvaluator.logResults = false;
+		setConsoleToFile();
 		// ApplyModelComputation.complexExecution(csvPath, imgFolderPath,
-		// MyDescriptorType.CEDD,
-		// MyLearnerType.tree);
+		// MyDescriptorType.BasicFeatures, MyLearnerType.tree,
+		// MyTerm.coastline);
 		ApplyModelComputation.fullComplexExecution(csvPath, imgFolderPath, MyTerm.coastline);
 
 		setDefaulConsole();
