@@ -16,16 +16,19 @@ import java.util.List;
 
 /**
  * Take all CSV files from a folder and split them in 2 other csv files with a part of image OK and a part of not OK
- * The number of file splitted is set by the number of names specified in 'nameFilesResultsPart'
+ * The number of file splitted is set by the number of OutputCSVFile object specified in 'filesResultsPart' with 
+ * for each, the number of imageOK and NotOK
  * @author Gaetan
  */
 public class SplitterCSVFiles {
 
     private static String sourceFolderPath = "input";
     private static String outputPath = "output/";
-    private static String[] nameFilesResultsPart = new String[] {"ToTrain", "ToTest"};
     private static String separatorCSV = ";";
-    
+    private static OutputCSVFile[] filesResultsPart = new OutputCSVFile[] {
+        new OutputCSVFile("ToTrain", 100, 100),
+        new OutputCSVFile("ToTest", 80, 120)
+    };
     
     /**
      * @param args the command line arguments
@@ -89,43 +92,61 @@ public class SplitterCSVFiles {
                 lignsImageNotOk.add(line);
             }
         }
-        
+
         //Split list of imageOK and list of imageNotOK
-        int nbFilesResult = nameFilesResultsPart.length;
+        int nbFilesResult = filesResultsPart.length;
         List<List<String>> listOfListImageOk = new ArrayList<>();
         List<List<String>> listOfListImageNotOk = new ArrayList<>();
-        int nbImageOkPerList = lignsImageOk.size() / nbFilesResult;
-        int nbImageNotOkPerList = lignsImageNotOk.size() / nbFilesResult;
+        int indexImageOK = 0;
+        int indexImageNotOK = 0;
         
-        System.out.println(csvFile.getName() + "\t " + nbImageOkPerList + " images OK\t " + nbImageNotOkPerList + " images Non Ok par fichiers");
-        
-        for(int i=0; i<nbFilesResult-1; i++){
-            listOfListImageOk.add(lignsImageOk.subList(i*nbImageOkPerList, (i+1)*nbImageOkPerList));
-            listOfListImageNotOk.add(lignsImageNotOk.subList(i*nbImageNotOkPerList, (i+1)*nbImageNotOkPerList));
+        for(int i=0; i<filesResultsPart.length; i++){
+            if(indexImageOK + filesResultsPart[i].nbImageOK <= lignsImageOk.size()){
+                listOfListImageOk.add(lignsImageOk.subList(indexImageOK, indexImageOK + filesResultsPart[i].nbImageOK));
+                indexImageOK += filesResultsPart[i].nbImageOK;
+            }
+            else{
+                System.out.println("Not enough imageOK for " + csvFile.getName() +
+                                    " for the part " + filesResultsPart[i].name +
+                                    " " + (lignsImageOk.size()-indexImageOK) + "/" + filesResultsPart[i].nbImageOK);
+                listOfListImageOk.add(lignsImageOk.subList(indexImageOK, lignsImageOk.size()));
+                indexImageOK = lignsImageOk.size();
+            }
+            if(indexImageNotOK + filesResultsPart[i].nbImageNotOK <= lignsImageNotOk.size()){
+                listOfListImageNotOk.add(lignsImageNotOk.subList(indexImageNotOK, indexImageNotOK + filesResultsPart[i].nbImageNotOK));
+                indexImageNotOK += filesResultsPart[i].nbImageNotOK;
+            }
+            else{
+                System.out.println("Not enough imageNotOK for " + csvFile.getName() +
+                                    " for the part " + filesResultsPart[i].name +
+                                    " " + (lignsImageNotOk.size()-indexImageNotOK) + "/" + filesResultsPart[i].nbImageNotOK);
+                listOfListImageNotOk.add(lignsImageNotOk.subList(indexImageNotOK, lignsImageNotOk.size()));
+                indexImageNotOK = lignsImageNotOk.size();
+            }
         }
-        
-        //for the last file, add the rest of images
-        listOfListImageOk.add(lignsImageOk.subList((nbFilesResult-1)*nbImageOkPerList, lignsImageOk.size()));
-        listOfListImageNotOk.add(lignsImageNotOk.subList((nbFilesResult-1)*nbImageNotOkPerList, lignsImageNotOk.size()));
-        
-        
+     
         //Write all results files
-        String baseNameFile = csvFile.getName().substring(0, csvFile.getName().length()-4);
-        for(int i=0; i<nbFilesResult; i++){
-            String filePathName = outputPath + baseNameFile + nameFilesResultsPart[i] + ".csv";
-            PrintStream file = new PrintStream(new FileOutputStream(filePathName, false));
+        if(listOfListImageOk.size() != 0 && listOfListImageNotOk.size() != 0){
+            String baseNameFile = csvFile.getName().substring(0, csvFile.getName().length()-4);
+            for(int i=0; i<nbFilesResult; i++){
+                String filePathName = outputPath + baseNameFile + filesResultsPart[i].name + ".csv";
+                PrintStream file = new PrintStream(new FileOutputStream(filePathName, false));
 
-            //Write lign of imageOK
-            Iterator<String> iter = listOfListImageOk.get(i).iterator(); 
-            while (iter.hasNext()) {
-                file.println(iter.next());
+                //Write lign of imageOK
+                Iterator<String> iter = listOfListImageOk.get(i).iterator(); 
+                while (iter.hasNext()) {
+                    file.println(iter.next());
+                }
+                //Write lign of imageNotOK
+                iter = listOfListImageNotOk.get(i).iterator(); 
+                while (iter.hasNext()) {
+                    file.println(iter.next());
+                }
+                file.close();
             }
-            //Write lign of imageNotOK
-            iter = listOfListImageNotOk.get(i).iterator(); 
-            while (iter.hasNext()) {
-                file.println(iter.next());
-            }
-            file.close();
+        }
+        else{
+            System.out.println("Not enough images to split " + csvFile.getName());
         }
     }
 }
