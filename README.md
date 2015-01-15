@@ -54,29 +54,41 @@ CREATE TABLE distancestags2 AS
 
 ## Projects description
 Projects can have it's own readme to describe how use it.
-* ####ImageClassification
+### ImageClassification
 TODO???
-* #### ImageDistance
+
+### ImageDistance
 TODO???
-* #### ImageLearnerKNIME
+
+### ImageLearnerKNIME
 TODO???
-* #### ImagesExtractors
+
+### ImagesExtractors
 Folder with projects to extract and download images from __Flicker__. Each project have advantages and disadvantages (speed, language, ...)
-* #### LearnImageTags
+
+### LearnImageTags
 TODO???
-* #### LireDescriptorsComputation
+
+### LireDescriptorsComputation
 TODO???
-* #### ProtoApplyModel
+
+### ProtoApplyModel
 TODO???
-* #### Rcode
+
+### Rcode
 TODO???
-* #### distancesTags
+
+### distancesTags
 __Java__ project to compute distances between tags using __Jenson Shanon Divergence__. This project can generate csv file with the matrix of distance and fill the database distance table.
-* #### generateCategoryImagesSet
+
+### generateCategoryImagesSet
 __Java__ project to generate sets of images ok and not ok for each terme you want. Sets are save in csv files.
-* #### imagesVisualisation
+
+### imagesVisualisation
 __HTML, CSS, Javascript__ project to visualize images of a csv file with tag cloud. The visualization with a simple html page.
-* #### splitterCSVFiles
+
+### splitterCSVFiles
 __Java__ project to split csv files in many others smaller but it can be useful to separate a trainning set and a set to test. 
-* #### wordnetSynonymeFounder
+
+### wordnetSynonymeFounder
 Small __Java__ project to get synonyms of a word using [Wordnet](http://wordnet.princeton.edu/) dictionnary.
