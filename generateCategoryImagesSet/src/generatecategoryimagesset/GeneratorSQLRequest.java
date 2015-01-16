@@ -17,6 +17,12 @@ import java.util.List;
  */
 public class GeneratorSQLRequest implements GeneratorImageSet {
 
+    /*
+     Parameters
+     */
+    private static int minCountCurrentTags = 10000;
+    
+    
     private Connection c;
     
     GeneratorSQLRequest(Connection c) {
@@ -87,7 +93,7 @@ public class GeneratorSQLRequest implements GeneratorImageSet {
                 "	) EXCEPT(SELECT tag\n" +
                 "           FROM \"imagetagfiltred\"\n" +
                 "           GROUP BY tag\n" +
-                "	HAVING count(imageid) > 10000\n" +
+                "	HAVING count(imageid) > " + minCountCurrentTags + "\n" +
                 "	)\n" +
                 ")\n" +
                 ") LIMIT " + number + ";";

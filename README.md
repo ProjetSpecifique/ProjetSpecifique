@@ -82,7 +82,7 @@ TODO???
 __Java__ project to compute distances between tags using __Jenson Shanon Divergence__. This project can generate csv file with the matrix of distance and fill the database distance table.
 
 ### generateCategoryImagesSet
-__Java__ project to generate sets of images ok and not ok for each terme you want. Sets are save in csv files.
+__Java__ project to generate sets of images ok and not ok for each terme you want. Sets are saved in csv files.
 
 ### imagesVisualisation
 __HTML, CSS, Javascript__ project to visualize images of a csv file with tag cloud. The visualization with a simple html page.

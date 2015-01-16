@@ -6,10 +6,8 @@ package generatecategoryimagesset;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.ArrayList;
@@ -28,8 +26,8 @@ public class GenerateCategoryImagesSet {
     private static String url = "jdbc:postgresql://localhost:5432/BDImageBig";
     private static String user = "utilisateur";
     private static String password = "utilisateur";
-    private static int nbImageOK = 200;
-    private static int nbImageNotOK = 200;
+    private static int nbImageOK = 300;
+    private static int nbImageNotOK = 300;
     private static String categoriesFilePath = "categories.csv";
     private static String outputPath = "output/";
     private static GeneratorImageSetFactory.GeneratorType generatorType = GeneratorImageSetFactory.GeneratorType.DistancesTags;

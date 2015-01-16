@@ -21,9 +21,9 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
     /*
      Parameters
      */
-    private static int nbTagsSimilar = 10;
-    private static int nbTagsOpposite = 10;
-    private static int distanceMaxSimilar = 200;
+    private static int nbTagsSimilar = 40;
+    private static int nbTagsOpposite = 20;
+    private static int distanceMaxSimilar = 1000;
     private static int distanceMinOpposite = 10000;
     
     private Connection c;
@@ -74,7 +74,7 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
                         " GROUP BY tag" + 
                         " ORDER BY minDistance ASC" +
                         " LIMIT " + number + ";";
-        System.out.println(query);
+        //System.out.println(query);
         Statement st = c.createStatement();
         ResultSet rs = st.executeQuery(query);
         while (rs.next()) {
@@ -85,6 +85,7 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
         st.close();
 
         if(listTags.isEmpty()) System.out.println("No tag similar found for " + tag);
+        else System.out.println(listTags.size() + " tags similar found for " + tag);
         return listTags;
     }
     
@@ -106,7 +107,7 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
                         " GROUP BY tag" + 
                         " ORDER BY maxDistance DESC" +
                         " LIMIT " + number + ";";
-        System.out.println(query);
+       // System.out.println(query);
         Statement st = c.createStatement();
         ResultSet rs = st.executeQuery(query);
         while (rs.next()) {
@@ -117,6 +118,7 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
         st.close();
 
         if(listTags.isEmpty()) System.out.println("No tag opposite found for " + tag);
+        else System.out.println(listTags.size() + " tags opposite found for " + tag);
         
         return listTags;
     }
@@ -127,7 +129,10 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
      * Function to find images with a tag from the parameters list
      */
     private List<String> getImagesWithListTags(List<String> listTag, int number, List<String> listIdImageExclude) throws Exception{
-        if(listTag == null || listTag.size() <= 0 || number <= 0) throw new Exception("List tag empty");
+        if(listTag == null || listTag.size() <= 0 || number <= 0){
+            System.out.println("List tag empty");
+            return new ArrayList<>();
+        }
         
         List<String> listImagesId = new ArrayList<>();
         
@@ -167,7 +172,7 @@ public class GeneratorDistancesTags implements GeneratorImageSet{
         query.append(number);
         query.append(";");
         
-        System.out.println(query.toString());
+        //System.out.println(query.toString());
         Statement st = c.createStatement();
         ResultSet rs = st.executeQuery(query.toString());
         while (rs.next()) {
