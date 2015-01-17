@@ -78,6 +78,7 @@ public class ApplyModelComputation {
 		// fn = false negative = items which were not labeled as belonging to
 		// the positive class but should have been
 		int fn0 = 0, fn1 = 0;
+		int noImgErr = 0;
 
 		// fn0 = fp1 and fn1 = fp0
 
@@ -100,33 +101,41 @@ public class ApplyModelComputation {
 				imgPath = imageFolderPath + elems[0] + imageExtention;
 
 				// System.out.println("csv Winner :  " + elems[1]);
-				modelWinnerClass = simpleExecution(imgPath, descriptorType, learnerType, term, elems[1]);
+				try {
+					modelWinnerClass = simpleExecution(imgPath, descriptorType, learnerType, term, elems[1]);
 
-				if (modelWinnerClass != null && modelWinnerClass.equals(elems[1])) {
-					// correctly labeled
-					if ("1".equals(elems[1])) {
-						tp1++;
+					if (modelWinnerClass != null && modelWinnerClass.equals(elems[1])) {
+						// correctly labeled
+						if ("1".equals(elems[1])) {
+							tp1++;
+						} else {
+							tp0++;
+						}
 					} else {
-						tp0++;
+						// incorrectly labeled
+						if ("1".equals(elems[1])) {
+							// items were label 0 but they were 1
+							fp0++;
+							fn1++;
+						} else {
+							// items were label 1 but they were 0
+							fp1++;
+							fn0++;
+						}
 					}
-				} else {
-					// incorrectly labeled
-					if ("1".equals(elems[1])) {
-						// items were label 0 but they were 1
-						fp0++;
-						fn1++;
-					} else {
-						// items were label 1 but they were 0
-						fp1++;
-						fn0++;
-					}
+				} catch (Exception e) {
+					noImgErr++;
+					// System.out.println(e);
 				}
 			}
 			br.close();
 
 			System.out.println("Analysed Images : " + (tp0 + fp0 + tp1 + fp1));
-//			System.out.println(tp0 + " " + fp0 + " " + fn0);
-//			System.out.println(tp1 + " " + fp1 + " " + fn1);
+			if (noImgErr > 0) {
+				System.out.println(noImgErr + " images not found");
+			}
+			// System.out.println(tp0 + " " + fp0 + " " + fn0);
+			// System.out.println(tp1 + " " + fp1 + " " + fn1);
 			float precision0 = (float) tp0 / (tp0 + fp0), precision1 = (float) tp1 / (tp1 + fp1);
 			System.out.println("Precision class 1 :" + precision1);
 			System.out.println("Precision class 0 :" + precision0);
