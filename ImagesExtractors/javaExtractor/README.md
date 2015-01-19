@@ -16,16 +16,16 @@ private static int number = 100;
 ```
 * Change the follow parameters by your's postgres parameters
   - Postgres server and database informations
-``` JAVA
-String url = "jdbc:postgresql://localhost:5432/imageSources";
-```
+  ``` JAVA
+  String url = "jdbc:postgresql://localhost:5432/imageSources";
+  ```
   - Postgres username
-``` JAVA
-String user = "utilisateur";
-```
+  ``` JAVA
+  String user = "utilisateur";
+  ```
   - Postgres password
-``` JAVA
-String password = "utilisateur";
-```
+  ``` JAVA
+  String password = "utilisateur";
+  ```
 
 Sometimes the dowloaded image is broken because the image itself is not anymore available in __Filcker__.
