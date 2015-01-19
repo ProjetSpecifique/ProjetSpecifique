@@ -1,0 +1,2 @@
+- eclipse projet 
+- computes lire descriptors for a set of images and save the into CSVs

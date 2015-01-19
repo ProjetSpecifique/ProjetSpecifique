@@ -1,0 +1,2 @@
+- workflow KNIME
+- settings: open KNIME and see the comments inside
