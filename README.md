@@ -57,9 +57,6 @@ Projects can have it's own readme to describe how use it.
 ### ImageClassification
 TODO???
 
-### ImageDistance
-TODO???
-
 ### ImageLearnerKNIME
 TODO???
 
