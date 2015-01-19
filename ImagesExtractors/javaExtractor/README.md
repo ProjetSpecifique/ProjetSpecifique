@@ -15,15 +15,15 @@ Cprivate static String folder = "getty_images/";
 private static int number = 100;
 ```
 * Change the follow parameters by your's postgres parameters
-** Postgres server and database informations
+- Postgres server and database informations
 ``` JAVA
 String url = "jdbc:postgresql://localhost:5432/imageSources";
 ```
-** Postgres username
+- Postgres username
 ``` JAVA
 String user = "utilisateur";
 ```
-** Postgres password
+- Postgres password
 ``` JAVA
 String password = "utilisateur";
 ```
