@@ -10,8 +10,8 @@ In order to use properly this simple program, you just need to follow these step
 ``` JAVASCRIPT
 var imagesPath = "images/";
 ```
-* Open the index.html file in your brower (Please use __Mozilla__ or __Chrome__)
+* Open the index.html file in your browser (Please use __Mozilla__ or __Chrome__)
 * Open a CSV file with the follwing synthax
-** First Column : image's ID
-** Second Column : 0 or 1 if the image is in or out category
-** Next Columns : image's tags
+  - First Column : image's ID
+  - Second Column : 0 or 1 if the image is in or out category
+  - Next Columns : image's tags
