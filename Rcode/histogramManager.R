@@ -2,6 +2,8 @@ source("fileManager.R")
 
 mf <-function(x, y) merge(x, y[grepl(x$photoID[1],y$photoName),])
 
+substrLeft <- function(x, n){ substr(x, 0, nchar(x)-n) }
+
 generateHistograms <- function (descriptorsFolder, termsFolder) {
     # generateHistograms("../CSVFiles/", "../CSVTerms/")
     writeLines("Getting started...")
@@ -20,10 +22,20 @@ generateHistograms <- function (descriptorsFolder, termsFolder) {
 
         # Open LaTex and HTML files for writing
         termName <- strsplit(basename(termCSV), ".", fixed=T)[[1]]
-        description <- paste("./visualisation/latex/", termName[1], ".tex", sep="")
-        latexFile <- file(description=description, open="wt")
-        htmlFile <- file(description=paste("./visualisation/html/", termName[1], ".html", sep=""), open="wt")
-        initFiles(latexFile, htmlFile)
+        toTest <- any(grep("*ToTest*", termName))
+        folderPrefix <- "None"
+
+        # See if it is a train or test csv
+        if (toTest) {
+            termName <- substrLeft(termName[1], nchar("ToTest"))   
+            folderPrefix <- "./visualisation/test"
+            latexFile <- file(description=paste("./visualisation/latex/", termName, ".tex", sep=""), open="wt")
+            htmlFile <- file(description=paste("./visualisation/html/", termName, ".html", sep=""), open="wt")
+            initFiles(latexFile, htmlFile)
+        } else {
+            termName <- substrLeft(termName[1], nchar("ToTrain")) 
+            folderPrefix <- "./visualisation/train"
+        }
 
         # Second level of imbrication
         lapply(descriptors, function(descriptorCSV) {
@@ -42,10 +54,12 @@ generateHistograms <- function (descriptorsFolder, termsFolder) {
             xvals <- 1:(ncol(joinedFrame)-3) 
             cols <- 4:ncol(joinedFrame)
 
-            descriptorName <- paste(strsplit(basename(descriptorCSV), ".", fixed=T)[[1]][1], ".png", sep="")
+            descriptorName <- strsplit(basename(descriptorCSV), ".", fixed=T)[[1]][1]
+            histogramName <- paste(descriptorName, "_", termName, ".png", sep="")
             
             # Histogram for all images
-            png(paste("./all/", descriptorName, sep=""))
+
+            png(paste(folderPrefix, "/all/", histogramName, sep=""))
             pic1 <- plot(1, 1, ylim=ylim, xlim=xlim, type="n", ylab="Descripteur", xlab="X")
             apply(joinedFrame[, cols], 1, function(x) lines(xvals, x))
             lines(xvals, colMeans(joinedFrame[, cols]), col="#FFFF00", type="o")
@@ -53,7 +67,7 @@ generateHistograms <- function (descriptorsFolder, termsFolder) {
             dev.off()
 
             # Histogram for positives
-            png(paste("./positives/", descriptorName, sep=""))
+            png(paste(folderPrefix, "/positives/", histogramName, sep=""))
             pic2 <- plot(1, 1, ylim=ylim, xlim=xlim, type="n", ylab="Descripteur", xlab="X")
             apply(joinedFrame[joinedFrame[, "class"] == 1, cols], 1, function(x) lines(xvals, x))
             lines(xvals, colMeans(joinedFrame[joinedFrame[, "class"] == 1, cols]), col="#00FFFF", type="o")
@@ -61,7 +75,7 @@ generateHistograms <- function (descriptorsFolder, termsFolder) {
             dev.off()
 
             # Histogram for negatives
-            png(paste("./negatives/", descriptorName, sep=""))
+            png(paste(folderPrefix, "/negatives/", histogramName, sep=""))
             pic3 <- plot(1, 1, ylim=ylim, xlim=xlim, type="n", ylab="Descripteur", xlab="X")
             apply(joinedFrame[joinedFrame[, "class"] == 0, cols], 1, function(x) lines(xvals, x))
             lines(xvals, colMeans(joinedFrame[joinedFrame[, "class"] == 0, cols]), col="#FF00FF", type="o")
@@ -69,13 +83,17 @@ generateHistograms <- function (descriptorsFolder, termsFolder) {
             dev.off()
 
             # Write to visualisation files
-            writeToFiles(latexFile, htmlFile, descriptorName)
+            if (toTest) {
+                writeToFiles(latexFile, htmlFile, descriptorName, histogramName)                
+            }
 
         })
         
-        finFiles(latexFile, htmlFile)
-        close(latexFile)
-        close(htmlFile)
+        if (toTest) {
+            finFiles(latexFile, htmlFile)
+            close(latexFile)
+            close(htmlFile)
+        }
 
     })
     writeLines("Done !")

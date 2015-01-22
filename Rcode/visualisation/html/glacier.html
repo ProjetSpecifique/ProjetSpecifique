@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Histograms</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top" role="navigation" style="background: cadetblue;">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul id="navbar" class="nav navbar-nav">
+                <li class="col-lg-6"><h2>Training data</h2></li>
+                <li class="col-lg-6"><h2>Test data</h2></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="margin-top: 60px; height: 40px">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul id="subnavbar" class="nav navbar-nav">
+                <li class="col-lg-2"><h3><span class="glyphicon glyphicon-asterisk"></span> All</h3></li>
+                <li class="col-lg-2"><h3><span class="glyphicon glyphicon-plus"></span> Positives</h3></li>
+                <li class="col-lg-2"><h3><span class="glyphicon glyphicon-minus"></span> Negatives</h3></li>
+                <li class="col-lg-2"><h3><span class="glyphicon glyphicon-asterisk"></span> All</h3></li>
+                <li class="col-lg-2"><h3><span class="glyphicon glyphicon-plus"></span> Positives</h3></li>
+                <li class="col-lg-2"><h3><span class="glyphicon glyphicon-minus"></span> Negatives</h3></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+<div class="row">
+    <h4>AutoColorCorrelogram</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/AutoColorCorrelogram_glacier.png">
+        <img class="img-thumbnail" src="../train/all/AutoColorCorrelogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/AutoColorCorrelogram_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/AutoColorCorrelogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/AutoColorCorrelogram_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/AutoColorCorrelogram_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/AutoColorCorrelogram_glacier.png">
+        <img class="img-thumbnail" src="../test/all/AutoColorCorrelogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/AutoColorCorrelogram_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/AutoColorCorrelogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/AutoColorCorrelogram_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/AutoColorCorrelogram_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>BasicFeatures</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/BasicFeatures_glacier.png">
+        <img class="img-thumbnail" src="../train/all/BasicFeatures_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/BasicFeatures_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/BasicFeatures_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/BasicFeatures_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/BasicFeatures_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/BasicFeatures_glacier.png">
+        <img class="img-thumbnail" src="../test/all/BasicFeatures_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/BasicFeatures_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/BasicFeatures_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/BasicFeatures_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/BasicFeatures_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>CEDD</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/CEDD_glacier.png">
+        <img class="img-thumbnail" src="../train/all/CEDD_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/CEDD_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/CEDD_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/CEDD_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/CEDD_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/CEDD_glacier.png">
+        <img class="img-thumbnail" src="../test/all/CEDD_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/CEDD_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/CEDD_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/CEDD_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/CEDD_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>ColorLayout</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/ColorLayout_glacier.png">
+        <img class="img-thumbnail" src="../train/all/ColorLayout_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/ColorLayout_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/ColorLayout_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/ColorLayout_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/ColorLayout_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/ColorLayout_glacier.png">
+        <img class="img-thumbnail" src="../test/all/ColorLayout_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/ColorLayout_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/ColorLayout_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/ColorLayout_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/ColorLayout_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>EdgeHistogram</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/EdgeHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/all/EdgeHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/EdgeHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/EdgeHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/EdgeHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/EdgeHistogram_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/EdgeHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/all/EdgeHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/EdgeHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/EdgeHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/EdgeHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/EdgeHistogram_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>FCTH</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/FCTH_glacier.png">
+        <img class="img-thumbnail" src="../train/all/FCTH_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/FCTH_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/FCTH_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/FCTH_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/FCTH_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/FCTH_glacier.png">
+        <img class="img-thumbnail" src="../test/all/FCTH_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/FCTH_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/FCTH_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/FCTH_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/FCTH_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>FuzzyColorHistogram</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/FuzzyColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/all/FuzzyColorHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/FuzzyColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/FuzzyColorHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/FuzzyColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/FuzzyColorHistogram_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/FuzzyColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/all/FuzzyColorHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/FuzzyColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/FuzzyColorHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/FuzzyColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/FuzzyColorHistogram_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>FuzzyOpponentHistogram</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/FuzzyOpponentHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/all/FuzzyOpponentHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/FuzzyOpponentHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/FuzzyOpponentHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/FuzzyOpponentHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/FuzzyOpponentHistogram_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/FuzzyOpponentHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/all/FuzzyOpponentHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/FuzzyOpponentHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/FuzzyOpponentHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/FuzzyOpponentHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/FuzzyOpponentHistogram_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>Gabor</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/Gabor_glacier.png">
+        <img class="img-thumbnail" src="../train/all/Gabor_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/Gabor_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/Gabor_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/Gabor_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/Gabor_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/Gabor_glacier.png">
+        <img class="img-thumbnail" src="../test/all/Gabor_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/Gabor_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/Gabor_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/Gabor_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/Gabor_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>JCD</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/JCD_glacier.png">
+        <img class="img-thumbnail" src="../train/all/JCD_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/JCD_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/JCD_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/JCD_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/JCD_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/JCD_glacier.png">
+        <img class="img-thumbnail" src="../test/all/JCD_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/JCD_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/JCD_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/JCD_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/JCD_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>JointHistogram</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/JointHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/all/JointHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/JointHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/JointHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/JointHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/JointHistogram_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/JointHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/all/JointHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/JointHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/JointHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/JointHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/JointHistogram_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>JpegCoefficientHistogram</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/JpegCoefficientHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/all/JpegCoefficientHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/JpegCoefficientHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/JpegCoefficientHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/JpegCoefficientHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/JpegCoefficientHistogram_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/JpegCoefficientHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/all/JpegCoefficientHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/JpegCoefficientHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/JpegCoefficientHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/JpegCoefficientHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/JpegCoefficientHistogram_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>PHOG</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/PHOG_glacier.png">
+        <img class="img-thumbnail" src="../train/all/PHOG_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/PHOG_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/PHOG_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/PHOG_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/PHOG_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/PHOG_glacier.png">
+        <img class="img-thumbnail" src="../test/all/PHOG_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/PHOG_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/PHOG_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/PHOG_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/PHOG_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>ScalableColor</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/ScalableColor_glacier.png">
+        <img class="img-thumbnail" src="../train/all/ScalableColor_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/ScalableColor_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/ScalableColor_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/ScalableColor_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/ScalableColor_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/ScalableColor_glacier.png">
+        <img class="img-thumbnail" src="../test/all/ScalableColor_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/ScalableColor_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/ScalableColor_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/ScalableColor_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/ScalableColor_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>SimpleColorHistogram</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/SimpleColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/all/SimpleColorHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/SimpleColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/SimpleColorHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/SimpleColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/SimpleColorHistogram_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/SimpleColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/all/SimpleColorHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/SimpleColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/SimpleColorHistogram_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/SimpleColorHistogram_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/SimpleColorHistogram_glacier.png">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <h4>Tamura</h4>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <a href="../train/all/Tamura_glacier.png">
+        <img class="img-thumbnail" src="../train/all/Tamura_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/positives/Tamura_glacier.png">
+        <img class="img-thumbnail" src="../train/positives/Tamura_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../train/negatives/Tamura_glacier.png">
+        <img class="img-thumbnail" src="../train/negatives/Tamura_glacier.png">
+        </a>
+    </div>
+
+    <div class="col-lg-2">
+        <a href="../test/all/Tamura_glacier.png">
+        <img class="img-thumbnail" src="../test/all/Tamura_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/positives/Tamura_glacier.png">
+        <img class="img-thumbnail" src="../test/positives/Tamura_glacier.png">
+        </a>
+    </div>
+    <div class="col-lg-2">
+        <a href="../test/negatives/Tamura_glacier.png">
+        <img class="img-thumbnail" src="../test/negatives/Tamura_glacier.png">
+        </a>
+    </div>
+</div>
+</div>
+</body>
+</html>
