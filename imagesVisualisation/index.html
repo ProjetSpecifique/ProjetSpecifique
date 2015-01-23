@@ -2,20 +2,20 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Titre</title>
+		<title>Projet Specifique</title>
 		<link href="css/jqcloud.css" rel="stylesheet" type="text/css"/>
 		<link href="css/style.css" rel="stylesheet" type="text/css"/>
 	</head>
 
 	<body>
-		<h1>Coucou</h1>
-		<input type="file" id="fileInputCsv" onchange="loadCsv()" />
+		<h1>Image Set Display</h1>
+		<div id="button"><input type="file" id="fileInputCsv" onchange="loadCsv()" /></div>
 		<div id="main">
 			<table>
 				<tr>
-					<td><h3>Images OK:</h3></td>
+					<td><h3>Positive Image Set :</h3></td>
 					<td><h3>Preview</h3></td>
-					<td><h3>Images Not OK:</h3></td>
+					<td><h3>Negative Image Set :</h3></td>
 				</tr>
 				<tr>
 					<td><table id="tableImageOk"></table></td>
@@ -26,9 +26,9 @@
 					<td><table id="tableImageNotOk"></table></td>
 				</tr>
 				<tr>
-					<td><h3>Tag cloud images OK:</h3></td>
+					<td><h3>Positive images' tag cloud :</h3></td>
 					<td></td>
-					<td><h3>Tag cloud images Not OK:</h3></td>
+					<td><h3>Negative images' tag cloud :</h3></td>
 				</tr>
 				<tr>
 					<td><div id='tagCloudOk' class="tagCloud"></div></td>
