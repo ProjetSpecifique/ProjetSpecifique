@@ -94,8 +94,8 @@ public class DetectModelComputation {
 					model.getTerm());
 			proba = MyEvaluator.evaluateProbability(histogram, modelPath, "1");
 
-			result += "\nTerm : " + model.getTerm() + "\n Probility : " + proba + " " + model.getDescriptorType()
-					+ " " + model.getLearnerType();
+			result += "Term : " + model.getTerm() + " Probility : " + proba + " " + model.getDescriptorType()
+					+ " " + model.getLearnerType() + "\n";
 			
 			if(proba > bestProba){
 				bestProba = proba;
@@ -103,7 +103,12 @@ public class DetectModelComputation {
 			}
 		}
 		
-		result = "Best Term : " + bestTerm + "\n" + result;
+		if(bestProba > 0.0){
+			result += "\nBest Term : " + bestTerm ;
+		}else{
+			result += "\nNo matching term" ;
+		}
+		
 
 		return result;
 	}

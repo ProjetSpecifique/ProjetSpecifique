@@ -107,7 +107,8 @@ public class MyEvaluator {
 			return result.getProbability(resultClass);
 		} else if (targetValue instanceof VoteClassificationMap) {
 			VoteClassificationMap<?> result = (VoteClassificationMap<?>) targetValue;
-			result.getProbability(resultClass);
+			
+			return result.getProbability(resultClass);
 		}
 
 		return 0.0;
