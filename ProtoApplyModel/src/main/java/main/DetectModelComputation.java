@@ -14,9 +14,6 @@ import evaluators.MyLearnerType;
 
 public class DetectModelComputation {
 
-	/*
-	 * for an image compute the best model for all terms
-	 */
 	public static String detectModelForTerm(String imagePath, MyTerm term) throws Exception {
 		/* 1. init image */
 		BufferedImage image;
@@ -54,6 +51,9 @@ public class DetectModelComputation {
 		return "Term : " + term + "\nBest Probility : " + bestProba + " " + myBestDescriptor + " " + myBestLearner;
 	}
 
+	/*
+	 * for an image compute the best model for all terms
+	 */
 	public static String detectModelForAllTerms(String imagePath) throws Exception {
 		String results = "";
 
@@ -62,5 +62,49 @@ public class DetectModelComputation {
 		}
 
 		return results;
+	}
+
+	public static String computeProbabilitiesForModels(String imagePath) throws Exception {
+
+		/* 1. init image */
+		BufferedImage image;
+		try {
+			image = ImageIO.read(new File(imagePath));
+			// for relative paths
+			// image = ImageIO.read(Main.class.getResourceAsStream(imagePath));
+		} catch (Exception e) {
+			throw new Exception("Cannot load image at : " + imagePath);
+		}
+
+		MyDescriptor myDescriptor;
+		double[] histogram;
+		String modelPath;
+		Double proba, bestProba = 0.0;
+
+		MyTerm bestTerm = null;
+		
+		
+		String result = "";
+
+		for (MyModel model : MyModel.values()) {
+			myDescriptor = MyDescriptorFactory.buildDescriptor(model.getDescriptorType(), image);
+			histogram = myDescriptor.computeHistogram();
+
+			modelPath = MyEvalPathFactory.buildModelPath(model.getDescriptorType(), model.getLearnerType(),
+					model.getTerm());
+			proba = MyEvaluator.evaluateProbability(histogram, modelPath, "1");
+
+			result += "\nTerm : " + model.getTerm() + "\n Probility : " + proba + " " + model.getDescriptorType()
+					+ " " + model.getLearnerType();
+			
+			if(proba > bestProba){
+				bestProba = proba;
+				bestTerm = model.getTerm();
+			}
+		}
+		
+		result = "Best Term : " + bestTerm + "\n" + result;
+
+		return result;
 	}
 }

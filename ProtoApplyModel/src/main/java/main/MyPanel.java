@@ -5,6 +5,7 @@ import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -18,19 +19,23 @@ import javax.swing.JTextArea;
 public class MyPanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
-	JButton go;
+	JButton imagePathBtn, allModels, selectedModels;
 	JTextArea textArea;
 	JLabel picLabel;
 
+	String imagePath;
+
 	public MyPanel() {
-		go = new JButton("Select Image");
+		imagePathBtn = new JButton("Select Image");
+		allModels = new JButton("Compute the best term");
+		selectedModels = new JButton("Apply selected models");
 
 		textArea = new JTextArea("", 15, 50);
 		JScrollPane scrollPane = new JScrollPane(textArea);
 		textArea.setEditable(false);
 		picLabel = new JLabel("");
 
-		go.addActionListener(new ActionListener() {
+		imagePathBtn.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser chooser = new JFileChooser();
@@ -40,22 +45,16 @@ public class MyPanel extends JPanel {
 				chooser.setAcceptAllFileFilterUsed(false);
 
 				if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-					String result = "";
 					try {
-						textArea.setText("Processing .. ");
-
 						picLabel.setIcon(new ImageIcon(
 								getScaledImage(ImageIO.read(chooser.getSelectedFile()), 100, 100)));
-
-						result = DetectModelComputation.detectModelForAllTerms(chooser.getSelectedFile().getPath());
-
-						System.out.println(result.toString());
-
-					} catch (Exception e1) {
-						result = e1.toString();
+					} catch (IOException e1) {
+						textArea.setText("Exception : " + e1);
 					}
 
-					textArea.setText(result.toString());
+					imagePath = chooser.getSelectedFile().getPath();
+					textArea.setText("Image Path : " + imagePath);
+
 				} else {
 					textArea.setText("No Selection ");
 				}
@@ -63,7 +62,35 @@ public class MyPanel extends JPanel {
 			}
 		});
 
-		add(go);
+		allModels.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				try {
+					textArea.setText("Processing ... ");
+
+					textArea.setText(DetectModelComputation.detectModelForAllTerms(imagePath));
+				} catch (Exception e1) {
+					textArea.setText("Exception : " + e1);
+				}
+			}
+		});
+
+		selectedModels.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				try {
+					textArea.setText("Processing ... ");
+
+					textArea.setText(DetectModelComputation.computeProbabilitiesForModels(imagePath));
+				} catch (Exception e1) {
+					textArea.setText("Exception : " + e1);
+				}
+			}
+		});
+
+		add(imagePathBtn);
+		add(allModels);
+		add(selectedModels);
 		add(picLabel);
 		add(scrollPane);
 		setVisible(true);
