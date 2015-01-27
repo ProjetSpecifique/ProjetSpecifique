@@ -65,7 +65,7 @@ public class MyPanel extends JPanel {
 
 		add(go);
 		add(picLabel);
-		add(textArea);
+		add(scrollPane);
 		setVisible(true);
 	}
 
