@@ -22,6 +22,30 @@ public class MyEvaluator {
 	public static boolean logResults = true;
 
 	public static String evaluate(double[] histogram, String modelPath, String resultClass) throws Exception {
+
+		Object targetValue = evaluateAndGetTargetValue(histogram, modelPath, resultClass);
+		// FieldName targetName = evaluator.getTargetField();
+		Double proba = getProbabilityForClass(targetValue, resultClass);
+		if (logResults) {
+			System.out.println("Probability for class " + resultClass + " : " + proba);
+		}
+
+		return (String) EvaluatorUtil.decode(targetValue);
+	}
+
+	public static Double evaluateProbability(double[] histogram, String modelPath, String resultClass) throws Exception {
+		Object targetValue = evaluateAndGetTargetValue(histogram, modelPath, resultClass);
+		// FieldName targetName = evaluator.getTargetField();
+		Double proba = getProbabilityForClass(targetValue, resultClass);
+		if (logResults) {
+			System.out.println("Probability for class " + resultClass + " : " + proba);
+		}
+
+		return proba;
+	}
+
+	private static Object evaluateAndGetTargetValue(double[] histogram, String modelPath, String resultClass)
+			throws Exception {
 		PMML pmml;
 		try {
 			pmml = JAXBUtil.unmarshalPMML(ImportFilter.apply(new InputSource(MyNaiveBayesEvaluator.class
@@ -70,14 +94,7 @@ public class MyEvaluator {
 		}
 
 		FieldName targetName = evaluator.getTargetField();
-		Object targetValue = result.get(targetName);
-		// FieldName targetName = evaluator.getTargetField();
-		Double proba = getProbabilityForClass(targetValue, resultClass);
-		if (logResults) {
-			System.out.println("Probability for class " + resultClass + " : " + proba);
-		}
-
-		return (String) EvaluatorUtil.decode(targetValue);
+		return result.get(targetName);
 	}
 
 	private static Double getProbabilityForClass(Object targetValue, String resultClass) {
