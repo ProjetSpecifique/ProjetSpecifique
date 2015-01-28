@@ -20,7 +20,7 @@ public class VisualMain {
 			}
 		});
 		frame.getContentPane().add(panel, "Center");
-		frame.setSize(new Dimension(600, 400));
+		frame.setSize(new Dimension(600, 500));
 		frame.setVisible(true);
 
 	}

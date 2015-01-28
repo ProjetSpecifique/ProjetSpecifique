@@ -48,7 +48,7 @@ public class DetectModelComputation {
 			}
 		}
 
-		return "Term : " + term + "\nBest Probility : " + bestProba + " " + myBestDescriptor + " " + myBestLearner;
+		return String.format("Term : %13s Best Proba : %.2f %20s %s ", term, bestProba, myBestDescriptor, myBestLearner);
 	}
 
 	/*
@@ -82,8 +82,7 @@ public class DetectModelComputation {
 		Double proba, bestProba = 0.0;
 
 		MyTerm bestTerm = null;
-		
-		
+
 		String result = "";
 
 		for (MyModel model : MyModel.values()) {
@@ -94,21 +93,20 @@ public class DetectModelComputation {
 					model.getTerm());
 			proba = MyEvaluator.evaluateProbability(histogram, modelPath, "1");
 
-			result += "Term : " + model.getTerm() + " Probility : " + proba + " " + model.getDescriptorType()
-					+ " " + model.getLearnerType() + "\n";
-			
-			if(proba > bestProba){
+			result += String.format("Term : %13s Probability : %.2f %20s	%s " , model.getTerm().name(), proba,
+					model.getDescriptorType().name(), model.getLearnerType().name()) + "\n";
+
+			if (proba > bestProba) {
 				bestProba = proba;
 				bestTerm = model.getTerm();
 			}
 		}
-		
-		if(bestProba > 0.0){
-			result += "\nBest Term : " + bestTerm ;
-		}else{
-			result += "\nNo matching term" ;
+
+		if (bestProba > 0.0) {
+			result += "\nBest Term : " + bestTerm;
+		} else {
+			result += "\nNo matching term";
 		}
-		
 
 		return result;
 	}

@@ -30,7 +30,7 @@ public class MyPanel extends JPanel {
 		allModels = new JButton("Compute the best term");
 		selectedModels = new JButton("Apply selected models");
 
-		textArea = new JTextArea("", 15, 50);
+		textArea = new JTextArea("", 20, 50);
 		JScrollPane scrollPane = new JScrollPane(textArea);
 		textArea.setEditable(false);
 		picLabel = new JLabel("");
